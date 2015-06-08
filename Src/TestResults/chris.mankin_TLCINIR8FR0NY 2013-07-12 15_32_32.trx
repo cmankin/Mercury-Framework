@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="495889bb-c762-44a3-b714-cc3f8e691758" name="chris.mankin@TLCINIR8FR0NY 2013-07-12 15:32:32" runUser="HQDOMAIN\chris.mankin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="70bce9e9-d360-4dd6-8af7-dd0eb2add29d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="chris.mankin_TLCINIR8FR0NY 2013-07-12 15_32_32">
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mecury.Messaging.Instrumentation.Test\MolesAssemblies\System.Moles.dll" />
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mercury.Messaging.Core\bin\Release\Mercury.Messaging.Core.dll" />
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mecury.Messaging.Instrumentation.Test\MolesAssemblies\System.Behaviors.dll" />
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mercury.Core\bin\Release\Mercury.Core.dll" />
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mecury.Messaging.Instrumentation.Test\MolesAssemblies\Mercury.Core.Moles.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-07-12T15:32:32.0237063-05:00" queuing="2013-07-12T15:32:34.2087063-05:00" start="2013-07-12T15:32:34.3597063-05:00" finish="2013-07-12T15:33:32.8797063-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Can_serialize_context_info" storage="c:\users\chris.mankin\documents\visual studio 2010\projects\development\mercury framework v2\src\mecury.messaging.instrumentation.test\bin\release\mercury.messaging.instrumentation.test.dll" id="b576ddba-ba34-6ac7-51d2-d533617911c6">
+      <Execution id="e850ea77-f45c-4d58-9ade-56b14a3765f3" />
+      <TestMethod codeBase="C:/Users/chris.mankin/Documents/Visual Studio 2010/Projects/Development/Mercury Framework v2/Src/Mecury.Messaging.Instrumentation.Test/bin/Release/Mercury.Messaging.Instrumentation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Messaging.Instrumentation.Test.Instrumentation_specs, Mercury.Messaging.Instrumentation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1fd2fa323c9a4f48" name="Can_serialize_context_info" />
+    </UnitTest>
+    <UnitTest name="Can_create_context_info" storage="c:\users\chris.mankin\documents\visual studio 2010\projects\development\mercury framework v2\src\mecury.messaging.instrumentation.test\bin\release\mercury.messaging.instrumentation.test.dll" id="05996a43-b678-b310-70b4-217860836eec">
+      <Execution id="7d80e3c9-8945-4b6c-a2db-1382c67e052c" />
+      <TestMethod codeBase="C:/Users/chris.mankin/Documents/Visual Studio 2010/Projects/Development/Mercury Framework v2/Src/Mecury.Messaging.Instrumentation.Test/bin/Release/Mercury.Messaging.Instrumentation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Messaging.Instrumentation.Test.Instrumentation_specs, Mercury.Messaging.Instrumentation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1fd2fa323c9a4f48" name="Can_create_context_info" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="05996a43-b678-b310-70b4-217860836eec" executionId="7d80e3c9-8945-4b6c-a2db-1382c67e052c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b576ddba-ba34-6ac7-51d2-d533617911c6" executionId="e850ea77-f45c-4d58-9ade-56b14a3765f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="7d80e3c9-8945-4b6c-a2db-1382c67e052c" testId="05996a43-b678-b310-70b4-217860836eec" testName="Can_create_context_info" computerName="TLCINIR8FR0NY" duration="00:00:00.3767248" startTime="2013-07-12T15:32:34.4767063-05:00" endTime="2013-07-12T15:32:35.5677063-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d80e3c9-8945-4b6c-a2db-1382c67e052c">
+    </UnitTestResult>
+    <UnitTestResult executionId="e850ea77-f45c-4d58-9ade-56b14a3765f3" testId="b576ddba-ba34-6ac7-51d2-d533617911c6" testName="Can_serialize_context_info" computerName="TLCINIR8FR0NY" duration="00:00:57.0312044" startTime="2013-07-12T15:32:35.5877063-05:00" endTime="2013-07-12T15:33:32.6227063-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e850ea77-f45c-4d58-9ade-56b14a3765f3">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,17 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Samples.AgentPingPong.exe.config
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Samples.AgentPingPong.exe
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Samples.AgentPingPong.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Samples.AgentPingPong.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Mercury.Messaging.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Microsoft.Ccr.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Microsoft.Ccr.Adapters.IO.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Mercury.Messaging.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Mercury.Messaging.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Mercury.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\bin\Release\Mercury.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\obj\x86\Release\Samples.AgentPingPong.Resources.resources
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\obj\x86\Release\Samples.AgentPingPong.vbproj.GenerateResource.Cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\obj\x86\Release\Samples.AgentPingPong.exe
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\obj\x86\Release\Samples.AgentPingPong.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentPingPong\obj\x86\Release\Samples.AgentPingPong.pdb

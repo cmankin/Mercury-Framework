@@ -1,0 +1,12 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Test.dll.config
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Test.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Test.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Configuration.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Configuration.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\obj\Release\Mercury.Logging.Test.csprojResolveAssemblyReference.cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\obj\Release\Mercury.Logging.Test.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\obj\Release\Mercury.Logging.Test.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Test\bin\Release\Mercury.Logging.Configuration.xml

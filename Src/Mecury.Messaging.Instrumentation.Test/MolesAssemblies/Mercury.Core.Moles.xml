@@ -1,0 +1,2941 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mercury.Core.Moles</name>
+    </assembly>
+    <members>
+        <member name="T:Mercury.Net.Moles.MByteExtensions">
+            <summary>Mole type of <see cref="T:Mercury.Net.ByteExtensions"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MByteExtensions.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MByteExtensions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MByteExtensions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MByteExtensions.AppendByteArrayByte">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.ByteExtensions.Append(System.Byte[],System.Byte)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MByteExtensions.AppendByteArrayByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.ByteExtensions.Append(System.Byte[],System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MByteExtensions.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MByteExtensions.ExtractCopyByteArrayInt32Int32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.ByteExtensions.ExtractCopy(System.Byte[],System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MByteExtensions.MergeByteArrayByteArrayInt32Int32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.ByteExtensions.Merge(System.Byte[],System.Byte[],System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MByteExtensions.PrependByteArrayByte">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.ByteExtensions.Prepend(System.Byte[],System.Byte)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MByteExtensions.PrependByteArrayByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.ByteExtensions.Prepend(System.Byte[],System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MDiagnosticsLog">
+            <summary>Mole type of <see cref="T:Mercury.Logging.DiagnosticsLog"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MDiagnosticsLog.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MDiagnosticsLog.#ctor(Mercury.Logging.DiagnosticsLog)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MDiagnosticsLog.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MDiagnosticsLog.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MDiagnosticsLog.Bind(Mercury.Logging.ILog)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MDiagnosticsLog.Bind(Mercury.Logging.ILog{Mercury.Logging.DiagnosticsLog})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.CriticalFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.CriticalInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.CriticalInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.CriticalStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.DebugFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.DebugInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.DebugInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.DebugStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.EnsureArgsNotNullObjectArrayRef">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.EnsureArgsNotNull(System.Object[]@)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.ErrorFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.ErrorInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.ErrorInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.ErrorStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.InfoFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.InfoInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.InfoInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.InfoStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.InitializeString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.InitializeTraceSourceTraceSource">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.InitializeTraceSource(System.Diagnostics.TraceSource)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.InternalFlushListeners">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.InternalFlushListeners"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.NameGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.DiagnosticsLog.Name"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.TraceGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.DiagnosticsLog.Trace"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.TraceSetTraceSource">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.DiagnosticsLog.Trace"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.WarnFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.WarnInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.WarnInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.WarnStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.CriticalFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.CriticalInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.CriticalInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.CriticalStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.DebugFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.DebugInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.DebugInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.DebugStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.EnsureArgsNotNullObjectArrayRef">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.EnsureArgsNotNull(System.Object[]@)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.ErrorFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.ErrorInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.ErrorInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.ErrorStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.InfoFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.InfoInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.InfoInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.InfoStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.InitializeString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.InitializeTraceSourceTraceSource">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.InitializeTraceSource(System.Diagnostics.TraceSource)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.InternalFlushListeners">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.InternalFlushListeners"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.NameGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.DiagnosticsLog.Name"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.TraceGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.DiagnosticsLog.Trace"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.TraceSetTraceSource">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.DiagnosticsLog.Trace"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.WarnFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.WarnInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.WarnInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MDiagnosticsLog.AllInstances.WarnStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.IO.Moles.MEncodableStringWriter">
+            <summary>Mole type of <see cref="T:Mercury.IO.EncodableStringWriter"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.MEncodableStringWriter.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.MEncodableStringWriter.#ctor(Mercury.IO.EncodableStringWriter)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.MEncodableStringWriter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.MEncodableStringWriter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.MEncodableStringWriter.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.MEncodableStringWriter.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.MEncodableStringWriter.ConstructorEncoding">
+            <summary>Sets the mole of <see cref="M:Mercury.IO.EncodableStringWriter.#ctor(System.Text.Encoding)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.MEncodableStringWriter.ConstructorEncodingStringBuilder">
+            <summary>Sets the mole of <see cref="M:Mercury.IO.EncodableStringWriter.#ctor(System.Text.Encoding,System.Text.StringBuilder)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.MEncodableStringWriter.EncodingGet">
+            <summary>Sets the mole of <see cref="P:Mercury.IO.EncodableStringWriter.Encoding"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.IO.Moles.MEncodableStringWriter.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.MEncodableStringWriter.AllInstances.EncodingGet">
+            <summary>Sets the mole of <see cref="P:Mercury.IO.EncodableStringWriter.Encoding"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MEnvelopeEncoding">
+            <summary>Mole type of <see cref="T:Mercury.Net.EnvelopeEncoding"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MEnvelopeEncoding.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MEnvelopeEncoding.#ctor(Mercury.Net.EnvelopeEncoding)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MEnvelopeEncoding.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MEnvelopeEncoding.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.ConstructorByte">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.EnvelopeEncoding.#ctor(System.Byte)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.EncodingGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.EnvelopeEncoding.Encoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.GetEncodingByte">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.EnvelopeEncoding.GetEncoding(System.Byte)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.IdGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.EnvelopeEncoding.Id"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MEnvelopeEncoding.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.AllInstances.EncodingGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.EnvelopeEncoding.Encoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.AllInstances.GetEncodingByte">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.EnvelopeEncoding.GetEncoding(System.Byte)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MEnvelopeEncoding.AllInstances.IdGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.EnvelopeEncoding.Id"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MHashItem`2">
+            <summary>Mole type of <see cref="T:Mercury.HashItem`2"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.MHashItem`2.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Moles.MHashItem`2.#ctor(Mercury.HashItem{`0,`1})">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.MHashItem`2.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Moles.MHashItem`2.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.ComparerGet">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Comparer"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.ComparerSetIEqualityComparerOfTValue">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Comparer"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.ConstructorTValueTCodeIEqualityComparerOfTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.#ctor(`1,`2,System.Collections.Generic.IEqualityComparer`1{`1})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.EqualsObject">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.Equals(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.GetHashCode">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.GetHashCode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.HashCodeGet">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.HashCode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.HashCodeSetTCode">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.HashCode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.IsEqualHashItemOfTValueTCodeHashItemOfTValueTCodeBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.IsEqual(Mercury.HashItem`2{`1,`2},Mercury.HashItem`2{`1,`2},System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.IsEqualHashTCodeTCode">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.IsEqualHash(`2,`2)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.IsEqualValueTValueTValueIEqualityComparerOfTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.IsEqualValue(`1,`1,System.Collections.Generic.IEqualityComparer`1{`1})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.ValueGet">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Value"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.ValueSetTValue">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Value"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MHashItem`2.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.ComparerGet">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Comparer"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.ComparerSetIEqualityComparerOfTValue">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Comparer"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.EqualsObject">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.Equals(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.GetHashCode01">
+            <summary>Sets the mole of <see cref="M:Mercury.HashItem`2.GetHashCode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.HashCodeGet">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.HashCode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.HashCodeSetTCode">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.HashCode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.ValueGet">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Value"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MHashItem`2.AllInstances.ValueSetTValue">
+            <summary>Sets the mole of <see cref="P:Mercury.HashItem`2.Value"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.MInstrumentationUtil">
+            <summary>Mole type of <see cref="T:Mercury.Instrumentation.InstrumentationUtil"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MInstrumentationUtil.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MInstrumentationUtil.#ctor(Mercury.Instrumentation.InstrumentationUtil)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MInstrumentationUtil.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MInstrumentationUtil.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MInstrumentationUtil.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MInstrumentationUtil.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.InstrumentationUtil.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MInstrumentationUtil.EnsurePathString">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.InstrumentationUtil.EnsurePath(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MInstrumentationUtil.GetExpandedFilePathString">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.InstrumentationUtil.GetExpandedFilePath(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MInstrumentationUtil.GetExpandedPathVariableString">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.InstrumentationUtil.GetExpandedPathVariable(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.MInstrumentationUtil.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MLog">
+            <summary>Mole type of <see cref="T:Mercury.Logging.Log"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLog.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLog.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLog.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLog.InitializeWith``1(Microsoft.Moles.Framework.MolesDelegates.Action)">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.Log.InitializeWith``1"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MLog.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MLog.GetExpandedFilePathString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.Log.GetExpandedFilePath(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MLog.GetLoggerString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.Log.GetLogger(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MLog.InitializeWithILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.Log.InitializeWith(Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MLog.RegisteredLogNamesGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.Log.RegisteredLogNames"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MLogExtensions">
+            <summary>Mole type of <see cref="T:Mercury.Logging.LogExtensions"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLogExtensions.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLogExtensions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLogExtensions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MLogExtensions.LogTString``1(Microsoft.Moles.Framework.MolesDelegates.Func{``0,System.String,Mercury.Logging.ILog})">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.LogExtensions.Log``1(``0,System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MLogExtensions.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MLogExtensions.LogString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.LogExtensions.Log(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MMachine">
+            <summary>Mole type of <see cref="T:Mercury.Net.Machine"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MMachine.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MMachine.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MMachine.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MMachine.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MMachine.HostGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.Machine.Host"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MMachine.IPv4Get">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.Machine.IPv4"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MMachine.IPv6Get">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.Machine.IPv6"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MMachine._get_IPv4b__0IPAddress">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.Machine.&lt;get_IPv4&gt;b__0(System.Net.IPAddress)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MMachine._get_IPv6b__2IPAddress">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.Machine.&lt;get_IPv6&gt;b__2(System.Net.IPAddress)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MMutexFlag">
+            <summary>Mole type of <see cref="T:Mercury.MutexFlag"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.#ctor(Mercury.MutexFlag)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.CanEnterGet">
+            <summary>Sets the mole of <see cref="P:Mercury.MutexFlag.CanEnter"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.ConstructorBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.#ctor(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.Enter">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.Enter"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MMutexFlag.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.AllInstances.CanEnterGet">
+            <summary>Sets the mole of <see cref="P:Mercury.MutexFlag.CanEnter"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.AllInstances.Enter">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.Enter"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MMutexFlag.MMutexFlagHandler">
+            <summary>Mole type of <see cref="T:Mercury.MutexFlag.MutexFlagHandler"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.MMutexFlagHandler.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.MMutexFlagHandler.#ctor(Mercury.MutexFlag.MutexFlagHandler)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.MMutexFlagHandler.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.MMutexFlagHandler.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Moles.MMutexFlag.MMutexFlagHandler.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.MMutexFlagHandler.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.MMutexFlagHandler.ConstructorMutexFlag">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.MutexFlagHandler.#ctor(Mercury.MutexFlag)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.MMutexFlagHandler.Dispose">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.MutexFlagHandler.Dispose"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.MMutexFlagHandler.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.MutexFlagHandler.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MMutexFlag.MMutexFlagHandler.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.MMutexFlagHandler.AllInstances.Dispose">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.MutexFlagHandler.Dispose"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MMutexFlag.MMutexFlagHandler.AllInstances.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.MutexFlag.MutexFlagHandler.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MNetExtensions">
+            <summary>Mole type of <see cref="T:Mercury.Net.NetExtensions"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MNetExtensions.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MNetExtensions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MNetExtensions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MNetExtensions.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MNetExtensions.GetAddressIPHostEntryFuncOfIPAddressBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.NetExtensions.GetAddress(System.Net.IPHostEntry,System.Func`2{System.Net.IPAddress,System.Boolean})"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MNullLog">
+            <summary>Mole type of <see cref="T:Mercury.Logging.NullLog"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MNullLog.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MNullLog.#ctor(Mercury.Logging.NullLog)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MNullLog.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MNullLog.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MNullLog.Bind(Mercury.Logging.ILog)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MNullLog.Bind(Mercury.Logging.ILog{Mercury.Logging.NullLog})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.CriticalFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.CriticalInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.CriticalInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.CriticalStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.DebugFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.DebugInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.DebugInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.DebugStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.ErrorFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.ErrorInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.ErrorInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.ErrorStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.InfoFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.InfoInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.InfoInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.InfoStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.InitializeString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.NameGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.NullLog.Name"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.WarnFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.WarnInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.WarnInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.WarnStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MNullLog.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.CriticalFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.CriticalInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.CriticalInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.CriticalStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.DebugFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.DebugInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.DebugInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.DebugStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.ErrorFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.ErrorInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.ErrorInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.ErrorStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.InfoFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.InfoInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.InfoInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.InfoStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.InitializeString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.NameGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.NullLog.Name"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.WarnFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.WarnInt32FuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.WarnInt32StringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MNullLog.AllInstances.WarnStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.NullLog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.MObserver">
+            <summary>Mole type of <see cref="T:Mercury.Instrumentation.Observer"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MObserver.#ctor(Mercury.Instrumentation.Observer)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MObserver.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MObserver.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MObserver.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.ConstructorMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.ContextGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Instrumentation.Observer.Context"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.Dispose">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Dispose"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.Enter">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Enter"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.Exit">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Exit"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.LoggerGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Instrumentation.Observer.Logger"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.MObserver.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.AllInstances.ContextGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Instrumentation.Observer.Context"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.AllInstances.Dispose">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Dispose"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.AllInstances.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.AllInstances.Enter">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Enter"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.AllInstances.Exit">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.Observer.Exit"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MObserver.AllInstances.LoggerGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Instrumentation.Observer.Logger"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Collections.Moles.MOrderedDictionary`2">
+            <summary>Mole type of <see cref="T:Mercury.Collections.OrderedDictionary`2"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.#ctor(Mercury.Collections.OrderedDictionary{`0,`1})">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.Bind(Mercury.Collections.IOrderedDictionary{`0,`1})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.Bind(System.Collections.Generic.ICollection{System.Collections.Generic.KeyValuePair{`0,`1}})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.Bind(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.MOrderedDictionary`2.Bind(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AddKeyValuePairOfTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Add(System.Collections.Generic.KeyValuePair`2{`1,`2})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AddTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Add(`1,`2)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AsReadOnly">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.AsReadOnly"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.Clear">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Clear"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ConstructorInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.#ctor(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ConstructorInt32IEqualityComparerOfTKey">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.#ctor(System.Int32,System.Collections.Generic.IEqualityComparer`1{`1})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ConstructorOrderedDictionaryOfTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.#ctor(Mercury.Collections.OrderedDictionary`2{`1,`2})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ContainsKeyTKey">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.ContainsKey(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ContainsKeyValuePairOfTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Contains(System.Collections.Generic.KeyValuePair`2{`1,`2})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.CopyToKeyValuePairOfTKeyTValueArrayInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.CopyTo(System.Collections.Generic.KeyValuePair`2{`1,`2}[],System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.CountGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Count"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.GetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.GetInternalEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.GetInternalEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.IndexOfKeyTKey">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.IndexOfKey(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.InsertInt32TKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Insert(System.Int32,`1,`2)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.IsReadOnlyGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.IsReadOnly"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ItemGetInt32">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ItemGetTKey">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ItemSetInt32TValue">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ItemSetTKeyTValue">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.KeysGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Keys"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.RemoveAtInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.RemoveAt(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.RemoveKeyValuePairOfTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Remove(System.Collections.Generic.KeyValuePair`2{`1,`2})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.RemoveTKey">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Remove(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.TryGetValueTKeyTValueOut">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.TryGetValue(`1,`2@)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.ValuesGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Values"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.AddKeyValuePairOfTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Add(System.Collections.Generic.KeyValuePair`2{`1,`2})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.AddTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Add(`1,`2)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.AsReadOnly">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.AsReadOnly"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.Clear">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Clear"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.ContainsKeyTKey">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.ContainsKey(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.ContainsKeyValuePairOfTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Contains(System.Collections.Generic.KeyValuePair`2{`1,`2})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.CopyToKeyValuePairOfTKeyTValueArrayInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.CopyTo(System.Collections.Generic.KeyValuePair`2{`1,`2}[],System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.CountGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Count"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.GetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.GetInternalEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.GetInternalEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.IndexOfKeyTKey">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.IndexOfKey(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.InsertInt32TKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Insert(System.Int32,`1,`2)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.IsReadOnlyGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.IsReadOnly"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.ItemGetInt32">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.ItemGetTKey">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.ItemSetInt32TValue">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.ItemSetTKeyTValue">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Item(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.KeysGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Keys"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.RemoveAtInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.RemoveAt(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.RemoveKeyValuePairOfTKeyTValue">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Remove(System.Collections.Generic.KeyValuePair`2{`1,`2})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.RemoveTKey">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.Remove(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.TryGetValueTKeyTValueOut">
+            <summary>Sets the mole of <see cref="M:Mercury.Collections.OrderedDictionary`2.TryGetValue(`1,`2@)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.MOrderedDictionary`2.AllInstances.ValuesGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Collections.OrderedDictionary`2.Values"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MPacketHeader">
+            <summary>Mole type of <see cref="T:Mercury.Net.PacketHeader"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketHeader.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketHeader.#ctor(Mercury.Net.PacketHeader)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketHeader.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketHeader.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.CalculateHeaderSize">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.CalculateHeaderSize"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.ConstructorByteByte">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.#ctor(System.Byte,System.Byte)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.ConstructorByteByteCommunicationModeStringEnvelopeEncodingEnvelopeStructure">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.#ctor(System.Byte,System.Byte,Mercury.Net.CommunicationMode,System.String,Mercury.Net.EnvelopeEncoding,Mercury.Net.EnvelopeStructure)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.EnvelopeEncodingGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeEncoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.EnvelopeEncodingSetEnvelopeEncoding">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeEncoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.EnvelopeStructureGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeStructure"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.EnvelopeStructureSetEnvelopeStructure">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeStructure"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.GetBytes">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetBytes"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.GetRecordByteByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetRecord(System.Byte,System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.GetSizeBytesUInt16">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetSizeBytes(System.UInt16)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.GetSizeBytesUInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetSizeBytes(System.UInt32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.MajorVersionGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MajorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.MajorVersionSetByte">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MajorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.MinorVersionGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MinorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.MinorVersionSetByte">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MinorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.ModeGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Mode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.ModeSetCommunicationMode">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Mode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.ViaGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Via"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.ViaSetString">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Via"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MPacketHeader.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.CalculateHeaderSize">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.CalculateHeaderSize"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.EnvelopeEncodingGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeEncoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.EnvelopeEncodingSetEnvelopeEncoding">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeEncoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.EnvelopeStructureGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeStructure"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.EnvelopeStructureSetEnvelopeStructure">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.EnvelopeStructure"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.GetBytes">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetBytes"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.GetRecordByteByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetRecord(System.Byte,System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.GetSizeBytesUInt16">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetSizeBytes(System.UInt16)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.GetSizeBytesUInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketHeader.GetSizeBytes(System.UInt32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.MajorVersionGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MajorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.MajorVersionSetByte">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MajorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.MinorVersionGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MinorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.MinorVersionSetByte">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.MinorVersion"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.ModeGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Mode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.ModeSetCommunicationMode">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Mode"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.ViaGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Via"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketHeader.AllInstances.ViaSetString">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketHeader.Via"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MPacketProtocol">
+            <summary>Mole type of <see cref="T:Mercury.Net.PacketProtocol"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketProtocol.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketProtocol.#ctor(Mercury.Net.PacketProtocol)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketProtocol.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MPacketProtocol.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.ConstructorPacketHeaderByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.#ctor(Mercury.Net.PacketHeader,System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.ConstructorPacketHeaderString">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.#ctor(Mercury.Net.PacketHeader,System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.ConvertToUint16ByteArrayInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.ConvertToUint16(System.Byte[],System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.ConvertToUint32ByteArrayInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.ConvertToUint32(System.Byte[],System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.DataGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketProtocol.Data"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GenerateHeaderCommunicationModeStringEnvelopeEncodingEnvelopeStructure">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GenerateHeader(Mercury.Net.CommunicationMode,System.String,Mercury.Net.EnvelopeEncoding,Mercury.Net.EnvelopeStructure)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GenerateHeaderString">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GenerateHeader(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetBytesUInt16">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetBytes(System.UInt16)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetBytesUInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetBytes(System.UInt32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetDataEncodingByteArrayInt32Int32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetData(System.Text.Encoding,System.Byte[],System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPacket">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacket"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPacketByteArrayByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacket(System.Byte[],System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPacketByteArrayByteArrayByteArrayByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacket(System.Byte[],System.Byte[],System.Byte[],System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPacketByteArrayByteArrayUInt16">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacket(System.Byte[],System.Byte[],System.UInt16)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPacketEnd">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacketEnd"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPacketFaultPacketError">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacketFault(Mercury.Net.PacketError)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPacketPacketHeaderByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacket(Mercury.Net.PacketHeader,System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetPreambleAck">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPreambleAck"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetRecordByteByteArray">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetRecord(System.Byte,System.Byte[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.GetSizedEnvelopeUInt32UInt16">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetSizedEnvelope(System.UInt32,System.UInt16)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.HeaderGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketProtocol.Header"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MPacketProtocol.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.AllInstances.DataGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketProtocol.Data"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.AllInstances.GetPacket">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.PacketProtocol.GetPacket"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MPacketProtocol.AllInstances.HeaderGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.PacketProtocol.Header"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MStringExtensions">
+            <summary>Mole type of <see cref="T:Mercury.StringExtensions"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.MStringExtensions.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.MStringExtensions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Moles.MStringExtensions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.AppendNewLineString">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.AppendNewLine(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.AppendTabString">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.AppendTab(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.FormatWithStringObjectArray">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.FormatWith(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.IsNumericString">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.IsNumeric(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.LeftStringInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.Left(System.String,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.MidStringInt32Int32">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.Mid(System.String,System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.ReplaceInternalStringStringStringInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.ReplaceInternal(System.String,System.String,System.String,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.ReplaceTextStringStringStringInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.ReplaceText(System.String,System.String,System.String,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MStringExtensions.RightStringInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.StringExtensions.Right(System.String,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.MSystemVariable">
+            <summary>Mole type of <see cref="T:Mercury.Instrumentation.SystemVariable"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MSystemVariable.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MSystemVariable.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MSystemVariable.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MSystemVariable.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MSystemVariable.GetExpandedPathVariableString">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.SystemVariable.GetExpandedPathVariable(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.MTcpSockets">
+            <summary>Mole type of <see cref="T:Mercury.Net.TcpSockets"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MTcpSockets.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MTcpSockets.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.MTcpSockets.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.ConnectIPEndPoint">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.TcpSockets.Connect(System.Net.IPEndPoint)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.ConnectInt64Int32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.TcpSockets.Connect(System.Int64,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.ConnectStringInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.TcpSockets.Connect(System.String,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.GetSocketIPEndPointSocketType">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.TcpSockets.GetSocket(System.Net.IPEndPoint,System.Net.Sockets.SocketType)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.GetSocketInt64Int32SocketType">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.TcpSockets.GetSocket(System.Int64,System.Int32,System.Net.Sockets.SocketType)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.LastErrorGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.TcpSockets.LastError"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.LastErrorSetException">
+            <summary>Sets the mole of <see cref="P:Mercury.Net.TcpSockets.LastError"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.MTcpSockets.TryConnectSocketSocketIPEndPoint">
+            <summary>Sets the mole of <see cref="M:Mercury.Net.TcpSockets.TryConnectSocket(System.Net.Sockets.Socket,System.Net.IPEndPoint)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MTextWriterTraceListenerEx">
+            <summary>Mole type of <see cref="T:Mercury.Logging.TextWriterTraceListenerEx"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTextWriterTraceListenerEx.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTextWriterTraceListenerEx.#ctor(Mercury.Logging.TextWriterTraceListenerEx)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTextWriterTraceListenerEx.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTextWriterTraceListenerEx.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTextWriterTraceListenerEx.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTextWriterTraceListenerEx.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTextWriterTraceListenerEx.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TextWriterTraceListenerEx.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTextWriterTraceListenerEx.ConstructorString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TextWriterTraceListenerEx.#ctor(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTextWriterTraceListenerEx.ConstructorStringString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TextWriterTraceListenerEx.#ctor(System.String,System.String)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MTextWriterTraceListenerEx.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="T:Mercury.Moles.MTimeSpanExtensions">
+            <summary>Mole type of <see cref="T:Mercury.TimeSpanExtensions"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.MTimeSpanExtensions.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.MTimeSpanExtensions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Moles.MTimeSpanExtensions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MTimeSpanExtensions.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MTimeSpanExtensions.DaysInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.TimeSpanExtensions.Days(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MTimeSpanExtensions.HoursInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.TimeSpanExtensions.Hours(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MTimeSpanExtensions.MillisecondsInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.TimeSpanExtensions.Milliseconds(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MTimeSpanExtensions.MinutesInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.TimeSpanExtensions.Minutes(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MTimeSpanExtensions.SecondsInt32">
+            <summary>Sets the mole of <see cref="M:Mercury.TimeSpanExtensions.Seconds(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MTraceCollection">
+            <summary>Mole type of <see cref="T:Mercury.Logging.TraceCollection"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTraceCollection.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTraceCollection.#ctor(Mercury.Logging.TraceCollection)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTraceCollection.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTraceCollection.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTraceCollection.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.MTraceCollection.Bind(System.Collections.Generic.IEnumerable{System.Diagnostics.TraceSource})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.CountGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.TraceCollection.Count"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.GetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.GetTraceString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.GetTrace(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.ItemGetString">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.TraceCollection.Item(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.NamesGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.TraceCollection.Names"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.RemoveTraceString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.RemoveTrace(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.TryAddTraceTraceSource">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.TryAddTrace(System.Diagnostics.TraceSource)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.TryGetTraceStringTraceSourceOut">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.TryGetTrace(System.String,System.Diagnostics.TraceSource@)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.MTraceCollection.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.CountGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.TraceCollection.Count"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.GetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.GetTraceString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.GetTrace(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.ItemGetString">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.TraceCollection.Item(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.NamesGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Logging.TraceCollection.Names"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.RemoveTraceString">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.RemoveTrace(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.TryAddTraceTraceSource">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.TryAddTrace(System.Diagnostics.TraceSource)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.MTraceCollection.AllInstances.TryGetTraceStringTraceSourceOut">
+            <summary>Sets the mole of <see cref="M:Mercury.Logging.TraceCollection.TryGetTrace(System.String,System.Diagnostics.TraceSource@)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.MTraceObserver">
+            <summary>Mole type of <see cref="T:Mercury.Instrumentation.TraceObserver"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MTraceObserver.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MTraceObserver.#ctor(Mercury.Instrumentation.TraceObserver)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MTraceObserver.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MTraceObserver.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.MTraceObserver.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.CaptureStateGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Instrumentation.TraceObserver.CaptureState"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.ConstructorMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.ConstructorMethodBaseILogFuncOfString">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.ConstructorMethodBaseILogFuncOfStringBoolean">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog,System.Func`1{System.String},System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.EnterObserverBlockInternalMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlockInternal(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.EnterObserverBlockMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.ExitObserverBlockMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.GetCurrentState">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.GetCurrentState"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.InternalGetStateFormattedContextName">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.InternalGetStateFormattedContextName"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.MTraceObserver.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.AllInstances.CaptureStateGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Instrumentation.TraceObserver.CaptureState"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.AllInstances.EnterObserverBlockInternalMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlockInternal(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.AllInstances.EnterObserverBlockMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.AllInstances.ExitObserverBlockMethodBaseILog">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.AllInstances.GetCurrentState">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.GetCurrentState"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.MTraceObserver.AllInstances.InternalGetStateFormattedContextName">
+            <summary>Sets the mole of <see cref="M:Mercury.Instrumentation.TraceObserver.InternalGetStateFormattedContextName"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MUtils">
+            <summary>Mole type of <see cref="T:Mercury.Utils"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.MUtils.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:Mercury.Moles.MUtils.#ctor(Mercury.Utils)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.MUtils.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Moles.MUtils.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MUtils.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Moles.MUtils.Constructor">
+            <summary>Sets the mole of <see cref="M:Mercury.Utils.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Moles.MUtils.GetCultureInfo">
+            <summary>Sets the mole of <see cref="M:Mercury.Utils.GetCultureInfo"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Moles.MUtils.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="T:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper">
+            <summary>Mole type of <see cref="T:Mercury.Xml.Serialization.XmlSerializationHelper"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.DeserializeString``1(Microsoft.Moles.Framework.MolesDelegates.Func{System.String,``0})">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.Deserialize``1(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.CurrentEncodingGet">
+            <summary>Sets the mole of <see cref="P:Mercury.Xml.Serialization.XmlSerializationHelper.CurrentEncoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.DeserializeStringType">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.Deserialize(System.String,System.Type)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.DeserializeTypeString">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.DeserializeType(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.DeserializeTypeXmlReader">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.DeserializeType(System.Xml.XmlReader)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.GenerateHeaderEncoding">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.GenerateHeader(System.Text.Encoding)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.GetSerializableTypeNameType">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.GetSerializableTypeName(System.Type)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.SerializeObject">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.Serialize(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.SerializeObjectEncoding">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.Serialize(System.Object,System.Text.Encoding)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.SerializeObjectXmlWriter">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.Serialize(System.Object,System.Xml.XmlWriter)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.SerializeTypeType">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.SerializeType(System.Type)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.SerializeTypeTypeEncoding">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.SerializeType(System.Type,System.Text.Encoding)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.SerializeTypeTypeXmlWriter">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.SerializeType(System.Type,System.Xml.XmlWriter)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.Moles.MXmlSerializationHelper.SetEncodingEncoding">
+            <summary>Sets the mole of <see cref="M:Mercury.Xml.Serialization.XmlSerializationHelper.SetEncoding(System.Text.Encoding)"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.SDiagnosticsLog">
+            <summary>Stub type of <see cref="T:Mercury.Logging.DiagnosticsLog"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Critical(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Critical(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Critical(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Critical(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.CriticalFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.CriticalInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.CriticalInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.CriticalStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Debug(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Debug(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Debug(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Debug(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.DebugFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.DebugInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.DebugInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.DebugStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Error(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Error(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Error(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Error(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.ErrorFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.ErrorInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.ErrorInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.ErrorStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Info(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Info(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Info(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Info(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.InfoFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.InfoInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.InfoInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.InfoStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Initialize(System.String)">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.InitializeString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.InitializeStub">
+            <summary>Initializes a new instance of type SDiagnosticsLog</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.InitializeTraceSource(System.Diagnostics.TraceSource)">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.InitializeTraceSource(System.Diagnostics.TraceSource)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.InitializeTraceSourceTraceSource">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.InitializeTraceSource(System.Diagnostics.TraceSource)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.NameGet">
+            <summary>Sets the stub of <see cref="P:Mercury.Logging.DiagnosticsLog.Name"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Warn(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Warn(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Warn(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SDiagnosticsLog.Warn(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.WarnFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.WarnInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.WarnInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SDiagnosticsLog.WarnStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.DiagnosticsLog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.SDiagnosticsLog.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.SDiagnosticsLog.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.SDiagnosticsLog.Name">
+            <summary>Sets the stub of <see cref="P:Mercury.Logging.DiagnosticsLog.Name"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.IO.Moles.SEncodableStringWriter">
+            <summary>Stub type of <see cref="T:Mercury.IO.EncodableStringWriter"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.SEncodableStringWriter.#ctor(System.Text.Encoding)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.SEncodableStringWriter.#ctor(System.Text.Encoding,System.Text.StringBuilder)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="F:Mercury.IO.Moles.SEncodableStringWriter.EncodingGet">
+            <summary>Sets the stub of <see cref="P:Mercury.IO.EncodableStringWriter.Encoding"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.IO.Moles.SEncodableStringWriter.InitializeStub">
+            <summary>Initializes a new instance of type SEncodableStringWriter</summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.SEncodableStringWriter.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.SEncodableStringWriter.Encoding">
+            <summary>Sets the stub of <see cref="P:Mercury.IO.EncodableStringWriter.Encoding"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.IO.Moles.SEncodableStringWriter.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.SEnvelopeEncoding">
+            <summary>Stub type of <see cref="T:Mercury.Net.EnvelopeEncoding"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SEnvelopeEncoding.#ctor(System.Byte)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SEnvelopeEncoding.InitializeStub">
+            <summary>Initializes a new instance of type SEnvelopeEncoding</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.SEnvelopeEncoding.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.SEnvelopeEncoding.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Moles.SHashItem`2">
+            <summary>Stub type of <see cref="T:Mercury.HashItem`2"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.SHashItem`2.#ctor(`0,`1,System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.SHashItem`2.Equals(System.Object)">
+            <summary>Sets the stub of <see cref="M:Mercury.HashItem`2.Equals(System.Object)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Moles.SHashItem`2.EqualsObject">
+            <summary>Sets the stub of <see cref="M:Mercury.HashItem`2.Equals(System.Object)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Moles.SHashItem`2.GetHashCode">
+            <summary>Sets the stub of <see cref="M:Mercury.HashItem`2.GetHashCode"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Moles.SHashItem`2.GetHashCode01">
+            <summary>Sets the stub of <see cref="M:Mercury.HashItem`2.GetHashCode"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Moles.SHashItem`2.InitializeStub">
+            <summary>Initializes a new instance of type SHashItem</summary>
+        </member>
+        <member name="P:Mercury.Moles.SHashItem`2.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Moles.SHashItem`2.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.SILog">
+            <summary>Stub type of <see cref="T:Mercury.Logging.ILog"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.#ctor">
+            <summary>Initializes a new instance of type SILog</summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.CriticalFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.CriticalInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.CriticalInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.CriticalStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.DebugFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.DebugInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.DebugInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.DebugStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.ErrorFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.ErrorInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.ErrorInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.ErrorStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.InfoFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.InfoInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.InfoInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.InfoStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.InitializeString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Critical(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Critical(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Critical(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Critical(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Critical(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Debug(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Debug(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Debug(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Debug(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Debug(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Error(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Error(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Error(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Error(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Error(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Info(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Info(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Info(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Info(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Info(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Initialize(System.String)">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Initialize(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Warn(System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Warn(System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Warn(System.Int32,System.Func{System.String})">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Warn(System.Int32,System.String,System.Object[])">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.NameGet">
+            <summary>Sets the stub of <see cref="P:Mercury.Logging.ILog.Name"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.WarnFuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.WarnInt32FuncOfString">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.Int32,System.Func`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.WarnInt32StringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.Int32,System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.Moles.SILog.WarnStringObjectArray">
+            <summary>Sets the stub of <see cref="M:Mercury.Logging.ILog.Warn(System.String,System.Object[])"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.SILog.mc::Mercury#Logging#ILog#Name">
+            <summary>Sets the stub of <see cref="P:Mercury.Logging.ILog.Name"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.SILog01`1">
+            <summary>Stub type of <see cref="T:Mercury.Logging.ILog`1"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SILog01`1.#ctor">
+            <summary>Initializes a new instance of type SILog01</summary>
+        </member>
+        <member name="T:Mercury.Collections.Moles.SIOrderedDictionary`2">
+            <summary>Stub type of <see cref="T:Mercury.Collections.IOrderedDictionary`2"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.#ctor">
+            <summary>Initializes a new instance of type SIOrderedDictionary</summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.AddKeyValuePairOfTKeyTValue">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Add(`1)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.AddTKeyTValue">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.Add(`1,`2)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.Clear">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Clear"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.ContainsKeyTKey">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.ContainsKey(`1)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.ContainsKeyValuePairOfTKeyTValue">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Contains(`1)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.CopyToKeyValuePairOfTKeyTValueArrayInt32">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.CopyTo(`1[],System.Int32)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.CountGet">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.ICollection`1.Count"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.GetEnumerator">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.GetEnumerator01">
+            <summary>Sets the stub of <see cref="M:System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.InsertInt32TKeyTValue">
+            <summary>Sets the stub of <see cref="M:Mercury.Collections.IOrderedDictionary`2.Insert(System.Int32,`1,`2)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.IsReadOnlyGet">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.ICollection`1.IsReadOnly"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.ItemGetTKey">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.IDictionary`2.Item(`1)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.ItemSetTKeyTValue">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.IDictionary`2.Item(`1)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.KeysGet">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.IDictionary`2.Keys"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.mc::Mercury#Collections#IOrderedDictionary{TKey@TValue}#Insert(System.Int32,`0,`1)">
+            <summary>Sets the stub of <see cref="M:Mercury.Collections.IOrderedDictionary`2.Insert(System.Int32,`1,`2)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.mc::Mercury#Collections#IOrderedDictionary{TKey@TValue}#RemoveAt(System.Int32)">
+            <summary>Sets the stub of <see cref="M:Mercury.Collections.IOrderedDictionary`2.RemoveAt(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.RemoveAtInt32">
+            <summary>Sets the stub of <see cref="M:Mercury.Collections.IOrderedDictionary`2.RemoveAt(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.RemoveKeyValuePairOfTKeyTValue">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Remove(`1)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.RemoveTKey">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.Remove(`1)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Add(`1)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Clear">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Clear"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Contains(`1)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.CopyTo(`1[],System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.ICollection`1.Remove(`1)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#IDictionary{TKey@TValue}#Add(`0,`1)">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.Add(`1,`2)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#IDictionary{TKey@TValue}#ContainsKey(`0)">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.ContainsKey(`1)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#IDictionary{TKey@TValue}#Remove(`0)">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.Remove(`1)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#IDictionary{TKey@TValue}#TryGetValue(`0,`1@)">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.TryGetValue(`1,`2@)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey@TValue}}#GetEnumerator">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#IEnumerable#GetEnumerator">
+            <summary>Sets the stub of <see cref="M:System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.TryGetValueTKeyTValueOut">
+            <summary>Sets the stub of <see cref="M:System.Collections.Generic.IDictionary`2.TryGetValue(`1,`2@)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Collections.Moles.SIOrderedDictionary`2.ValuesGet">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.IDictionary`2.Values"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#Count">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.ICollection`1.Count"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey@TValue}}#IsReadOnly">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.ICollection`1.IsReadOnly"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.SIOrderedDictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Item(`0)">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.IDictionary`2.Item(`1)"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#IDictionary{TKey@TValue}#Keys">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.IDictionary`2.Keys"/>
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.SIOrderedDictionary`2.global::System#Collections#Generic#IDictionary{TKey@TValue}#Values">
+            <summary>Sets the stub of <see cref="P:System.Collections.Generic.IDictionary`2.Values"/>
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.SInstrumentationUtil">
+            <summary>Stub type of <see cref="T:Mercury.Instrumentation.InstrumentationUtil"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SInstrumentationUtil.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SInstrumentationUtil.InitializeStub">
+            <summary>Initializes a new instance of type SInstrumentationUtil</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.SInstrumentationUtil.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.SInstrumentationUtil.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Moles.SMutexFlag">
+            <summary>Stub type of <see cref="T:Mercury.MutexFlag"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.SMutexFlag.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.SMutexFlag.#ctor(System.Boolean)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.SMutexFlag.InitializeStub">
+            <summary>Initializes a new instance of type SMutexFlag</summary>
+        </member>
+        <member name="P:Mercury.Moles.SMutexFlag.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Moles.SMutexFlag.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.SNullLog">
+            <summary>Stub type of <see cref="T:Mercury.Logging.NullLog"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SNullLog.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.SNullLog.InitializeStub">
+            <summary>Initializes a new instance of type SNullLog</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.SNullLog.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.SNullLog.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.SObserver">
+            <summary>Stub type of <see cref="T:Mercury.Instrumentation.Observer"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SObserver.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SObserver.Enter">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Enter"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.SObserver.Enter01">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Enter"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SObserver.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.SObserver.EnterObserverBlockMethodBaseILog">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SObserver.Exit">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Exit"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.SObserver.Exit01">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Exit"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SObserver.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.SObserver.ExitObserverBlockMethodBaseILog">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.SObserver.InitializeStub">
+            <summary>Initializes a new instance of type SObserver</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.SObserver.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.SObserver.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Collections.Moles.SOrderedDictionary`2">
+            <summary>Stub type of <see cref="T:Mercury.Collections.OrderedDictionary`2"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SOrderedDictionary`2.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SOrderedDictionary`2.#ctor(System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SOrderedDictionary`2.#ctor(Mercury.Collections.OrderedDictionary{`0,`1})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SOrderedDictionary`2.#ctor(System.Int32,System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Collections.Moles.SOrderedDictionary`2.InitializeStub">
+            <summary>Initializes a new instance of type SOrderedDictionary</summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.SOrderedDictionary`2.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Collections.Moles.SOrderedDictionary`2.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.SPacketHeader">
+            <summary>Stub type of <see cref="T:Mercury.Net.PacketHeader"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SPacketHeader.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SPacketHeader.#ctor(System.Byte,System.Byte)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SPacketHeader.#ctor(System.Byte,System.Byte,Mercury.Net.CommunicationMode,System.String,Mercury.Net.EnvelopeEncoding,Mercury.Net.EnvelopeStructure)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SPacketHeader.InitializeStub">
+            <summary>Initializes a new instance of type SPacketHeader</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.SPacketHeader.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.SPacketHeader.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Net.Moles.SPacketProtocol">
+            <summary>Stub type of <see cref="T:Mercury.Net.PacketProtocol"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SPacketProtocol.#ctor(Mercury.Net.PacketHeader,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SPacketProtocol.#ctor(Mercury.Net.PacketHeader,System.Byte[])">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Net.Moles.SPacketProtocol.InitializeStub">
+            <summary>Initializes a new instance of type SPacketProtocol</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.SPacketProtocol.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Net.Moles.SPacketProtocol.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.STextWriterTraceListenerEx">
+            <summary>Stub type of <see cref="T:Mercury.Logging.TextWriterTraceListenerEx"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.STextWriterTraceListenerEx.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.STextWriterTraceListenerEx.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.STextWriterTraceListenerEx.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.STextWriterTraceListenerEx.InitializeStub">
+            <summary>Initializes a new instance of type STextWriterTraceListenerEx</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.STextWriterTraceListenerEx.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.STextWriterTraceListenerEx.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Logging.Moles.STraceCollection">
+            <summary>Stub type of <see cref="T:Mercury.Logging.TraceCollection"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.STraceCollection.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Logging.Moles.STraceCollection.InitializeStub">
+            <summary>Initializes a new instance of type STraceCollection</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.STraceCollection.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Logging.Moles.STraceCollection.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Moles.STraceObserver">
+            <summary>Stub type of <see cref="T:Mercury.Instrumentation.TraceObserver"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog,System.Func{System.String})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog,System.Func{System.String},System.Boolean)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.Enter">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Enter"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.STraceObserver.Enter01">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Enter"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.STraceObserver.EnterObserverBlockMethodBaseILog">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.Exit">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Exit"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.STraceObserver.Exit01">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.Observer.Exit"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.TraceObserver.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.STraceObserver.ExitObserverBlockMethodBaseILog">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.TraceObserver.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.GetCurrentState">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.TraceObserver.GetCurrentState"/>
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.Moles.STraceObserver.GetCurrentState01">
+            <summary>Sets the stub of <see cref="M:Mercury.Instrumentation.TraceObserver.GetCurrentState"/>
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Moles.STraceObserver.InitializeStub">
+            <summary>Initializes a new instance of type STraceObserver</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.STraceObserver.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Moles.STraceObserver.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:Mercury.Moles.SUtils">
+            <summary>Stub type of <see cref="T:Mercury.Utils"/>
+            .</summary>
+        </member>
+        <member name="M:Mercury.Moles.SUtils.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Mercury.Moles.SUtils.InitializeStub">
+            <summary>Initializes a new instance of type SUtils</summary>
+        </member>
+        <member name="P:Mercury.Moles.SUtils.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Mercury.Moles.SUtils.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+    </members>
+</doc>

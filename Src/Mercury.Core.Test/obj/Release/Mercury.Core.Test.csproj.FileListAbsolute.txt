@@ -1,0 +1,8 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\bin\Release\Mercury.Core.Test.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\bin\Release\Mercury.Core.Test.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\bin\Release\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\bin\Release\Mercury.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\bin\Release\Mercury.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\obj\Release\Mercury.Core.Test.csprojResolveAssemblyReference.cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\obj\Release\Mercury.Core.Test.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.Test\obj\Release\Mercury.Core.Test.pdb

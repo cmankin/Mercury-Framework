@@ -1,0 +1,16 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Samples.AgentCounting.exe.config
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Samples.AgentCounting.exe
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Samples.AgentCounting.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Mercury.Messaging.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Samples.Common.Data.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Microsoft.Ccr.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Microsoft.Ccr.Adapters.IO.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Mercury.Messaging.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Mercury.Messaging.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Samples.Common.Data.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Samples.Common.Data.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Mercury.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\bin\Release\Mercury.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\obj\x86\Release\Samples.AgentCounting.exe
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.AgentCounting\obj\x86\Release\Samples.AgentCounting.pdb

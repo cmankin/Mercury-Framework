@@ -1,0 +1,371 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Mercury.Core.OpenXml
+</name>
+</assembly>
+<members>
+<member name="M:Mercury.Document.PackageFileInfo.#ctor(Mercury.Document.FilePackage)">
+	<summary>
+ Initializes a default instance of the <c>PackageFileInfo</c> 
+ with the specified <c>FilePackage</c> instance.
+ </summary>
+	<param name="parent">Owning <c>FilePackage</c> instance.</param>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.PackageFileInfo.#ctor(Mercury.Document.FilePackage,System.String)">
+	<summary>
+ Initializes a default instance of the <c>PackageFileInfo</c> 
+ with the specified <c>FilePackage</c> instance and resource 
+ file relative system path.
+ </summary>
+	<param name="parent">Owning <c>FilePackage</c> instance.</param>
+	<param name="path">Relative path from package root to resource file.</param>
+</member><member name="P:Mercury.Document.PackageFileInfo.ParentPackage">
+	<summary>
+ Gets the parent package to which this <c>PackageDirectoryInfo</c> belongs.
+ </summary>
+	<returns>the parent package to which this <c>PackageDirectoryInfo</c> belongs.</returns>
+</member><member name="P:Mercury.Document.PackageFileInfo.ParentPath">
+	<summary>
+ Gets the path to the parent package.
+ </summary>
+	<returns>The path to the parent package.</returns>
+</member><member name="P:Mercury.Document.PackageFileInfo.FullPath">
+	<summary>
+ Gets the full system path to the file.
+ </summary>
+	<returns>The full system path to the file.</returns>
+</member><member name="P:Mercury.Document.PackageFileInfo.RelativePath">
+	<summary>
+ Gets or sets the relative path from the package root to the file.
+ </summary>
+	<value>The relative path from the package root to the file.</value>
+	<returns>The relative path from the package root to the file.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.Document.PackageFileInfo.Name">
+	<summary>
+ Gets the name of the file.
+ </summary>
+	<returns>The name of the file.</returns>
+</member><member name="M:Mercury.Document.PackageFileInfo.Extract(System.IO.StreamReader@)">
+	<summary>
+ Extracts the contents of the file specified by this 
+ <c>PackageFileInfo</c> into the provided <c>StreamReader</c>.
+ </summary>
+	<param name="reader"><c>StreamReader</c> to fill with file contents.</param>
+</member><member name="M:Mercury.Document.PackageFileInfo.GetNameWithoutExtension">
+	<summary>
+ Returns the file name without the extension.
+ </summary>
+	<returns>The file name without the extension.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.PackageFileInfo.Save(System.String)">
+	<summary>
+ Saves the specified content string to the file 
+ specified by this <c>PackageFileInfo</c> instance.
+ </summary>
+	<param name="content">Text content to save to file.</param>
+</member><member name="M:Mercury.Document.PackageFileInfo.GetNameFromPath(System.String,System.String)">
+	<summary>
+ Returns the file name from a system file path.
+ </summary>
+	<param name="path">Full system path to file.</param>
+	<param name="delim">Optional delimiter used in file path. Default is '\'.</param>
+	<returns>The file name from a system file path.</returns>
+</member><member name="M:Mercury.Document.PackageFileInfo.GetDirectoryPath(System.String,System.String)">
+	<summary>
+ Returns only the directory path from a system file path.
+ </summary>
+	<param name="path">Full system path to file.</param>
+	<param name="delim">Optional delimiter used in file path. Default is '\'.</param>
+	<returns>The directory path from a system file path.</returns>
+</member><member name="M:Mercury.Document.PackageFileInfo.GetNameWithoutExtension(System.String)">
+	<summary>
+ Gets the file name of the specified path string without the extension.
+ </summary>
+	<param name="path">The path of the file.</param>
+	<returns>The file name of the specified path string without the extension.</returns>
+	<remarks></remarks>
+</member><member name="T:Mercury.Document.PackageFileInfo">
+	<summary>
+ Represents a set of information for a packaged (ZIP) file.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.#ctor(System.String)">
+	<summary>
+ Initializes a default instance of the <c>ExcelFastReader</c> class with the specified file path.
+ </summary>
+	<param name="path">The path to the Excel file to read.</param>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.#ctor(System.String,System.Boolean)">
+	<summary>
+ Initializes a default instance of the <c>ExcelFastReader</c> class with the 
+ specified file path and string table cache state.
+ </summary>
+	<param name="path">The path to the Excel file to read.</param>
+	<param name="isCachedStringTable">A value indicating whether the <c>StringTable</c> should be cached.  
+ If the <c>StringTable</c> is not cached all string values in the file will appear as the numeric 
+ equivalent to the position in which they are located in the table.  This table may be cached after 
+ object construction by calling the <see>CacheLocalStringTable</see> method.</param>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.#ctor(System.String,System.Boolean,System.String)">
+	<summary>
+ Initializes a default instance of the <c>ExcelFastReader</c> class with the 
+ specified file path, string table cache state, and current worksheet name.
+ </summary>
+	<param name="path">The path to the Excel file to read.</param>
+	<param name="isCachedStringTable">A value indicating whether the <c>StringTable</c> should be cached.  
+ If the <c>StringTable</c> is not cached all string values in the file will appear as the numeric 
+ equivalent to the position in which they are located in the table.  This table may be cached after 
+ object construction by calling the <see>CacheLocalStringTable</see> method.</param>
+	<param name="currentWorksheet">The name of the worksheet to begin reading.</param>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.#ctor(System.String,System.Boolean,System.String,System.Boolean)">
+	<summary>
+ Initializes a default instance of the <c>ExcelFastReader</c> class with the 
+ specified file path, string table cache state, current worksheet name, and 
+ a value indicating whether the first row contains column headers.
+ </summary>
+	<param name="path">The path to the Excel file to read.</param>
+	<param name="isCachedStringTable">A value indicating whether the <c>StringTable</c> should be cached.  
+ If the <c>StringTable</c> is not cached all string values in the file will appear as the numeric 
+ equivalent to the position in which they are located in the table.  This table may be cached after 
+ object construction by calling the <see>CacheLocalStringTable</see> method.</param>
+	<param name="currentWorksheet">The name of the worksheet to begin reading.</param>
+	<param name="firstRowHeaders">A value indicating whether the first row of data contains column headers.</param>
+	<remarks></remarks>
+</member><member name="P:Mercury.OpenXml.Excel.ExcelFastReader.CanReadRow">
+	<summary>
+ Gets a value indicating whether the current state of the reader allows by-row reading.
+ </summary>
+	<value></value>
+	<returns>True if the current state of the reader allows by-row reading; otherwise, false.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.OpenXml.Excel.ExcelFastReader.CurrentRow">
+	<summary>
+ Gets the current row of data.
+ </summary>
+	<value>The current row of data.</value>
+	<returns>The current row of data.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.OpenXml.Excel.ExcelFastReader.CurrentWorksheet">
+	<summary>
+ Gets or sets the name of the current worksheet from which to read data.
+ </summary>
+	<value>The name of the current worksheet from which to read data.</value>
+	<returns>The name of the current worksheet from which to read data.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.OpenXml.Excel.ExcelFastReader.FirstRowHeaders">
+	<summary>
+ Gets or sets a value indicating whether the first row of the Excel file contains column headers.
+ </summary>
+	<value>A value indicating whether the first row of the Excel file contains column headers.</value>
+	<returns>A value indicating whether the first row of the Excel file contains column headers.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.OpenXml.Excel.ExcelFastReader.Package">
+	<summary>
+ Gets the <c>FilePackage</c> for the Excel file.
+ </summary>
+	<returns>The <c>FilePackage</c> for the Excel file.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.OpenXml.Excel.ExcelFastReader.StringTable">
+	<summary>
+ Gets the cached string table used in the <c>Excel</c> file. 
+ If the table is not already cached, it will attempt to 
+ cache and return the result.
+ </summary>
+	<returns>The cached string table used in the <c>Excel</c> file.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.CacheLocalStringTable">
+	<summary>
+ Caches the <c>StringTable</c> for the current Excel document.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.GetContent(System.String)">
+	<summary>
+ Gets the <c>XML</c> content of the file at the specified path.
+ </summary>
+	<param name="path">Relative path from the package root to the file resource.</param>
+	<returns>The <c>XML</c> content of the file at the specified path.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.TrimNumber(System.String)">
+	<summary>
+ Returns a specified <c>String</c> with all numeric values removed.
+ </summary>
+	<param name="value">The <c>String</c> to trim.</param>
+	<returns>A specified <c>String</c> with all numeric values removed.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.CloseReader">
+	<summary>
+ Closes the reader and sets it to null.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.ReadRow(System.Collections.Generic.ICollection{System.String}@,System.Boolean)">
+	<summary>
+ Reads a row of data in an Excel worksheet, fills the specified <c>ICollection</c> 
+ with a collection of <c>String</c> data objects for each cell in the row and 
+ returns a value indicating whether the row was successfully read.  If a cell 
+ does not have a value an empty string ("") is inserted in place.
+ </summary>
+	<param name="row">The <c>ICollection</c> to fill with cell data for the current row.</param>
+	<param name="generateBlock">A value indicating whether this read should set the block data for the import.  
+ Generating a block captures the columns included in the row and assigns a positional value to each 
+ successive column encountered.  Successive reads will be compared against the block, and if any cells are 
+ skipped, blank data will be filled in to line up the data correctly.  If a cell is out of bounds, the 
+ procedure will throw an error.  If this is undesirable, do not generate the block.</param>
+	<returns>True if the row was successfully read; otherwise, false.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.ReadRow">
+	<summary>
+ Reads a row of data in an Excel worksheet and returns a collection 
+ of <c>String</c> data objects for each cell in the row.  If a cell 
+ does not have a value an empty string ("") is inserted in place.
+ </summary>
+	<returns>A collection of <c>String</c> data objects for each cell in the row.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.OpenXml.Excel.ExcelFastReader.ReadIntoDataSet">
+	<summary>
+ Internally reads the Excel file and returns a <c>DataSet</c> 
+ with a <c>DataTable</c> for each worksheet containing data.
+ </summary>
+	<returns>A <c>DataSet</c> with a <c>DataTable</c> for each worksheet containing data.</returns>
+	<remarks></remarks>
+</member><member name="T:Mercury.OpenXml.Excel.ExcelFastReader">
+	<summary>
+ Represents a reader for Microsoft OpenXML Excel files.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.FilePackage.#ctor">
+	<summary>
+ Initializes a default instance of the <c>FilePackage</c> class.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.FilePackage.#ctor(System.String)">
+	<summary>
+ Initializes a default instance of the <c>FilePackage</c> 
+ class with the specified system path to the file.
+ </summary>
+	<param name="path">Full system path to file.</param>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.FilePackage.#ctor(System.String,System.String)">
+	<summary>
+ Initializes a default instance of the <c>FilePackage</c> class with 
+ the specified package name and path to the package directory.
+ </summary>
+	<param name="name">The name of the package.</param>
+	<param name="directoryPath">The path to the package directory.</param>
+</member><member name="P:Mercury.Document.FilePackage.Path">
+	<summary>
+ Gets the full system file path to the package.
+ </summary>
+	<returns>The full system file path to the package.</returns>
+</member><member name="P:Mercury.Document.FilePackage.DirectoryPath">
+	<summary>
+ Gets or sets the system directory path to the package.
+ </summary>
+	<value>The system directory path to the package.</value>
+	<returns>The system directory path to the package.</returns>
+</member><member name="P:Mercury.Document.FilePackage.Name">
+	<summary>
+ Gets or sets the name of the package.
+ </summary>
+	<value>The name of the package.</value>
+	<returns>The name of the package.</returns>
+</member><member name="P:Mercury.Document.FilePackage.Contents">
+	<summary>
+ Gets a collection of <c>PackageFileInfo</c> objects 
+ for content contained within the <c>FilePackage</c>.
+ </summary>
+	<returns>A collection of <c>PackageFileInfo</c> objects.</returns>
+</member><member name="M:Mercury.Document.FilePackage.AddContentInfo(System.String)">
+	<summary>
+ Adds the relative path resource to the <c>FilePackage</c> if it does not already exist.
+ </summary>
+	<param name="path">Relative path from the package root to the file resource.</param>
+</member><member name="M:Mercury.Document.FilePackage.RemoveContentInfo(System.String)">
+	<summary>
+ Removes the content <c>PackageFileInfo</c> at the specified path.
+ </summary>
+	<param name="path">Relative path from the package root to the file resource.</param>
+</member><member name="M:Mercury.Document.FilePackage.ClearContentInfo">
+	<summary>
+ Clears all <c>PackageFileInfo</c> objects 
+ associated with the <c>FilePackage</c>.
+ </summary>
+</member><member name="M:Mercury.Document.FilePackage.ExtractContentInfo">
+	<summary>
+ Extracts packaged file content information into 
+ a collection of <c>PackageFileInfo</c> objects.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.FilePackage.ExtractContent(System.String)">
+	<summary>
+ Returns the <c>String</c> content of the file at the specified file path.
+ </summary>
+	<param name="path">Relative path from the package root to the file resource.</param>
+	<returns>The <c>String</c> content of the file at the specified file path.</returns>
+</member><member name="M:Mercury.Document.FilePackage.ExtractContent(System.String,System.IO.StreamReader@)">
+	<summary>
+ Extracts the content from the file at the 
+ specified path into a <c>StreamReader</c>.
+ </summary>
+	<param name="path">Relative path from the package root to the file resource.</param>
+	<param name="reader">A <c>StreamReader</c> into 
+ which the file contents will be extracted.</param>
+</member><member name="M:Mercury.Document.FilePackage.FileExists(System.String)">
+	<summary>
+ Determines whether the specified file name exists in the package.
+ </summary>
+	<param name="name">The file name to check for existence.</param>
+	<returns>True if the file exists in the package; otherwise, false.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.FilePackage.GetFileEntries(System.String)">
+	<summary>
+ Returns a collection of <c>PackageFileInfo</c> objects that are children of the specified directory.
+ </summary>
+	<param name="dirPath">The path to the directory to retrieve entries.</param>
+	<returns>A collection of <c>PackageFileInfo</c> objects 
+ that are children of the specified directory.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.Document.FilePackage.SaveContent(System.String,System.String)">
+	<summary>
+ Saves the specified content <c>String</c> to the file resource at the specified path.
+ </summary>
+	<param name="path">Relative path from the package root to the file resource.</param>
+	<param name="content">Text content to save to file.</param>
+</member><member name="M:Mercury.Document.FilePackage.RemoveContent(System.String)">
+	<summary>
+ Removes the file resource at the specified path.  This method 
+ also removes the associated <c>PackageFileInfo</c> object.
+ </summary>
+	<param name="path">Relative path from the package root to the file resource.</param>
+</member><member name="M:Mercury.Document.FilePackage.IsInDirectoryPath(System.String,System.String)">
+	<summary>
+ Determines whether a specified file path is contained within the specified directory path.
+ </summary>
+	<param name="path">The file path to be evaluated.</param>
+	<param name="dirPath">The directory path to search for.</param>
+	<returns>True if the file path is contained within the specified directory path; otherwise, false.</returns>
+	<remarks></remarks>
+</member><member name="T:Mercury.Document.FilePackage">
+	<summary>
+ A file wrapper that can be used to represent a packaged (ZIP) file.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Mercury.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Mercury.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Mercury.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

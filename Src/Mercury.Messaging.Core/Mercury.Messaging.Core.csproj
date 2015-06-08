@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B69290C-6C75-47AD-AD68-1D7E198465C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mercury.Messaging</RootNamespace>
+    <AssemblyName>Mercury.Messaging.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Mercury.Messaging.Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Mercury.Messaging.Core.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Ccr.Adapters.IO, Version=4.0.261.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Ccr.Adapters.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ccr.Core, Version=4.0.261.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Ccr.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\build\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Channels\ChannelBase.cs" />
+    <Compile Include="Channels\ChannelFactory.cs" />
+    <Compile Include="Channels\FutureChannel.cs" />
+    <Compile Include="Channels\FutureMulticastChannel.cs" />
+    <Compile Include="Channels\IChannel.cs" />
+    <Compile Include="Channels\ITimeoutChannel.cs" />
+    <Compile Include="Channels\IUntypedChannel.cs" />
+    <Compile Include="Channels\MultiCastChannel.cs" />
+    <Compile Include="Channels\RemotingChannel.cs" />
+    <Compile Include="Channels\LocalRefChannel.cs" />
+    <Compile Include="Channels\SynchronousChannel.cs" />
+    <Compile Include="Channels\ResourceTimeoutChannel.cs" />
+    <Compile Include="Core\Agents\Agent.cs" />
+    <Compile Include="Core\Agents\AgentFactory.cs" />
+    <Compile Include="Core\Agents\AgentPort.cs" />
+    <Compile Include="Core\Agents\AnonymousAgent.cs" />
+    <Compile Include="Core\Catalog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\CommunicationMode.cs" />
+    <Compile Include="Core\RTConstraintException.cs" />
+    <Compile Include="Core\CoreInstanceProvider.cs" />
+    <Compile Include="Core\CoreMethodUtil.cs" />
+    <Compile Include="Core\DictionaryHeaders.cs" />
+    <Compile Include="Core\RemotingUtil.cs" />
+    <Compile Include="Core\RemoteRef.cs" />
+    <Compile Include="Core\Future.cs" />
+    <Compile Include="Core\FutureExtensions.cs" />
+    <Compile Include="Core\LocalRef.cs" />
+    <Compile Include="Core\TypeExtensions.cs" />
+    <Compile Include="Instrumentation\ContextInfo.cs" />
+    <Compile Include="Instrumentation\CoreLogTextWriter.cs" />
+    <Compile Include="Instrumentation\EnvironmentInfo.cs" />
+    <Compile Include="Instrumentation\InstrumentationMode.cs" />
+    <Compile Include="Instrumentation\LogSource.cs" />
+    <Compile Include="Instrumentation\MessageInfo.cs" />
+    <Compile Include="Instrumentation\MessagingCoreEventId.cs" />
+    <Compile Include="Instrumentation\MessagingCoreInstrumentation.cs" />
+    <Compile Include="Instrumentation\TraceOutputSource.cs" />
+    <Compile Include="Instrumentation\MethodContextInfo.cs" />
+    <Compile Include="Instrumentation\ResourceInfo.cs" />
+    <Compile Include="Messages\Exit.cs" />
+    <Compile Include="Messages\Fault.cs" />
+    <Compile Include="Core\HeadersExtensions.cs" />
+    <Compile Include="Core\IHeaders.cs" />
+    <Compile Include="Core\ReceiveHandler.cs" />
+    <Compile Include="Messages\Headers\HeaderKey.cs" />
+    <Compile Include="Messages\Headers\IMessageHeader.cs" />
+    <Compile Include="Messages\IMessage.cs" />
+    <Compile Include="Messages\Interrupt.cs" />
+    <Compile Include="Messages\MessageBase.cs" />
+    <Compile Include="Messages\OpContinue.cs" />
+    <Compile Include="Routing\IRemoteRouting.cs" />
+    <Compile Include="Routing\PostedOperation.cs" />
+    <Compile Include="Routing\RemotingInfo.cs" />
+    <Compile Include="Routing\RemotingManager.cs" />
+    <Compile Include="Runtime\InternalResource.cs" />
+    <Compile Include="Messages\Stereotypes\RequestBase.cs" />
+    <Compile Include="Messages\Stereotypes\Request.cs" />
+    <Compile Include="Messages\Headers\IRequestHeader.cs" />
+    <Compile Include="Messages\Headers\IResponseHeader.cs" />
+    <Compile Include="Messages\Stereotypes\RequestExtensions.cs" />
+    <Compile Include="Messages\Stereotypes\Response.cs" />
+    <Compile Include="Messages\Stereotypes\ResponseBase.cs" />
+    <Compile Include="Messages\Stereotypes\ResponseExtensions.cs" />
+    <Compile Include="Messages\Stop.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Routing\IRoutingEngine.cs" />
+    <Compile Include="Routing\RoutingContext.cs" />
+    <Compile Include="Routing\RuntimeRoutingEngine.cs" />
+    <Compile Include="Routing\RuntimeUri.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\IResource.cs" />
+    <Compile Include="Runtime\Scheduler\IScheduledOperation.cs" />
+    <Compile Include="Runtime\Scheduler\IScheduledOperationExecutor.cs" />
+    <Compile Include="Runtime\Scheduler\IScheduler.cs" />
+    <Compile Include="Runtime\RuntimeEnvironment.cs" />
+    <Compile Include="Runtime\ResourceLimitException.cs" />
+    <Compile Include="Runtime\ResourcePool.cs" />
+    <Compile Include="Runtime\RuntimeExtensions.cs" />
+    <Compile Include="Runtime\Scheduler\ScheduledOperationExecutor.cs" />
+    <Compile Include="Runtime\Scheduler\ScheduledOperationList.cs" />
+    <Compile Include="Runtime\Scheduler\TimerScheduler.cs" />
+    <Compile Include="Serialization\ITypeReceive.cs" />
+    <Compile Include="Serialization\RuntimeSerializer.cs" />
+    <Compile Include="Serialization\SerialException.cs" />
+    <Compile Include="Serialization\SerialMessage.cs" />
+    <Compile Include="ServiceModel\MessageDeliveryException.cs" />
+    <Compile Include="ServiceModel\MessagingService.cs" />
+    <Compile Include="ServiceModel\PacketFaultCode.cs" />
+    <Compile Include="ServiceModel\PacketState.cs" />
+    <Compile Include="ServiceModel\RuntimeListener.cs" />
+    <Compile Include="ServiceModel\RuntimePacketProtocol.cs" />
+    <Compile Include="ServiceModel\RuntimeServiceBase.cs" />
+    <Compile Include="ServiceModel\StartServer.cs" />
+    <Compile Include="ServiceModel\TimeInterval.cs" />
+    <Compile Include="ServiceModel\WaitTime.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mercury.Messaging.Core.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mercury.Core\Mercury.Core.csproj">
+      <Project>{B7669234-2DF5-4D8B-B463-DF4CE38F370D}</Project>
+      <Name>Mercury.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

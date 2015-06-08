@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ebf46a58-d8fa-487b-b835-7e3ea120b4d3" name="chris.mankin@TLCITS2796ZQ1 2015-02-05 17:30:14" runUser="HQDOMAIN\chris.mankin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="70bce9e9-d360-4dd6-8af7-dd0eb2add29d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="chris.mankin_TLCITS2796ZQ1 2015-02-05 17_30_14">
+      <DeploymentItem filename="E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Core\bin\Release\Mercury.Logging.Core.dll" />
+      <DeploymentItem filename="E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Configuration\bin\Release\Mercury.Logging.Configuration.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-02-05T17:30:14.3059593-06:00" queuing="2015-02-05T17:30:15.0235593-06:00" start="2015-02-05T17:30:15.0547593-06:00" finish="2015-02-05T17:30:20.0467593-06:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="16" executed="16" passed="16" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Can_flush_and_continue_writing" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="722c1803-4186-5fff-de48-bec50afbb12a">
+      <Execution id="183b4be5-bc29-47c4-bd71-65c222590df3" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.FileLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_flush_and_continue_writing" />
+    </UnitTest>
+    <UnitTest name="Durable_logger_supports_delayed_write_to_primary" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="7268b6d0-0354-48b9-c3cc-9bcc977ee7d6">
+      <Execution id="61ffcf2f-ca83-42ae-b837-0913d66fea96" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.DurableLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Durable_logger_supports_delayed_write_to_primary" />
+    </UnitTest>
+    <UnitTest name="Can_write_to_memory_log" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="25a197ab-36bd-51df-1b66-bd8a5cd5234f">
+      <Execution id="2a3574dd-5aa9-4cee-a109-f875fb0babb0" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.MemoryLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_write_to_memory_log" />
+    </UnitTest>
+    <UnitTest name="Can_write_to_durable_log_and_primary" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="74242b03-abdd-8896-0d59-54239b9d70eb">
+      <Execution id="cc299a81-a639-475a-9e28-23131d257940" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.DurableLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_write_to_durable_log_and_primary" />
+    </UnitTest>
+    <UnitTest name="Can_flush_cancel_pending_retry" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="717ef22f-6007-32e5-26a6-5f19a3ec4019">
+      <Execution id="33ba72cf-eda7-44e2-9031-60c210c73ba9" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.PersistentLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_flush_cancel_pending_retry" />
+    </UnitTest>
+    <UnitTest name="CompositeLogger_can_log_to_multiple_loggers" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="702bf928-4946-58d8-cd41-655a3e64a588">
+      <Execution id="5e278bc3-1a51-4222-b6d0-fa105f357dab" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.CompositeLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CompositeLogger_can_log_to_multiple_loggers" />
+    </UnitTest>
+    <UnitTest name="Can_persist_across_time_interval" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="12d44479-d13a-c02b-91a5-fed1aec60438">
+      <Execution id="13e0c56f-784a-40a9-8530-71fd3872b0f0" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.PersistentLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_persist_across_time_interval" />
+    </UnitTest>
+    <UnitTest name="Can_remove_and_compact_with_consuming_enumerable" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="4c6edd2e-cecb-a5ca-c112-06916ad6e43e">
+      <Execution id="0c2434e4-1459-4730-8ed7-c443f2a5bed7" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.MemoryLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_remove_and_compact_with_consuming_enumerable" />
+    </UnitTest>
+    <UnitTest name="Can_create_log_file" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="b23ffc2c-aab0-f8c9-54a9-05cf5cbee55e">
+      <Execution id="f3928ae4-db0a-409d-9118-7a58bf6a45a7" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.FileLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_create_log_file" />
+    </UnitTest>
+    <UnitTest name="Can_remove_and_compact_values" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="20535119-ff01-66c9-a8cc-ad4127eb9f9d">
+      <Execution id="67f3b347-3fbe-44b1-8aa3-a689d2dfbf6b" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.MemoryLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_remove_and_compact_values" />
+    </UnitTest>
+    <UnitTest name="Can_create_an_in_memory_logger" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="ea59004c-d228-f381-3464-acde69579057">
+      <Execution id="0c9dbcc2-d5aa-4e73-8ceb-9c1c2c9260ab" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.Logger_basic_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_create_an_in_memory_logger" />
+    </UnitTest>
+    <UnitTest name="Can_use_severity_and_category_filters" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="51b7e5f9-11a7-218e-9aab-bf811c1c67ac">
+      <Execution id="e9dc6b2b-c437-47fa-a7d1-d5f0dd55a824" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.Logger_basic_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_use_severity_and_category_filters" />
+    </UnitTest>
+    <UnitTest name="Durable_logger_supports_batched_writing_to_primary" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="c93a1f0b-9b5c-8c39-f330-2bccfaa4d87e">
+      <Execution id="46f8ac9e-50b2-4e3a-89b5-1ca2dc7b24e2" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.DurableLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Durable_logger_supports_batched_writing_to_primary" />
+    </UnitTest>
+    <UnitTest name="Can_clear_and_compact_values" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="79bd92d3-5dc2-dd22-b919-6f58b3e9b0ab">
+      <Execution id="846018c4-7f0e-4a49-acfc-09cf3dc48671" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.MemoryLogger_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_clear_and_compact_values" />
+    </UnitTest>
+    <UnitTest name="Can_load_loggers_from_configuration" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="fb599e3d-0c56-c782-414f-fc5f0b0a38dc">
+      <Execution id="4b01d05e-e5a2-4484-afe8-f92097c31f1a" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.Configuration_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_load_loggers_from_configuration" />
+    </UnitTest>
+    <UnitTest name="Can_log_with_options" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.logging.test\bin\release\mercury.logging.test.dll" id="382ccc8f-314a-ceec-4fe9-9ab7a9c48569">
+      <Execution id="1d7f1e16-14ad-41f6-add7-a688e5aa9266" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Logging.Test/bin/Release/Mercury.Logging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Logging.Test.Logger_basic_specs, Mercury.Logging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_log_with_options" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fb599e3d-0c56-c782-414f-fc5f0b0a38dc" executionId="4b01d05e-e5a2-4484-afe8-f92097c31f1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea59004c-d228-f381-3464-acde69579057" executionId="0c9dbcc2-d5aa-4e73-8ceb-9c1c2c9260ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="382ccc8f-314a-ceec-4fe9-9ab7a9c48569" executionId="1d7f1e16-14ad-41f6-add7-a688e5aa9266" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51b7e5f9-11a7-218e-9aab-bf811c1c67ac" executionId="e9dc6b2b-c437-47fa-a7d1-d5f0dd55a824" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12d44479-d13a-c02b-91a5-fed1aec60438" executionId="13e0c56f-784a-40a9-8530-71fd3872b0f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="717ef22f-6007-32e5-26a6-5f19a3ec4019" executionId="33ba72cf-eda7-44e2-9031-60c210c73ba9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25a197ab-36bd-51df-1b66-bd8a5cd5234f" executionId="2a3574dd-5aa9-4cee-a109-f875fb0babb0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20535119-ff01-66c9-a8cc-ad4127eb9f9d" executionId="67f3b347-3fbe-44b1-8aa3-a689d2dfbf6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79bd92d3-5dc2-dd22-b919-6f58b3e9b0ab" executionId="846018c4-7f0e-4a49-acfc-09cf3dc48671" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c6edd2e-cecb-a5ca-c112-06916ad6e43e" executionId="0c2434e4-1459-4730-8ed7-c443f2a5bed7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b23ffc2c-aab0-f8c9-54a9-05cf5cbee55e" executionId="f3928ae4-db0a-409d-9118-7a58bf6a45a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="722c1803-4186-5fff-de48-bec50afbb12a" executionId="183b4be5-bc29-47c4-bd71-65c222590df3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74242b03-abdd-8896-0d59-54239b9d70eb" executionId="cc299a81-a639-475a-9e28-23131d257940" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7268b6d0-0354-48b9-c3cc-9bcc977ee7d6" executionId="61ffcf2f-ca83-42ae-b837-0913d66fea96" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c93a1f0b-9b5c-8c39-f330-2bccfaa4d87e" executionId="46f8ac9e-50b2-4e3a-89b5-1ca2dc7b24e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="702bf928-4946-58d8-cd41-655a3e64a588" executionId="5e278bc3-1a51-4222-b6d0-fa105f357dab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4b01d05e-e5a2-4484-afe8-f92097c31f1a" testId="fb599e3d-0c56-c782-414f-fc5f0b0a38dc" testName="Can_load_loggers_from_configuration" computerName="TLCITS2796ZQ1" duration="00:00:00.3213448" startTime="2015-02-05T17:30:15.0859593-06:00" endTime="2015-02-05T17:30:16.4587593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b01d05e-e5a2-4484-afe8-f92097c31f1a">
+    </UnitTestResult>
+    <UnitTestResult executionId="0c9dbcc2-d5aa-4e73-8ceb-9c1c2c9260ab" testId="ea59004c-d228-f381-3464-acde69579057" testName="Can_create_an_in_memory_logger" computerName="TLCITS2796ZQ1" duration="00:00:00.0049186" startTime="2015-02-05T17:30:16.4587593-06:00" endTime="2015-02-05T17:30:16.4743593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c9dbcc2-d5aa-4e73-8ceb-9c1c2c9260ab">
+    </UnitTestResult>
+    <UnitTestResult executionId="1d7f1e16-14ad-41f6-add7-a688e5aa9266" testId="382ccc8f-314a-ceec-4fe9-9ab7a9c48569" testName="Can_log_with_options" computerName="TLCITS2796ZQ1" duration="00:00:00.0542304" startTime="2015-02-05T17:30:16.4743593-06:00" endTime="2015-02-05T17:30:16.5367593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d7f1e16-14ad-41f6-add7-a688e5aa9266">
+    </UnitTestResult>
+    <UnitTestResult executionId="e9dc6b2b-c437-47fa-a7d1-d5f0dd55a824" testId="51b7e5f9-11a7-218e-9aab-bf811c1c67ac" testName="Can_use_severity_and_category_filters" computerName="TLCITS2796ZQ1" duration="00:00:00.0021565" startTime="2015-02-05T17:30:16.5367593-06:00" endTime="2015-02-05T17:30:16.5367593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9dc6b2b-c437-47fa-a7d1-d5f0dd55a824">
+    </UnitTestResult>
+    <UnitTestResult executionId="13e0c56f-784a-40a9-8530-71fd3872b0f0" testId="12d44479-d13a-c02b-91a5-fed1aec60438" testName="Can_persist_across_time_interval" computerName="TLCITS2796ZQ1" duration="00:00:02.0101107" startTime="2015-02-05T17:30:16.5523593-06:00" endTime="2015-02-05T17:30:18.5647593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13e0c56f-784a-40a9-8530-71fd3872b0f0">
+    </UnitTestResult>
+    <UnitTestResult executionId="33ba72cf-eda7-44e2-9031-60c210c73ba9" testId="717ef22f-6007-32e5-26a6-5f19a3ec4019" testName="Can_flush_cancel_pending_retry" computerName="TLCITS2796ZQ1" duration="00:00:01.1947438" startTime="2015-02-05T17:30:18.5647593-06:00" endTime="2015-02-05T17:30:19.7659593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33ba72cf-eda7-44e2-9031-60c210c73ba9">
+    </UnitTestResult>
+    <UnitTestResult executionId="2a3574dd-5aa9-4cee-a109-f875fb0babb0" testId="25a197ab-36bd-51df-1b66-bd8a5cd5234f" testName="Can_write_to_memory_log" computerName="TLCITS2796ZQ1" duration="00:00:00.0006111" startTime="2015-02-05T17:30:19.7659593-06:00" endTime="2015-02-05T17:30:19.7659593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a3574dd-5aa9-4cee-a109-f875fb0babb0">
+    </UnitTestResult>
+    <UnitTestResult executionId="67f3b347-3fbe-44b1-8aa3-a689d2dfbf6b" testId="20535119-ff01-66c9-a8cc-ad4127eb9f9d" testName="Can_remove_and_compact_values" computerName="TLCITS2796ZQ1" duration="00:00:00.0010756" startTime="2015-02-05T17:30:19.7659593-06:00" endTime="2015-02-05T17:30:19.7659593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67f3b347-3fbe-44b1-8aa3-a689d2dfbf6b">
+    </UnitTestResult>
+    <UnitTestResult executionId="846018c4-7f0e-4a49-acfc-09cf3dc48671" testId="79bd92d3-5dc2-dd22-b919-6f58b3e9b0ab" testName="Can_clear_and_compact_values" computerName="TLCITS2796ZQ1" duration="00:00:00.0004459" startTime="2015-02-05T17:30:19.7815593-06:00" endTime="2015-02-05T17:30:19.7815593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="846018c4-7f0e-4a49-acfc-09cf3dc48671">
+    </UnitTestResult>
+    <UnitTestResult executionId="0c2434e4-1459-4730-8ed7-c443f2a5bed7" testId="4c6edd2e-cecb-a5ca-c112-06916ad6e43e" testName="Can_remove_and_compact_with_consuming_enumerable" computerName="TLCITS2796ZQ1" duration="00:00:00.0004181" startTime="2015-02-05T17:30:19.7815593-06:00" endTime="2015-02-05T17:30:19.7815593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c2434e4-1459-4730-8ed7-c443f2a5bed7">
+    </UnitTestResult>
+    <UnitTestResult executionId="f3928ae4-db0a-409d-9118-7a58bf6a45a7" testId="b23ffc2c-aab0-f8c9-54a9-05cf5cbee55e" testName="Can_create_log_file" computerName="TLCITS2796ZQ1" duration="00:00:00.0031755" startTime="2015-02-05T17:30:19.7815593-06:00" endTime="2015-02-05T17:30:19.7971593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3928ae4-db0a-409d-9118-7a58bf6a45a7">
+    </UnitTestResult>
+    <UnitTestResult executionId="183b4be5-bc29-47c4-bd71-65c222590df3" testId="722c1803-4186-5fff-de48-bec50afbb12a" testName="Can_flush_and_continue_writing" computerName="TLCITS2796ZQ1" duration="00:00:00.1558004" startTime="2015-02-05T17:30:19.7971593-06:00" endTime="2015-02-05T17:30:19.9531593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="183b4be5-bc29-47c4-bd71-65c222590df3">
+    </UnitTestResult>
+    <UnitTestResult executionId="cc299a81-a639-475a-9e28-23131d257940" testId="74242b03-abdd-8896-0d59-54239b9d70eb" testName="Can_write_to_durable_log_and_primary" computerName="TLCITS2796ZQ1" duration="00:00:00.0030759" startTime="2015-02-05T17:30:19.9531593-06:00" endTime="2015-02-05T17:30:19.9687593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc299a81-a639-475a-9e28-23131d257940">
+    </UnitTestResult>
+    <UnitTestResult executionId="61ffcf2f-ca83-42ae-b837-0913d66fea96" testId="7268b6d0-0354-48b9-c3cc-9bcc977ee7d6" testName="Durable_logger_supports_delayed_write_to_primary" computerName="TLCITS2796ZQ1" duration="00:00:00.0137803" startTime="2015-02-05T17:30:19.9687593-06:00" endTime="2015-02-05T17:30:19.9843593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61ffcf2f-ca83-42ae-b837-0913d66fea96">
+    </UnitTestResult>
+    <UnitTestResult executionId="46f8ac9e-50b2-4e3a-89b5-1ca2dc7b24e2" testId="c93a1f0b-9b5c-8c39-f330-2bccfaa4d87e" testName="Durable_logger_supports_batched_writing_to_primary" computerName="TLCITS2796ZQ1" duration="00:00:00.0092380" startTime="2015-02-05T17:30:19.9843593-06:00" endTime="2015-02-05T17:30:19.9999593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46f8ac9e-50b2-4e3a-89b5-1ca2dc7b24e2">
+    </UnitTestResult>
+    <UnitTestResult executionId="5e278bc3-1a51-4222-b6d0-fa105f357dab" testId="702bf928-4946-58d8-cd41-655a3e64a588" testName="CompositeLogger_can_log_to_multiple_loggers" computerName="TLCITS2796ZQ1" duration="00:00:00.0029696" startTime="2015-02-05T17:30:19.9999593-06:00" endTime="2015-02-05T17:30:19.9999593-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e278bc3-1a51-4222-b6d0-fa105f357dab">
+      <Output>
+        <StdOut>Info [0] : Composite logger start.  Send message only to console and memory logs...
+ Debug [0] : Log entry 1
+ Debug [0] : Log entry 2
+ Debug [0] : Log entry 3
+ Error [0] : Error occurred!!!
+ Error [0] : Last error entry.
+ Critical [0] : Critical failure!
+ Warning [0] : Warning not received on file logger.
+ Info [0] : Test complete.</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

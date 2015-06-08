@@ -1,0 +1,17 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\bin\Release\VerifyHashTool.exe
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\bin\Release\VerifyHashTool.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\bin\Release\VerifyHashTool.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\bin\Release\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\bin\Release\Mercury.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\bin\Release\Mercury.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool.vbprojResolveAssemblyReference.cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\MainWindow.baml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\MainWindow.g.vb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\Application.g.vb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool_MarkupCompile.cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool.g.resources
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool.Resources.resources
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool.vbproj.GenerateResource.Cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool.exe
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Tools\VerifyHashTool\obj\x86\Release\VerifyHashTool.pdb

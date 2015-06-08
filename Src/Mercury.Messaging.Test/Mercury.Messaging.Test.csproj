@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A87B8F5B-0009-4AC0-904E-6EAC65611D79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mercury.Messaging.Test</RootNamespace>
+    <AssemblyName>Mercury.Messaging.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Mercury.Messaging.Test.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Ccr.Core, Version=4.0.261.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Ccr.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agents\Agent_specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\AddAgentMock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\AddChild.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\AddMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\ForwardRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\ForwardRequestBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\GetValueMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\InterruptAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\Paddle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\Ping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\Pong.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\PongFinal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\PrepInterrupt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\SuperContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agents\Mock\SupervisorAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\IPC2_Behaviors_specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\Mock\AgentSink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\Mock\GenServ.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\Mock\ServerPing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routing\RoutingEngine_Specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\Mock\MockResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\ResourcePool_Specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\RuntimeEnvironment_Specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\Scheduler_specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\Serialization_specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ServiceModel\ServiceModel_specs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleAgent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mercury.Core\Mercury.Core.csproj">
+      <Project>{B7669234-2DF5-4D8B-B463-DF4CE38F370D}</Project>
+      <Name>Mercury.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mercury.Messaging.Behaviors\Mercury.Messaging.Behaviors.csproj">
+      <Project>{101C6258-F22B-4ED0-AF38-CF1A901D736B}</Project>
+      <Name>Mercury.Messaging.Behaviors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mercury.Messaging.Core\Mercury.Messaging.Core.csproj">
+      <Project>{9B69290C-6C75-47AD-AD68-1D7E198465C8}</Project>
+      <Name>Mercury.Messaging.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mercury.Messaging.Test.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

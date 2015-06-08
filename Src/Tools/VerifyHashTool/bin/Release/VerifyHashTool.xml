@@ -1,0 +1,79 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VerifyHashTool
+</name>
+</assembly>
+<members>
+<member name="M:VerifyHashTool.Application.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:VerifyHashTool.Application.Main">
+	<summary>
+Application Entry Point.
+</summary>
+</member><member name="T:VerifyHashTool.Application">
+	<summary>
+Application
+</summary>
+</member><member name="M:VerifyHashTool.MainWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:VerifyHashTool.MainWindow">
+	<summary>
+MainWindow
+</summary>
+</member><member name="P:VerifyHashTool.My.MyWpfExtension.Application">
+	<summary>
+ Returns the application object for the running application
+ </summary>
+</member><member name="P:VerifyHashTool.My.MyWpfExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:VerifyHashTool.My.MyWpfExtension.User">
+	<summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member><member name="P:VerifyHashTool.My.MyWpfExtension.Log">
+	<summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member><member name="P:VerifyHashTool.My.MyWpfExtension.Windows">
+	<summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member><member name="T:VerifyHashTool.My.MyWpfExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+	<remarks></remarks>
+</member><member name="M:VerifyHashTool.MainWindow.OpenSingleFileBrowser(System.String,System.String)">
+	<summary>
+ Opens a file browser window and returns the path to the selected file.
+ </summary>
+	<param name="title">File dialog box title.</param>
+	<param name="filter">The file name filter string, which determines the choices 
+ that appear in the "Save as file type" or "Files of type" box in the dialog box.</param>
+	<returns>The path to the selected file.</returns>
+	<remarks></remarks>
+</member><member name="P:VerifyHashTool.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:VerifyHashTool.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:VerifyHashTool.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

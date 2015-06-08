@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c3088427-73a2-4310-8309-b4580072a465" name="chris.mankin@TLCITS2796ZQ1 2015-05-15 14:51:26" runUser="HQDOMAIN\chris.mankin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="70bce9e9-d360-4dd6-8af7-dd0eb2add29d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="chris.mankin_TLCITS2796ZQ1 2015-05-15 14_51_26">
+      <DeploymentItem filename="E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\bin\Release\Mercury.SettingsManager.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-05-15T14:51:26.9435175-05:00" queuing="2015-05-15T14:51:27.6455220-05:00" start="2015-05-15T14:51:27.6767222-05:00" finish="2015-05-15T14:51:29.0495310-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="5" executed="5" passed="5" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Update_section_on_settings_file" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.settingsmanager.test\bin\release\mercury.settingsmanager.test.dll" id="dd064312-787d-ab4e-0857-f76f638c7723">
+      <Execution id="21ee4f69-e5ba-463c-9333-e829b06da5a3" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.SettingsManager.Test/bin/Release/Mercury.SettingsManager.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.SettingsManager.Test.Settings_specs, Mercury.SettingsManager.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Update_section_on_settings_file" />
+    </UnitTest>
+    <UnitTest name="Save_and_read_section" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.settingsmanager.test\bin\release\mercury.settingsmanager.test.dll" id="3bc59427-5629-9951-9412-099faa16a30d">
+      <Execution id="f6330f8b-8822-4bbb-9515-bafa0b57a279" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.SettingsManager.Test/bin/Release/Mercury.SettingsManager.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.SettingsManager.Test.Settings_specs, Mercury.SettingsManager.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Save_and_read_section" />
+    </UnitTest>
+    <UnitTest name="Save_multiple_sections_and_read" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.settingsmanager.test\bin\release\mercury.settingsmanager.test.dll" id="f4460e35-6e47-268c-df81-716f4292e2c1">
+      <Execution id="8fa11b1b-4d91-48f6-bb6a-eed3a940dbe6" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.SettingsManager.Test/bin/Release/Mercury.SettingsManager.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.SettingsManager.Test.Settings_specs, Mercury.SettingsManager.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Save_multiple_sections_and_read" />
+    </UnitTest>
+    <UnitTest name="Save_to_new_settings" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.settingsmanager.test\bin\release\mercury.settingsmanager.test.dll" id="eccb267a-6658-8472-9fec-8c53a83a03ef">
+      <Execution id="4fe5a50c-e8b3-4709-b8c2-c95d337e4099" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.SettingsManager.Test/bin/Release/Mercury.SettingsManager.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.SettingsManager.Test.Settings_specs, Mercury.SettingsManager.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Save_to_new_settings" />
+    </UnitTest>
+    <UnitTest name="Save_to_default_app_data_location" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.settingsmanager.test\bin\release\mercury.settingsmanager.test.dll" id="8a635787-6d6b-a0f4-733d-ef2c445aa7ee">
+      <Execution id="c608453e-eab7-42b0-ad1d-f8589204ff37" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.SettingsManager.Test/bin/Release/Mercury.SettingsManager.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.SettingsManager.Test.Settings_specs, Mercury.SettingsManager.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Save_to_default_app_data_location" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="eccb267a-6658-8472-9fec-8c53a83a03ef" executionId="4fe5a50c-e8b3-4709-b8c2-c95d337e4099" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3bc59427-5629-9951-9412-099faa16a30d" executionId="f6330f8b-8822-4bbb-9515-bafa0b57a279" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4460e35-6e47-268c-df81-716f4292e2c1" executionId="8fa11b1b-4d91-48f6-bb6a-eed3a940dbe6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dd064312-787d-ab4e-0857-f76f638c7723" executionId="21ee4f69-e5ba-463c-9333-e829b06da5a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a635787-6d6b-a0f4-733d-ef2c445aa7ee" executionId="c608453e-eab7-42b0-ad1d-f8589204ff37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4fe5a50c-e8b3-4709-b8c2-c95d337e4099" testId="eccb267a-6658-8472-9fec-8c53a83a03ef" testName="Save_to_new_settings" computerName="TLCITS2796ZQ1" duration="00:00:00.3858786" startTime="2015-05-15T14:51:27.7079224-05:00" endTime="2015-05-15T14:51:28.9403303-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4fe5a50c-e8b3-4709-b8c2-c95d337e4099">
+    </UnitTestResult>
+    <UnitTestResult executionId="f6330f8b-8822-4bbb-9515-bafa0b57a279" testId="3bc59427-5629-9951-9412-099faa16a30d" testName="Save_and_read_section" computerName="TLCITS2796ZQ1" duration="00:00:00.0073807" startTime="2015-05-15T14:51:28.9403303-05:00" endTime="2015-05-15T14:51:28.9559304-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6330f8b-8822-4bbb-9515-bafa0b57a279">
+    </UnitTestResult>
+    <UnitTestResult executionId="8fa11b1b-4d91-48f6-bb6a-eed3a940dbe6" testId="f4460e35-6e47-268c-df81-716f4292e2c1" testName="Save_multiple_sections_and_read" computerName="TLCITS2796ZQ1" duration="00:00:00.0121222" startTime="2015-05-15T14:51:28.9559304-05:00" endTime="2015-05-15T14:51:28.9715305-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fa11b1b-4d91-48f6-bb6a-eed3a940dbe6">
+    </UnitTestResult>
+    <UnitTestResult executionId="21ee4f69-e5ba-463c-9333-e829b06da5a3" testId="dd064312-787d-ab4e-0857-f76f638c7723" testName="Update_section_on_settings_file" computerName="TLCITS2796ZQ1" duration="00:00:00.0099130" startTime="2015-05-15T14:51:28.9871306-05:00" endTime="2015-05-15T14:51:28.9871306-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21ee4f69-e5ba-463c-9333-e829b06da5a3">
+    </UnitTestResult>
+    <UnitTestResult executionId="c608453e-eab7-42b0-ad1d-f8589204ff37" testId="8a635787-6d6b-a0f4-733d-ef2c445aa7ee" testName="Save_to_default_app_data_location" computerName="TLCITS2796ZQ1" duration="00:00:00.0052645" startTime="2015-05-15T14:51:29.0027307-05:00" endTime="2015-05-15T14:51:29.0027307-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c608453e-eab7-42b0-ad1d-f8589204ff37">
+    </UnitTestResult>
+  </Results>
+</TestRun>

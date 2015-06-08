@@ -1,0 +1,17 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Samples.Common.Data.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Samples.Common.Data.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Samples.Common.Data.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Mercury.Messaging.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Microsoft.Ccr.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Microsoft.Ccr.Adapters.IO.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Mercury.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Mercury.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Mercury.Messaging.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\bin\Release\Mercury.Messaging.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\obj\Release\Samples.Common.Data.vbprojResolveAssemblyReference.cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\obj\Release\Samples.Common.Data.Resources.resources
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\obj\Release\Samples.Common.Data.vbproj.GenerateResource.Cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\obj\Release\Samples.Common.Data.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\obj\Release\Samples.Common.Data.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Samples\Samples.Common.Data\obj\Release\Samples.Common.Data.pdb

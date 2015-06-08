@@ -1,0 +1,16 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Test.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Test.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Behaviors.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Microsoft.Ccr.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Microsoft.Ccr.Adapters.IO.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Behaviors.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Behaviors.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\bin\Release\Mercury.Messaging.Core.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\obj\Release\Mercury.Messaging.Test.csprojResolveAssemblyReference.cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\obj\Release\Mercury.Messaging.Test.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Messaging.Test\obj\Release\Mercury.Messaging.Test.pdb

@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mercury.Logging.Configuration</name>
+    </assembly>
+    <members>
+        <member name="T:Mercury.Logging.Configuration.Parameter">
+            <summary>
+            Represents a parameter or property of a logging framework object.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.Parameter.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.Parameter.Name">
+            <summary>
+            Gets the name of the parameter.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.Parameter.Value">
+            <summary>
+            Gets the string value of the parameter.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.ObjectRef">
+            <summary>
+            Represents a referenced logging framework object.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.ObjectRef.GetInstance">
+            <summary>
+            Gets an instance of the referenced object.
+            </summary>
+            <returns>An instance of the referenced object.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.ObjectRef.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.ObjectRef.ReferenceString">
+            <summary>
+            Gets the original reference string.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.ObjectRef.ReferenceType">
+            <summary>
+            Gets an instance of the referenced object.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.FrameworkObject">
+            <summary>
+            The base framework object class used in configuration.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.FrameworkObject.MergeProperties(System.Configuration.ConfigurationPropertyCollection)">
+            <summary>
+            Adds the properties on this base class to the specified property collection.
+            </summary>
+            <param name="properties">The property collection on which to add the base class properties.</param>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.FrameworkObject.GetInstance">
+            <summary>
+            Generates an instance of this framework object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.FrameworkObject.PrepareInstance(System.Object)">
+            <summary>
+            Configures the specified instance according to the parameters of this element.
+            </summary>
+            <param name="instance">The instance to configure.</param>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.FrameworkObject.PostDeserialize">
+            <summary>
+            Called after deserialization
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FrameworkObject.Parameters">
+            <summary>
+            Gets a collection of <see cref="T:Mercury.Logging.Configuration.Parameter"/> objects.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FrameworkObject.Children">
+            <summary>
+            Gets a collection of object references with a child relationship to this object.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FrameworkObject.Type">
+            <summary>
+            Gets the System.Type of this framework object.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FrameworkObject.AssemblyString">
+            <summary>
+            Gets the assembly string for this instance.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FrameworkObject.TypeString">
+            <summary>
+            Gets the type string for this instance.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FrameworkObject.RefString">
+            <summary>
+            Gets the reference string for this instance.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FrameworkObject.Id">
+            <summary>
+            Gets a unique identifier for this framework object.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.LoggerObjectCollection">
+            <summary>
+            A collection of <see cref="T:Mercury.Logging.Configuration.LoggerObject"/> objects.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1">
+            <summary>
+            A base class for extending the <see cref="T:System.Configuration.ConfigurationElementCollection"/>.
+            </summary>
+            <typeparam name="TConfigurationElement">The System.Type of the ConfigurationElement contained in this collection.</typeparam>
+        </member>
+        <member name="F:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.DefaultConfigurationPropertyCollection">
+            <summary>
+            The default property collection.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.CreateNewElement">
+            <summary>
+            Creates a new <see cref="T:System.Configuration.ConfigurationElement"/> of the type of element contained in this collection.
+            </summary>
+            <returns>A new <see cref="T:System.Configuration.ConfigurationElement"/> of the type of element contained in this collection.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Gets the key that identifies the specified element in this collection.
+            </summary>
+            <param name="element">The element from which to extract the key.</param>
+            <returns>The key that identifies the specified element in this collection.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.IndexOf(`0)">
+            <summary>
+            Gets the index of the specified element.
+            </summary>
+            <param name="item">The element to find.</param>
+            <returns>The index of the specified element.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts the specified element at the specified index.
+            </summary>
+            <param name="index">The index at which to insert the element.</param>
+            <param name="item">The element to insert.</param>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index.
+            </summary>
+            <param name="index">The index of the element to remove.</param>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.Add(`0)">
+            <summary>
+            Adds the element to the collection.
+            </summary>
+            <param name="item">The element to add.</param>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.Clear">
+            <summary>
+            Removes all elements from the collection.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.Contains(`0)">
+            <summary>
+            Gets a value indicating whether the specified element exists in this collection.
+            </summary>
+            <param name="item">The element to test for existence.</param>
+            <returns>True if the element exists in this collection; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the elements of this collection into the specified array starting at the specified index within the array.
+            </summary>
+            <param name="array">The array into which the elements of this collection will be copied.</param>
+            <param name="arrayIndex">The index in the array at which to begin copying elements.</param>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.Remove(`0)">
+            <summary>
+            Removes the specified element from this collection.
+            </summary>
+            <param name="item">The element to remove.</param>
+            <returns>A value indicating whether the specified element could be removed.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.GetEnumerator">
+            <summary>
+            Gets an object used to enumerate elements in this collection.
+            </summary>
+            <returns>An object used to enumerate elements in this collection.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.CollectionType">
+            <summary>
+            Gets the type of this ConfigurationElementCollection.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.ElementName">
+            <summary>
+            Gets the XML element name used in configuration for the elements in this collection.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+            <param name="index">The index of the element to get or set.</param>
+            <returns>The element at the specified index.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.BaseConfigurationElementCollection`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether this collection is a read-only collection.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.LoggerObjectCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Gets the key that identifies the specified element in this collection.
+            </summary>
+            <param name="element">The element from which to extract the key.</param>
+            <returns>The key that identifies the specified element in this collection.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LoggerObjectCollection.ElementName">
+            <summary>
+            Gets the XML element name used in configuration for the elements in this collection.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.ObjectRefCollection">
+            <summary>
+            Represents a collection of <see cref="T:Mercury.Logging.Configuration.ObjectRef"/> objects.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.ObjectRefCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Gets the key that identifies the specified element in this collection.
+            </summary>
+            <param name="element">The element from which to extract the key.</param>
+            <returns>The key that identifies the specified element in this collection.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.ObjectRefCollection.ElementName">
+            <summary>
+            Gets the XML element name used in configuration for the elements in this collection.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.ParameterCollection">
+            <summary>
+            A collection of <see cref="T:Mercury.Logging.Configuration.Parameter"/> objects.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.ParameterCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Gets the key that identifies the specified element in this collection.
+            </summary>
+            <param name="element">The element from which to extract the key.</param>
+            <returns>The key that identifies the specified element in this collection.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.ParameterCollection.ElementName">
+            <summary>
+            Gets the XML element name used in configuration for the elements in this collection.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.FilterObjectCollection">
+            <summary>
+            A collection of <see cref="T:Mercury.Logging.Configuration.FilterObject"/> objects.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.FilterObjectCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Gets the key that identifies the specified element in this collection.
+            </summary>
+            <param name="element">The element from which to extract the key.</param>
+            <returns>The key that identifies the specified element in this collection.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FilterObjectCollection.ElementName">
+            <summary>
+            Gets the XML element name used in configuration for the elements in this collection.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.LoggerObject">
+            <summary>
+            Represents a <see cref="T:Mercury.Logging.Logger"/> as defined in configuration.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LoggerObject.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.LogRoot">
+            <summary>
+            Represents the root logging objects in configuration.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.LogRoot.GetInstance(System.String)">
+            <summary>
+            Gets an instance of the root logger.
+            </summary>
+            <param name="requestedName">The requested name for the logger.</param>
+            <returns>An instance of the root logger.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.LogRoot.PrepareInstance(Mercury.Logging.Logger,System.String)">
+            <summary>
+            Configures the specified instance according to the parameters of this element.
+            </summary>
+            <param name="instance">The instance to configure.</param>
+            <param name="requestedName">The requested name for the specified <see cref="T:Mercury.Logging.Logger"/>.</param>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.LogRoot.PostDeserialize">
+            <summary>
+            Called after deserialization.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LogRoot.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LogRoot.Parameters">
+            <summary>
+            Gets a collection of <see cref="T:Mercury.Logging.Configuration.Parameter"/> objects.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LogRoot.Children">
+            <summary>
+            Gets a collection of logger objects associated with this root.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.FilterObject">
+            <summary>
+            Represents a logging framework filter as defined in configuration.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FilterObject.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.FormatterObject">
+            <summary>
+            Represents a logging framework formatter as defined in configuration.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FormatterObject.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.FormatterObjectCollection">
+            <summary>
+            A collection of <see cref="T:Mercury.Logging.Configuration.FormatterObject"/> objects.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.FormatterObjectCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Gets the key that identifies the specified element in this collection.
+            </summary>
+            <param name="element">The element from which to extract the key.</param>
+            <returns>The key that identifies the specified element in this collection.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.FormatterObjectCollection.ElementName">
+            <summary>
+            Gets the XML element name used in configuration for the elements in this collection.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.LoggingSection">
+            <summary>
+            A configuration section for defining logging framework objects.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LoggingSection.Properties">
+            <summary>
+            Gets a collection of properties on this element.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LoggingSection.Root">
+            <summary>
+            Gets the root logging element.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LoggingSection.Filters">
+            <summary>
+            Gets a collection of defined filter objects.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LoggingSection.Formatters">
+            <summary>
+            Gets a collection of defined formatter objects.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.Configuration.LoggingSection.Loggers">
+            <summary>
+            Gets a collection of defined loggers.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Configuration.LogFramework">
+            <summary>
+            Provides methods for altering aspects of the logging framework.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.Type)">
+            <summary>
+            Gets a logger constructed from configuration.
+            </summary>
+            <param name="type">The System.Type from which to derive the logger name.</param>
+            <returns>A logger constructed from configuration.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.String)">
+            <summary>
+            Gets a logger constructed from configuration.
+            </summary>
+            <param name="name">The name of the logger.</param>
+            <returns>A logger constructed from configuration.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Configuration.LogFramework.OpenConfiguration(System.String,System.String)">
+            <summary>
+            Opens the logging configuration from the specified file using the specified section name.
+            </summary>
+            <param name="exePath">The full path to the executable (exe) file whose configuration should be loaded.</param>
+            <param name="sectionName">The name of the logging section element.</param>
+        </member>
+    </members>
+</doc>

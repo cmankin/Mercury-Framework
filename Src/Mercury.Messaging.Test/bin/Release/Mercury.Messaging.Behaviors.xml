@@ -1,0 +1,761 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mercury.Messaging.Behaviors</name>
+    </assembly>
+    <members>
+        <member name="T:Mercury.Messaging.Behaviors.StopChild">
+            <summary>
+            Represents a message to a supervisor to stop the specified child.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.StopChild.#ctor">
+            <summary>
+            Initializes a default instance of the StopChild class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.StopChild.#ctor(System.String)">
+            <summary>
+            Initializes a default instance of the StopChild 
+            class with the specified internal child name.
+            </summary>
+            <param name="childName">The internal name of the child to stop.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.StopChild.ChildName">
+            <summary>
+            Gets the internal name of the child to stop.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.IPC2.GenericServer">
+            <summary>
+            Represents a generic server agent.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.IPC2.GenericServer.#ctor(Mercury.Messaging.Core.AgentPort,Mercury.Messaging.Behaviors.RetrySpecification)">
+            <summary>
+            Initializes a default instance of the GenericServer class with the specified values.
+            </summary>
+            <param name="port">The agent port on which to receive.</param>
+            <param name="retrySpec">A retry specification for lost messages.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.IPC2.GenericServer.InternalReceive``1(Mercury.Messaging.Messages.Request{``0})">
+            <summary>
+            Captures and handles the internal receive.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.IPC2.GenericServer.Reply(Mercury.Messaging.Channels.IUntypedChannel,System.String)">
+            <summary>
+            Sends a server reply response on the specified response channel with the specified request ID.
+            </summary>
+            <param name="responseChannel">The response channel on which to send the reply.</param>
+            <param name="requestId">The unique ID associated with the request.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.IPC2.GenericServer.SendServerRequest``1(``0,System.String)">
+            <summary>
+            Sends a request of the specified message and type to the agent or server 
+            with the specified ID.  When sending a server request, a server reply is 
+            expected to be returned.  Failure to reply could cause the message to be 
+            resent, or eventually, abandoned.
+            </summary>
+            <typeparam name="T">The type of the message request to send.</typeparam>
+            <param name="message">The message to send.</param>
+            <param name="agentId">The agent ID of the receiver.</param>
+            <returns>True if the request was sent successfully; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.IPC2.GenericServer.Receive``1(Mercury.Messaging.Core.ReceiveHandler{``0})">
+            <summary>
+            Registers a receive handler for a message of the specified type.
+            </summary>
+            <typeparam name="T">The type of the message to receive.</typeparam>
+            <param name="handler">The receive handler to use.</param>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.IPC2.GenericServer.RetrySpecification">
+            <summary>
+            The retry specification.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.IPC2.GenericServer.Environment">
+            <summary>
+            The runtime environment.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.IPC2.GenericServer.Port">
+            <summary>
+            The agent port.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.IPC2.GenericServer.Receivers">
+            <summary>
+            Gets a dictionary of registered receive handlers.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.GetChildren">
+            <summary>
+            A message requesting the child information for all children of a supervisor.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.SupervisorRef">
+            <summary>
+            Represents a channel to a supervisor resource.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.Channels.NamedChannel">
+            <summary>
+            Represents a channel to a named resource.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.Channels.INamedChannel">
+            <summary>
+            Represents an untyped channel to a named resource.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.Channels.INamedChannel.Address">
+            <summary>
+            Gets the address of the named resource.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Channels.NamedChannel.#ctor(Mercury.Messaging.Behaviors.HostRoutingTable,System.String)">
+            <summary>
+            Initializes a default instance of the NamedChannel class with the specified values.
+            </summary>
+            <param name="hosts">The host routing table to use.</param>
+            <param name="address">The routing address for the agent.</param>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Channels.NamedChannel.Hosts">
+            <summary>
+            The internal host routing table.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Channels.NamedChannel._address">
+            <summary>
+            The internal address.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Channels.NamedChannel.Send``1(``0)">
+            <summary>
+            Sends the specified message to the agent.
+            </summary>
+            <typeparam name="T">The type of the message to send.</typeparam>
+            <param name="message">The message to send.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Channels.NamedChannel.GetHostAddress">
+            <summary>
+            Gets the parent host address.
+            </summary>
+            <returns>The parent host address.</returns>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.Channels.NamedChannel.Address">
+            <summary>
+            Gets the routing address for the agent.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.Channels.NamedChannel.IsPersisted">
+            <summary>
+            Gets a value indicating whether this channel has been persisted as a resource.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.Channels.NamedChannel.Id">
+            <summary>
+            Gets the resource ID of this channel if it has been persisted.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.SendChildren">
+            <summary>
+            A message from a supervisor containing an array of child info objects for all of its children.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SendChildren.#ctor">
+            <summary>
+            Initializes a default instance of the SendChildren class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SendChildren.#ctor(Mercury.Messaging.Behaviors.ChildInfo[])">
+            <summary>
+            Initializes a default instance of the SendChildren 
+            class with the specified children.
+            </summary>
+            <param name="children">An array of ChildInfo objects describing the supervisor children.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.SendChildren.Children">
+            <summary>
+            Gets an array of child info objects describing all child agents of a supervisor.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.ServerReply">
+            <summary>
+            Represents a reply acknowledgment from a generic server request.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.SendChildId">
+            <summary>
+            Represents a request to a supervisor to return the id of a named child.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SendChildId.#ctor">
+            <summary>
+            Initializes a default instance of the SendChildId class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SendChildId.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a default instance of the SendChildId class 
+            with the specified internal name and agent ID.
+            </summary>
+            <param name="name">The internal name of the child.</param>
+            <param name="id">The agent ID of the child.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.SendChildId.Name">
+            <summary>
+            Gets or sets the internal child name.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.SendChildId.Id">
+            <summary>
+            Gets or sets the agent ID.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.ChildSpecification">
+            <summary>
+            Represents the specification for creating a child on a supervisor.
+            </summary>
+            <remarks>TODO: Support IXmlSerializable.</remarks>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.ChildSpecification.#ctor(System.String,System.Func{Mercury.Messaging.Runtime.RuntimeEnvironment,System.String,System.Type,System.Object[],System.String},Mercury.Messaging.Behaviors.RestartMode,System.Int32,System.Type,System.Object[])">
+            <summary>
+            Initializes a default instance of the ChildSpecification class with the specified values.
+            </summary>
+            <param name="name">The unique name identifier for the child.</param>
+            <param name="startup">The startup function called by the supervisor.  
+            Func{[environment],[supervisor ID],[agent type],[constructor args]}</param>
+            <param name="restart">The restart mode for this child.</param>
+            <param name="shutdown">The interval in milliseconds to wait for an exit 
+            signal on a supervisor stop before an environment.Kill is issued.</param>
+            <param name="type">The type of the child agent.</param>
+            <param name="constructorArgs">Constructor arguments for agent construction.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildSpecification.Name">
+            <summary>
+            Gets the internal name used by the supervisor.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildSpecification.Restart">
+            <summary>
+            Gets the restart mode for this child.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildSpecification.Shutdown">
+            <summary>
+            Gets the interval in milliseconds to wait for an exit signal on a 
+            stop message sent by the supervisor before a forced kill is issued.
+            </summary>
+            <returns>The interval in milliseconds to wait for an exit signal on a 
+            stop message sent by the supervisor before a forced kill is issued.  
+            If 0, the supervisor will immediately kill the agent.  If -1, the 
+            supervisor will wait until an exit signal is received.</returns>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildSpecification.Type">
+            <summary>
+            Gets the type of the child.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildSpecification.ConstructorArgs">
+            <summary>
+            Gets an array of additional constructor arguments 
+            to be passed to the startup function.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildSpecification.Startup">
+            <summary>
+            Gets the startup action to be performed on the child.  This must 
+            result in the equivalent of a spawn link on the supervisor agent.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.SupervisorExtensions">
+            <summary>
+            Extensions to the SupervisorRef object.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorExtensions.GetChildId(Mercury.Messaging.Behaviors.SupervisorRef,System.String)">
+            <summary>
+            Returns the agent ID of the child agent with specified child name.
+            </summary>
+            <param name="reference">The supervisor reference on which to retrieve the child.</param>
+            <param name="childName">The internal name of the child to retrieve.</param>
+            <returns>The agent ID of the child agent with specified child ID.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorExtensions.GetAllChildren(Mercury.Messaging.Behaviors.SupervisorRef)">
+            <summary>
+            Returns an array of child info objects containing 
+            information on all children of this supervisor.
+            </summary>
+            <param name="reference">The supervisor reference on which to retrieve all children.</param>
+            <returns>An array of child info objects containing 
+            information on all children of this supervisor.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorExtensions.SendFuture``2(Mercury.Messaging.Behaviors.SupervisorRef,``1)">
+            <summary>
+            Returns a future as the result of the specified message to a supervisor.
+            </summary>
+            <typeparam name="TResult">The type of the future result.</typeparam>
+            <typeparam name="TMessage">The type of the message to send.</typeparam>
+            <param name="reference">The supervisor reference on which to retrieve a future value.</param>
+            <param name="message">The message to send.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorExtensions.StartChild(Mercury.Messaging.Behaviors.SupervisorRef,Mercury.Messaging.Behaviors.ChildSpecification)">
+            <summary>
+            Dynamically adds a child specification to the supervisor 
+            which starts the corresponding agent.
+            </summary>
+            <param name="reference">The supervisor reference on which to add the child specification.</param>
+            <param name="spec">The specification for the child agent to start.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorExtensions.RestartChild(Mercury.Messaging.Behaviors.SupervisorRef,System.String)">
+            <summary>
+            Commands the supervisor to restart the agent 
+            corresponding to the specified child name.
+            </summary>
+            <param name="reference">The supervisor reference on which to restart the child agent.</param>
+            <param name="childName">The internal name of the child to restart.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorExtensions.StopChild(Mercury.Messaging.Behaviors.SupervisorRef,System.String)">
+            <summary>
+            Commands the supervisor to terminate the agent 
+            corresponding to the specified child name.
+            </summary>
+            <param name="reference">The supervisor reference on which to stop the child agent.</param>
+            <param name="childName">The internal name of the child to terminate.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorExtensions.DeleteChild(Mercury.Messaging.Behaviors.SupervisorRef,System.String)">
+            <summary>
+            Commands the supervisor to delete the child specification 
+            corresponding to the specified child name.
+            </summary>
+            <param name="reference">The supervisor reference on which to delete the child specification.</param>
+            <param name="childName">The internal name corresponding to the child specification to delete.</param>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.RestartMode">
+            <summary>
+            Describes the restart mode for a supervisor child agent.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.RestartMode.Permanent">
+            <summary>
+            Child agent is always restarted.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.RestartMode.Temporary">
+            <summary>
+            Child agent is never restarted.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.RestartMode.Transient">
+            <summary>
+            Child agent is only restarted on abnormal termination (i.e. a fault).
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.RetrySpecification">
+            <summary>
+            Represents a specification for retry criteria on message delivery.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.RetrySpecification.#ctor(System.Int32,System.TimeSpan)">
+            <summary>
+            Initializes a default instance of the RetrySpecification class with the specified values.
+            </summary>
+            <param name="attempts">The number of attempts allowed before the message is lost.</param>
+            <param name="waitInterval">The wait interval between resend attempts.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.RetrySpecification.Attempts">
+            <summary>
+            Gets the maximum number of attempts allowed before the message is considered lost.  
+            If the value is set to a number less than 0, the number of retry attempts will be 
+            unbounded.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.RetrySpecification.WaitInterval">
+            <summary>
+            Gets the interval of time to wait between resend attempts.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.SupervisorRestartMode">
+            <summary>
+            Describes the restart mode for a supervisor's child agents.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.SupervisorRestartMode.OneForOne">
+            <summary>
+            If a child agent terminates, only that agent is restarted.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.SupervisorRestartMode.OneForAll">
+            <summary>
+            If a child agent terminates, all remaining child 
+            agents are terminated then restarted, along with 
+            the originally terminated agent.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.IHostRouting">
+            <summary>
+            Common interface for host routing tables.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.IHostRouting.TryFind(System.String)">
+            <summary>
+            Returns an agent reference if the specified agent address is found.
+            </summary>
+            <param name="address">The address of the agent to find.</param>
+            <returns>An agent reference or null.</returns>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.HostRoutingTable">
+            <summary>
+            Represents a routing table for host names and paths.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.HostRoutingTable.#ctor">
+            <summary>
+            Initializes a default instance of the HostRoutingTable class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.HostRoutingTable.TryAddOrUpdate(System.String,Mercury.Messaging.Core.LocalRef)">
+            <summary>
+            Attempts to add or update the host at the specified 
+            address with the specified agent reference.
+            </summary>
+            <param name="address">The address of the host to add or update.</param>
+            <param name="reference">The agent reference to add or update.</param>
+            <returns>True if the add or update was successful; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.HostRoutingTable.TryAddOrUpdate(System.String,Mercury.Messaging.Core.LocalRef,System.Exception@)">
+            <summary>
+            Attempts to add or update the host at the specified 
+            address with the specified agent reference.
+            </summary>
+            <param name="address">The address of the host to add or update.</param>
+            <param name="reference">The agent reference to add or update.</param>
+            <param name="fault">Out. The exception that caused the operation to fail or null.</param>
+            <returns>True if the add or update was successful; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.HostRoutingTable.TryRemove(System.String)">
+            <summary>
+            Attempts to remove the host with the specified address from the routing table.
+            </summary>
+            <param name="address">The address of the host to remove.</param>
+            <returns>True if the remove operation was successful; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.HostRoutingTable.TryFind(System.String)">
+            <summary>
+            Attempts to find and return the agent reference associated with the specified address.
+            </summary>
+            <param name="address">The address of the agent reference to find.</param>
+            <returns>The agent reference associated with the specified address.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.HostRoutingTable.TryFind(System.String,System.String@)">
+            <summary>
+            Attempts to find the address associated with the specified agent ID.
+            </summary>
+            <param name="agentId">The agent ID whose address to find.</param>
+            <param name="address">Out. The associated address or null.</param>
+            <returns>True if the address is found; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.HostRoutingTable.GetHostAddress(System.String)">
+            <summary>
+            Returns the address of the parent host from the specified address.
+            </summary>
+            <param name="address">The address whose parent host address to parse.</param>
+            <returns>The address of the parent host.</returns>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.HostRoutingTable.Hosts">
+            <summary>
+            Gets the host routing dictionary.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.StartChild">
+            <summary>
+            Represents a message to a supervisor agent to add and 
+            start the child described by the specification.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.StartChild.#ctor">
+            <summary>
+            Initializes a default instance of the StartChild class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.StartChild.#ctor(Mercury.Messaging.Behaviors.ChildSpecification)">
+            <summary>
+            Initializes a default instance of the StartChild 
+            class with the specified child specification.
+            </summary>
+            <param name="spec">The child specification to start.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.StartChild.Specification">
+            <summary>
+            Gets the specification of the child to start.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.RestartChild">
+            <summary>
+            A message sent to a supervisor to restart a child agent.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.RestartChild.#ctor">
+            <summary>
+            Initializes a default instance of the RestartChild class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.RestartChild.#ctor(System.String)">
+            <summary>
+            Initializes a default instance of the RestartChild 
+            class with the specified internal child name.
+            </summary>
+            <param name="childName">The internal name of the child to restart.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.RestartChild.ChildName">
+            <summary>
+            Gets the internal child name.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.Supervisor">
+            <summary>
+            Represents a supervisor on a collection of child agents.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.#ctor(Mercury.Messaging.Core.AgentPort,Mercury.Messaging.Behaviors.RestartStrategy,Mercury.Messaging.Behaviors.ChildSpecification[])">
+            <summary>
+            Initializes a default instance of the Supervisor class with the specified values.
+            </summary>
+            <param name="port">The agent port for this supervisor.</param>
+            <param name="strategy">The restart strategy for this supervisor.</param>
+            <param name="children">Initial child specifications for this supervisor.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.StartChildFromSpec(Mercury.Messaging.Behaviors.ChildSpecification)">
+            <summary>
+            Adds and starts the child according to the provided child specification.
+            </summary>
+            <param name="spec">The child specification to start.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.StartupChildAgent(Mercury.Messaging.Behaviors.ChildSpecification,System.String)">
+            <summary>
+            Invokes the startup function on the specified child specification and adds/updates the routing table.
+            </summary>
+            <param name="spec">The child specification to startup.</param>
+            <param name="internalName">The internal identifier for the specified child.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.TerminateChild(System.String)">
+            <summary>
+            Terminates the child with the specified name by sending a stop message 
+            and resorting to an Environment.Kill() if the child fails to shutdown.
+            </summary>
+            <param name="internalName">The internal identifier of the child to terminate.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.DeleteChild(System.String)">
+            <summary>
+            Deletes the specification of the child with the specified name.
+            </summary>
+            <param name="internalId">The internal identifier of the child specification to delete.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.HandleChildTerminationSignal(System.Object)">
+            <summary>
+            Handles the termination signal sent by a child on shutdown.
+            </summary>
+            <param name="message">The termination message sent by the child.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.RestartChildren(System.Boolean)">
+            <summary>
+            Attempts to restart all children from the child specification table.
+            </summary>
+            <param name="normalExit">A value indicating whether a clean exit triggered the restart.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.Shutdown(Mercury.Messaging.Messages.Fault)">
+            <summary>
+            Shuts down the supervisor with the specified fault.
+            </summary>
+            <param name="fault">The fault which caused the shutdown or null if no fault is specified.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.ShutdownChildren">
+            <summary>
+            Performs an Environment.Kill() on all children and removes them from the routing table.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Supervisor.ThrowSupervisorFaultAndShutdown(Mercury.Messaging.Messages.Fault)">
+            <summary>
+            Throws a fault on this supervisor and shuts down.
+            </summary>
+            <param name="fault">The fault which caused the shutdown or null if no fault is specified.</param>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Supervisor.Specifications">
+            <summary>
+            The child specification table.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Supervisor.Environment">
+            <summary>
+            The runtime environment.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Supervisor.RoutingTable">
+            <summary>
+            The internal child routing table.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Supervisor.Strategy">
+            <summary>
+            The child restart strategy.
+            </summary>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Supervisor.Port">
+            <summary>
+            The internal agent port.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.RestartStrategy">
+            <summary>
+            Represents a strategy for restarting child agents of a supervisor.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.RestartStrategy.#ctor(Mercury.Messaging.Behaviors.SupervisorRestartMode,System.Int32,System.TimeSpan)">
+            <summary>
+            Initializes a default instance of the RestartStrategy class with the specified values.
+            </summary>
+            <param name="restartMode">The supervisor restart mode to use.</param>
+            <param name="restarts">The maximum number of allowable restarts within a restart interval.</param>
+            <param name="restartInterval">The interval of time in which the maximum
+            number of child restarts may occur before the supervisor shuts down.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.RestartStrategy.RestartMode">
+            <summary>
+            Gets the supervisor's child restart strategy.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.RestartStrategy.Restarts">
+            <summary>
+            Gets the maximum number of allowable restarts within a restart interval.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.RestartStrategy.RestartInterval">
+            <summary>
+            Gets the interval of time in which the maximum number of restarts may occur.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.DeleteChild">
+            <summary>
+            Represents a message sent to a supervisor to permanently delete a child specification.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.DeleteChild.#ctor">
+            <summary>
+            Initializes a default instance of the DeleteChild class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.DeleteChild.#ctor(System.String)">
+            <summary>
+            Initializes a default instance of the DeleteChild 
+            class with the specified child name identifier.
+            </summary>
+            <param name="childName"></param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.DeleteChild.ChildName">
+            <summary>
+            Gets the internal ID of the child to delete.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.ChildInfo">
+            <summary>
+            A set of related information for a child agent.
+            </summary>
+            <remarks>TODO: Support IXmlSerializable.</remarks>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.ChildInfo.#ctor(Mercury.Messaging.Behaviors.ChildSpecification,System.String)">
+            <summary>
+            Initializes a default instance of the ChildInfo class with the specified values.
+            </summary>
+            <param name="spec">The child specification to use.</param>
+            <param name="id">The agent ID corresponding to the child specification.</param>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildInfo.ChildSpecification">
+            <summary>
+            Gets the child specification.
+            </summary>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.ChildInfo.Id">
+            <summary>
+            Gets the ID of the corresponding agent.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.Channels.SupervisorRefChannel">
+            <summary>
+            Represents a specialized channel to a supervisor resource.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Channels.SupervisorRefChannel.#ctor(Mercury.Messaging.Core.AgentPort)">
+            <summary>
+            Initializes a default instance of the SupervisorRefChannel 
+            class with the specified agent port.
+            </summary>
+            <param name="port">The agent port of the supervisor to reference.</param>
+        </member>
+        <member name="F:Mercury.Messaging.Behaviors.Channels.SupervisorRefChannel._id">
+            <summary>
+            The agent ID.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.Channels.SupervisorRefChannel.GetPort">
+            <summary>
+            Gets the agent port for the referenced supervisor.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mercury.Messaging.Behaviors.Channels.SupervisorRefChannel.ResId">
+            <summary>
+            Gets the agent ID for the referenced supervisor.
+            </summary>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.SupervisorException">
+            <summary>
+            Thrown when an operation on a supervisor fails.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorException.#ctor">
+            <summary>
+            Initializes a default instance of the SupervisorException class with the specified values.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorException.#ctor(System.String)">
+            <summary>
+            Initializes a default instance of the SupervisorException class with the specified values.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.SupervisorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a default instance of the SupervisorException class with the specified values.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current 
+            exception or a null reference if no exception is specified.</param>
+        </member>
+        <member name="T:Mercury.Messaging.Behaviors.RuntimeExtensions">
+            <summary>
+            Core behaviors extensions to the RuntimeEnvironment.
+            </summary>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.RuntimeExtensions.SpawnSupervisor``1(Mercury.Messaging.Runtime.RuntimeEnvironment,Mercury.Messaging.Behaviors.RestartStrategy,Mercury.Messaging.Behaviors.ChildSpecification[])">
+            <summary>
+            Spawns and returns a reference to a supervisor created with the specified configuration.
+            </summary>
+            <typeparam name="TSupervisor">The type of the supervisor to spawn.</typeparam>
+            <param name="environment">The runtime environment on which to spawn the supervisor.</param>
+            <param name="strategy">The restart strategy for the supervisor.</param>
+            <param name="specs">Any static child specifications.</param>
+            <returns>A reference to a supervisor created with the specified configuration.</returns>
+        </member>
+        <member name="M:Mercury.Messaging.Behaviors.RuntimeExtensions.GetSupervisor(Mercury.Messaging.Runtime.RuntimeEnvironment,System.String)">
+            <summary>
+            Returns a reference to a supervisor with the specified ID.
+            </summary>
+            <param name="environment">The runtime environment of the supervisor.</param>
+            <param name="id">The ID of the supervisor to find.</param>
+            <returns>A reference to a supervisor with the specified ID.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a079e549-87ed-4cef-b640-36f753d4b34f" name="chris.mankin@TLCITS2796ZQ1 2015-05-15 14:52:26" runUser="HQDOMAIN\chris.mankin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="70bce9e9-d360-4dd6-8af7-dd0eb2add29d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="chris.mankin_TLCITS2796ZQ1 2015-05-15 14_52_26">
+      <DeploymentItem filename="E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core\bin\Release\Mercury.Core.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-05-15T14:52:26.8759554-05:00" queuing="2015-05-15T14:52:27.6040282-05:00" start="2015-05-15T14:52:27.6380316-05:00" finish="2015-05-15T14:52:28.8061484-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="17" executed="17" passed="17" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Explicit_enter_and_exit_block" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="e2563f84-83fa-94c1-6f73-c608e461078d">
+      <Execution id="8fb29b3c-1763-40ef-b90e-31f57ef77fe3" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Instrumentation.Observer_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Explicit_enter_and_exit_block" />
+    </UnitTest>
+    <UnitTest name="Observe_on_block" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="0835ab16-d6a1-9869-579f-b20ebb7df19b">
+      <Execution id="d1d47401-bb9f-41cd-b202-f743a6a35efd" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Instrumentation.Observer_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Observe_on_block" />
+    </UnitTest>
+    <UnitTest name="Create_packet_protocol" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="a9b24993-a3c3-c43f-c5bc-8bd983702166">
+      <Execution id="a2c76861-f275-4530-bd6f-9f62fba6eabf" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Common.Test.Net.Net_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Create_packet_protocol" />
+    </UnitTest>
+    <UnitTest name="ReplaceText_extension_spec" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="d5a502bb-1515-2cf3-499b-ee79ba643643">
+      <Execution id="d74e9084-7851-4ce6-86b1-24ca095b4809" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Common.Test.StringExtensions_Specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReplaceText_extension_spec" />
+    </UnitTest>
+    <UnitTest name="Can_clear_items_from_cache" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="2a499416-f30a-8b33-94da-a14f22d090a1">
+      <Execution id="f9462f0b-8366-4d61-82e0-90725efe9b34" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Core.Core_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_clear_items_from_cache" />
+    </UnitTest>
+    <UnitTest name="Left_extension_spec" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="ae684861-51b2-f36d-3210-c06bed219713">
+      <Execution id="d77f0ada-6d31-4ce0-b293-43b09e6622dd" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Common.Test.StringExtensions_Specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Left_extension_spec" />
+    </UnitTest>
+    <UnitTest name="Exception_exits_observer_block" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="de7f2f59-6d7d-8630-f72f-e3cfb1788868">
+      <Execution id="6b3d3d39-cc9e-4471-a39a-09712973741f" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Instrumentation.Observer_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Exception_exits_observer_block" />
+    </UnitTest>
+    <UnitTest name="Ring_cache_can_remove_and_compact" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="91e2f339-b251-8c5a-8358-7732dd2bb4af">
+      <Execution id="693ccf65-98e9-4b0f-a003-7cab3c22a5ba" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Core.Core_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ring_cache_can_remove_and_compact" />
+    </UnitTest>
+    <UnitTest name="Ring_cache_can_buffer" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="33bd2ffb-4f96-0db3-f09e-a6118c40537c">
+      <Execution id="4d29bdb1-ef4b-4172-abe0-829c2c208c80" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Core.Core_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ring_cache_can_buffer" />
+    </UnitTest>
+    <UnitTest name="Ring_cache_dispose_handler_occurs_on_overwrite" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="fffeb1fa-1d90-a423-c638-a3f9688e34bc">
+      <Execution id="39f26f22-2a75-4f6b-98ef-7f21dcbffc32" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Core.Core_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ring_cache_dispose_handler_occurs_on_overwrite" />
+    </UnitTest>
+    <UnitTest name="In_order_entries" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="ed6807ba-00d8-6725-82e5-80d250236188">
+      <Execution id="f4ed21d9-741a-43be-80a6-202b88c5d3ea" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Collections.OrderedDictionary_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="In_order_entries" />
+    </UnitTest>
+    <UnitTest name="IsNumeric_extension_spec" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="3911ae1c-9f32-9142-3631-9790e9f87fda">
+      <Execution id="553bc8c7-eb14-4081-b328-986885c81005" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Common.Test.StringExtensions_Specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsNumeric_extension_spec" />
+    </UnitTest>
+    <UnitTest name="Provide_custom_state_to_observer_block" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="87b57f5b-221f-936e-5116-f073783b8d8c">
+      <Execution id="12516d84-7326-40d5-96ac-8a8635c6c03f" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Instrumentation.Observer_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Provide_custom_state_to_observer_block" />
+    </UnitTest>
+    <UnitTest name="Mid_extension_spec" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="dda50e74-fa1e-a32a-a23f-4db305902f7b">
+      <Execution id="e0146f10-1b0e-4888-8d34-65fb111949a0" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Common.Test.StringExtensions_Specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Mid_extension_spec" />
+    </UnitTest>
+    <UnitTest name="Delay_observe_on_block" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="e670636a-9d43-9786-48bd-b3dd451e6e5a">
+      <Execution id="b80a5a9c-9419-485d-aaae-b934e46f5250" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Instrumentation.Observer_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Delay_observe_on_block" />
+    </UnitTest>
+    <UnitTest name="Ring_cache_can_buffer_continuously" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="36285dd0-77ec-359f-db95-4ea764fdcf2a">
+      <Execution id="bf6cedfe-a68a-41cd-940d-1472202e3c9d" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Core.Test.Core.Core_specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ring_cache_can_buffer_continuously" />
+    </UnitTest>
+    <UnitTest name="Right_extension_spec" storage="e:\documents\projects\personal\mercury framework\main\src\mercury.core.test\bin\release\mercury.core.test.dll" id="9f17a6c5-5d4d-3f5b-5636-306323b6f057">
+      <Execution id="5c6fcd9f-ae00-4f02-ab83-995fe4d9cdc3" />
+      <TestMethod codeBase="E:/Documents/Projects/Personal/Mercury Framework/Main/Src/Mercury.Core.Test/bin/Release/Mercury.Core.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Common.Test.StringExtensions_Specs, Mercury.Core.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Right_extension_spec" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ed6807ba-00d8-6725-82e5-80d250236188" executionId="f4ed21d9-741a-43be-80a6-202b88c5d3ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9b24993-a3c3-c43f-c5bc-8bd983702166" executionId="a2c76861-f275-4530-bd6f-9f62fba6eabf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae684861-51b2-f36d-3210-c06bed219713" executionId="d77f0ada-6d31-4ce0-b293-43b09e6622dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f17a6c5-5d4d-3f5b-5636-306323b6f057" executionId="5c6fcd9f-ae00-4f02-ab83-995fe4d9cdc3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dda50e74-fa1e-a32a-a23f-4db305902f7b" executionId="e0146f10-1b0e-4888-8d34-65fb111949a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5a502bb-1515-2cf3-499b-ee79ba643643" executionId="d74e9084-7851-4ce6-86b1-24ca095b4809" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3911ae1c-9f32-9142-3631-9790e9f87fda" executionId="553bc8c7-eb14-4081-b328-986885c81005" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33bd2ffb-4f96-0db3-f09e-a6118c40537c" executionId="4d29bdb1-ef4b-4172-abe0-829c2c208c80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36285dd0-77ec-359f-db95-4ea764fdcf2a" executionId="bf6cedfe-a68a-41cd-940d-1472202e3c9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91e2f339-b251-8c5a-8358-7732dd2bb4af" executionId="693ccf65-98e9-4b0f-a003-7cab3c22a5ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fffeb1fa-1d90-a423-c638-a3f9688e34bc" executionId="39f26f22-2a75-4f6b-98ef-7f21dcbffc32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a499416-f30a-8b33-94da-a14f22d090a1" executionId="f9462f0b-8366-4d61-82e0-90725efe9b34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0835ab16-d6a1-9869-579f-b20ebb7df19b" executionId="d1d47401-bb9f-41cd-b202-f743a6a35efd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e670636a-9d43-9786-48bd-b3dd451e6e5a" executionId="b80a5a9c-9419-485d-aaae-b934e46f5250" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e2563f84-83fa-94c1-6f73-c608e461078d" executionId="8fb29b3c-1763-40ef-b90e-31f57ef77fe3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de7f2f59-6d7d-8630-f72f-e3cfb1788868" executionId="6b3d3d39-cc9e-4471-a39a-09712973741f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87b57f5b-221f-936e-5116-f073783b8d8c" executionId="12516d84-7326-40d5-96ac-8a8635c6c03f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f4ed21d9-741a-43be-80a6-202b88c5d3ea" testId="ed6807ba-00d8-6725-82e5-80d250236188" testName="In_order_entries" computerName="TLCITS2796ZQ1" duration="00:00:00.0172226" startTime="2015-05-15T14:52:27.6620340-05:00" endTime="2015-05-15T14:52:28.5401218-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4ed21d9-741a-43be-80a6-202b88c5d3ea">
+    </UnitTestResult>
+    <UnitTestResult executionId="a2c76861-f275-4530-bd6f-9f62fba6eabf" testId="a9b24993-a3c3-c43f-c5bc-8bd983702166" testName="Create_packet_protocol" computerName="TLCITS2796ZQ1" duration="00:00:00.0043428" startTime="2015-05-15T14:52:28.5441222-05:00" endTime="2015-05-15T14:52:28.5521230-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2c76861-f275-4530-bd6f-9f62fba6eabf">
+    </UnitTestResult>
+    <UnitTestResult executionId="d77f0ada-6d31-4ce0-b293-43b09e6622dd" testId="ae684861-51b2-f36d-3210-c06bed219713" testName="Left_extension_spec" computerName="TLCITS2796ZQ1" duration="00:00:00.0166859" startTime="2015-05-15T14:52:28.5551233-05:00" endTime="2015-05-15T14:52:28.5751253-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d77f0ada-6d31-4ce0-b293-43b09e6622dd">
+    </UnitTestResult>
+    <UnitTestResult executionId="5c6fcd9f-ae00-4f02-ab83-995fe4d9cdc3" testId="9f17a6c5-5d4d-3f5b-5636-306323b6f057" testName="Right_extension_spec" computerName="TLCITS2796ZQ1" duration="00:00:00.0082223" startTime="2015-05-15T14:52:28.5781256-05:00" endTime="2015-05-15T14:52:28.5891267-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c6fcd9f-ae00-4f02-ab83-995fe4d9cdc3">
+    </UnitTestResult>
+    <UnitTestResult executionId="e0146f10-1b0e-4888-8d34-65fb111949a0" testId="dda50e74-fa1e-a32a-a23f-4db305902f7b" testName="Mid_extension_spec" computerName="TLCITS2796ZQ1" duration="00:00:00.0143632" startTime="2015-05-15T14:52:28.5911269-05:00" endTime="2015-05-15T14:52:28.6081286-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0146f10-1b0e-4888-8d34-65fb111949a0">
+    </UnitTestResult>
+    <UnitTestResult executionId="d74e9084-7851-4ce6-86b1-24ca095b4809" testId="d5a502bb-1515-2cf3-499b-ee79ba643643" testName="ReplaceText_extension_spec" computerName="TLCITS2796ZQ1" duration="00:00:00.0157033" startTime="2015-05-15T14:52:28.6111289-05:00" endTime="2015-05-15T14:52:28.6291307-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d74e9084-7851-4ce6-86b1-24ca095b4809">
+    </UnitTestResult>
+    <UnitTestResult executionId="553bc8c7-eb14-4081-b328-986885c81005" testId="3911ae1c-9f32-9142-3631-9790e9f87fda" testName="IsNumeric_extension_spec" computerName="TLCITS2796ZQ1" duration="00:00:00.0003075" startTime="2015-05-15T14:52:28.6321310-05:00" endTime="2015-05-15T14:52:28.6351313-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="553bc8c7-eb14-4081-b328-986885c81005">
+    </UnitTestResult>
+    <UnitTestResult executionId="4d29bdb1-ef4b-4172-abe0-829c2c208c80" testId="33bd2ffb-4f96-0db3-f09e-a6118c40537c" testName="Ring_cache_can_buffer" computerName="TLCITS2796ZQ1" duration="00:00:00.0093340" startTime="2015-05-15T14:52:28.6381316-05:00" endTime="2015-05-15T14:52:28.6501328-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d29bdb1-ef4b-4172-abe0-829c2c208c80">
+    </UnitTestResult>
+    <UnitTestResult executionId="bf6cedfe-a68a-41cd-940d-1472202e3c9d" testId="36285dd0-77ec-359f-db95-4ea764fdcf2a" testName="Ring_cache_can_buffer_continuously" computerName="TLCITS2796ZQ1" duration="00:00:00.0321191" startTime="2015-05-15T14:52:28.6541332-05:00" endTime="2015-05-15T14:52:28.6891367-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf6cedfe-a68a-41cd-940d-1472202e3c9d">
+    </UnitTestResult>
+    <UnitTestResult executionId="693ccf65-98e9-4b0f-a003-7cab3c22a5ba" testId="91e2f339-b251-8c5a-8358-7732dd2bb4af" testName="Ring_cache_can_remove_and_compact" computerName="TLCITS2796ZQ1" duration="00:00:00.0093164" startTime="2015-05-15T14:52:28.6921370-05:00" endTime="2015-05-15T14:52:28.7041382-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="693ccf65-98e9-4b0f-a003-7cab3c22a5ba">
+    </UnitTestResult>
+    <UnitTestResult executionId="39f26f22-2a75-4f6b-98ef-7f21dcbffc32" testId="fffeb1fa-1d90-a423-c638-a3f9688e34bc" testName="Ring_cache_dispose_handler_occurs_on_overwrite" computerName="TLCITS2796ZQ1" duration="00:00:00.0010411" startTime="2015-05-15T14:52:28.7081386-05:00" endTime="2015-05-15T14:52:28.7111389-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39f26f22-2a75-4f6b-98ef-7f21dcbffc32">
+    </UnitTestResult>
+    <UnitTestResult executionId="f9462f0b-8366-4d61-82e0-90725efe9b34" testId="2a499416-f30a-8b33-94da-a14f22d090a1" testName="Can_clear_items_from_cache" computerName="TLCITS2796ZQ1" duration="00:00:00.0011282" startTime="2015-05-15T14:52:28.7141392-05:00" endTime="2015-05-15T14:52:28.7181396-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9462f0b-8366-4d61-82e0-90725efe9b34">
+    </UnitTestResult>
+    <UnitTestResult executionId="d1d47401-bb9f-41cd-b202-f743a6a35efd" testId="0835ab16-d6a1-9869-579f-b20ebb7df19b" testName="Observe_on_block" computerName="TLCITS2796ZQ1" duration="00:00:00.0034520" startTime="2015-05-15T14:52:28.7211399-05:00" endTime="2015-05-15T14:52:28.7271405-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1d47401-bb9f-41cd-b202-f743a6a35efd">
+    </UnitTestResult>
+    <UnitTestResult executionId="b80a5a9c-9419-485d-aaae-b934e46f5250" testId="e670636a-9d43-9786-48bd-b3dd451e6e5a" testName="Delay_observe_on_block" computerName="TLCITS2796ZQ1" duration="00:00:00.0004677" startTime="2015-05-15T14:52:28.7301408-05:00" endTime="2015-05-15T14:52:28.7331411-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b80a5a9c-9419-485d-aaae-b934e46f5250">
+    </UnitTestResult>
+    <UnitTestResult executionId="8fb29b3c-1763-40ef-b90e-31f57ef77fe3" testId="e2563f84-83fa-94c1-6f73-c608e461078d" testName="Explicit_enter_and_exit_block" computerName="TLCITS2796ZQ1" duration="00:00:00.0003946" startTime="2015-05-15T14:52:28.7361414-05:00" endTime="2015-05-15T14:52:28.7391417-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fb29b3c-1763-40ef-b90e-31f57ef77fe3">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b3d3d39-cc9e-4471-a39a-09712973741f" testId="de7f2f59-6d7d-8630-f72f-e3cfb1788868" testName="Exception_exits_observer_block" computerName="TLCITS2796ZQ1" duration="00:00:00.0072602" startTime="2015-05-15T14:52:28.7421420-05:00" endTime="2015-05-15T14:52:28.7521430-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b3d3d39-cc9e-4471-a39a-09712973741f">
+    </UnitTestResult>
+    <UnitTestResult executionId="12516d84-7326-40d5-96ac-8a8635c6c03f" testId="87b57f5b-221f-936e-5116-f073783b8d8c" testName="Provide_custom_state_to_observer_block" computerName="TLCITS2796ZQ1" duration="00:00:00.0014235" startTime="2015-05-15T14:52:28.7541432-05:00" endTime="2015-05-15T14:52:28.7581436-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12516d84-7326-40d5-96ac-8a8635c6c03f">
+    </UnitTestResult>
+  </Results>
+</TestRun>

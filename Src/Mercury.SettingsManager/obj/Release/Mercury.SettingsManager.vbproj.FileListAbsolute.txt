@@ -1,0 +1,8 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\bin\Release\Mercury.SettingsManager.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\bin\Release\Mercury.SettingsManager.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\bin\Release\Mercury.SettingsManager.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\obj\Release\Mercury.Resources.resources
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\obj\Release\Mercury.SettingsManager.vbproj.GenerateResource.Cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\obj\Release\Mercury.SettingsManager.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\obj\Release\Mercury.SettingsManager.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.SettingsManager\obj\Release\Mercury.SettingsManager.pdb

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Mercury.SettingsManager.Test
+</name>
+</assembly>
+<members>
+<member name="M:Mercury.SettingsManager.Test.QuerySettings.#ctor(Mercury.SettingsManager.Test.QuerySettingsElement)">
+	<summary>
+ Initializes a default instance of the QuerySettings 
+ class with the specified internal settings element.
+ </summary>
+	<param name="internalSettings">The internal QuerySettingsElement to use.</param>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.Source">
+	<summary>
+ Gets or sets the source connection information.
+ </summary>
+	<returns>The source connection information.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.Type">
+	<summary>
+ Gets or sets the type of data source to query.
+ </summary>
+	<returns>The type of data source to query.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.Command">
+	<summary>
+ Gets or sets the command associated with this query.
+ </summary>
+	<returns>The command associated with this query.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.Parameter">
+	<summary>
+ Gets or sets a parameter associated with this query.
+ </summary>
+	<returns>A parameter associated with this query.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.Key">
+	<summary>
+ Gets or sets the key identifier for this query.
+ </summary>
+	<returns>The key identifier for this query.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.Timeout">
+	<summary>
+ Gets or sets the timeout value for this query.
+ </summary>
+	<returns>The timeout value for this query.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.OverrideTaskAssembly">
+	<summary>
+ Gets or sets the path to the assembly that will override the default service 
+ type assembly.  This path is relative to the executing assembly.
+ </summary>
+	<returns>The path to the assembly that will override the default service type assembly.</returns>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettings.OverrideServiceType">
+	<summary>
+ Gets or sets the type string for the service type that will 
+ override the default service in the associated task.
+ </summary>
+	<returns>The type string for the service type that will 
+ override the default service in the associated task.</returns>
+	<remarks></remarks>
+</member><member name="M:Mercury.SettingsManager.Test.QuerySettings.Create(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String)">
+	<summary>
+ Creates and returns a QuerySettings object from the specified inputs.
+ </summary>
+	<param name="key">The key identifier for this query.</param>
+	<param name="source">The source connection information.</param>
+	<param name="type">The type of data source to query.</param>
+	<param name="parameter">A parameter associated with the query.</param>
+	<param name="timeout">The timeout value for this query.</param>
+	<param name="overrideTaskAssembly">The path to the assembly that will override the default service type assembly.</param>
+	<returns>A QuerySettings object derived from the specified inputs.</returns>
+	<remarks></remarks>
+</member><member name="T:Mercury.SettingsManager.Test.QuerySettings">
+	<summary>
+ Represents settings for a query.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Mercury.SettingsManager.Test.QuerySettingsCollection.QuerySettingsEnumerator">
+	<summary>
+ Private enumerator item.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Mercury.SettingsManager.Test.QuerySettingsCollection">
+	<summary>
+ A collection of query settings.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.QuerySettingsSection.ConfigurationPropertyCollection">
+	<summary>
+ A collection of configuration-element properties.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.QuerySettingsSection.Settings">
+	<summary>
+ Gets or sets the settings collection.
+ </summary>
+</member><member name="T:Mercury.SettingsManager.Test.QuerySettingsSection">
+	<summary>
+ Represents a configuration section containing query settings.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.WindowSettingsElement.ConfigurationPropertyCollection">
+	<summary>
+ A collection of configuration-element properties.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.WindowSettingsElement.windowSizeProperty">
+	<summary>
+ A window size attribute.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.WindowSettingsElement.windowStateProperty">
+	<summary>
+ A window state attribute.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.WindowSettingsElement.windowLocationProperty">
+	<summary>
+ A window location attribute.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.WindowSettingsElement.WindowSize">
+	<summary>
+ Gets or sets the window size setting.
+ </summary>
+</member><member name="P:Mercury.SettingsManager.Test.WindowSettingsElement.WindowState">
+	<summary>
+ Gets or sets the window state setting.
+ </summary>
+</member><member name="P:Mercury.SettingsManager.Test.WindowSettingsElement.WindowLocation">
+	<summary>
+ Gets or sets the window location setting.
+ </summary>
+</member><member name="T:Mercury.SettingsManager.Test.WindowSettingsElement">
+	<summary>
+ Represents a configuration element containing window settings.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.QuerySettingsElement.ConfigurationPropertyCollection">
+	<summary>
+ A collection of configuration-element properties.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.QuerySettingsElement.OverrideTaskAssemblyProperty">
+	<summary>
+ A string specifying the assembly to load for the task service type.  
+ This should be a relative path from the executing assembly.
+ </summary>
+</member><member name="M:Mercury.SettingsManager.Test.QuerySettingsElement.GetQuerySettings(Mercury.SettingsManager.Test.QuerySettingsElement)">
+	<summary>
+ Builds a query settings object from the specified configuration.
+ </summary>
+	<param name="config">The query settings configuration data from which to build.</param>
+	<returns>A query settings object constructed from the specified configuration.</returns>
+	<remarks></remarks>
+</member><member name="T:Mercury.SettingsManager.Test.QuerySettingsElement">
+	<summary>
+ Specifies a configuration element for query settings.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.QuerySettingsElementCollection.ConfigurationPropertyCollection">
+	<summary>
+ A collection of configuration-element properties.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Mercury.SettingsManager.Test.QuerySettingsElementCollection">
+	<summary>
+ Represents a collection of data source elements.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.Settings_specs.TestContext">
+	<summary>
+Gets or sets the test context which provides
+information about and functionality for the current test run.
+</summary>
+</member><member name="F:Mercury.SettingsManager.Test.WindowSettingsSection.ConfigurationPropertyCollection">
+	<summary>
+ A collection of configuration-element properties.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Mercury.SettingsManager.Test.WindowSettingsSection.MainWindowSettingsProperty">
+	<summary>
+ A window settings element for the primary application window.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Mercury.SettingsManager.Test.WindowSettingsSection.MainWindowSettings">
+	<summary>
+ Gets or sets the settings element for the primary application window.
+ </summary>
+</member><member name="T:Mercury.SettingsManager.Test.WindowSettingsSection">
+	<summary>
+ Represents a configuration section containing window settings.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

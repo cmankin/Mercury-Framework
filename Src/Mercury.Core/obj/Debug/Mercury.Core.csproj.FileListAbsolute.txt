@@ -1,0 +1,6 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core\bin\Debug\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core\bin\Debug\Mercury.Core.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core\obj\Debug\Mercury.Properties.Strings.resources
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core\obj\Debug\Mercury.Core.csproj.GenerateResource.Cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core\obj\Debug\Mercury.Core.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core\obj\Debug\Mercury.Core.pdb

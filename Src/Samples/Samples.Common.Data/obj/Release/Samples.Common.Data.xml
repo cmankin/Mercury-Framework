@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Samples.Common.Data
+</name>
+</assembly>
+<members>
+<member name="T:Samples.Common.Data.TimeFormat">
+	<summary>
+ Generalized time formatting to string.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Samples.Common.Data.ClientWorker">
+	<summary>
+ Generic worker agent
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Samples.Common.Data.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Samples.Common.Data.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Samples.Common.Data.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Samples.Common.Data.TestResult">
+	<summary>
+ Represents the results of a test
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Samples.Common.Data.ServerWorker">
+	<summary>
+ Generic worker agent
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Samples.Common.Data.ServerState">
+	<summary>
+ A set of flags for server workers to evaluate.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

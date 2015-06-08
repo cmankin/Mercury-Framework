@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="70592c4c-31fc-44b5-9a69-349b3345ce65" name="chris.mankin@TLCINIR8FR0NY 2013-07-15 10:39:10" runUser="HQDOMAIN\chris.mankin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="70bce9e9-d360-4dd6-8af7-dd0eb2add29d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="chris.mankin_TLCINIR8FR0NY 2013-07-15 10_39_10">
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mercury.Messaging.Core\bin\Release\Mercury.Messaging.Core.dll" />
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mercury.Messaging.Behaviors\bin\Release\Mercury.Messaging.Behaviors.dll" />
+      <DeploymentItem filename="C:\Users\chris.mankin\Documents\Visual Studio 2010\Projects\Development\Mercury Framework v2\Src\Mercury.Core\bin\Release\Mercury.Core.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-07-15T10:39:10.6126606-05:00" queuing="2013-07-15T10:39:13.3927162-05:00" start="2013-07-15T10:39:13.4527174-05:00" finish="2013-07-15T10:39:16.8527854-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Synchronous_message_blocks_until_complete" storage="c:\users\chris.mankin\documents\visual studio 2010\projects\development\mercury framework v2\src\mercury.messaging.test\bin\release\mercury.messaging.test.dll" id="fbf19baf-adef-42c8-f964-b6feea0d5ea2">
+      <Execution id="4f2de389-c9a7-41a8-954a-2c46eef28b9d" />
+      <TestMethod codeBase="C:/Users/chris.mankin/Documents/Visual Studio 2010/Projects/Development/Mercury Framework v2/Src/Mercury.Messaging.Test/bin/Release/Mercury.Messaging.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Mercury.Messaging.Test.Agent_specs, Mercury.Messaging.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7c578f7c47ef72c" name="Synchronous_message_blocks_until_complete" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fbf19baf-adef-42c8-f964-b6feea0d5ea2" executionId="4f2de389-c9a7-41a8-954a-2c46eef28b9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4f2de389-c9a7-41a8-954a-2c46eef28b9d" testId="fbf19baf-adef-42c8-f964-b6feea0d5ea2" testName="Synchronous_message_blocks_until_complete" computerName="TLCINIR8FR0NY" duration="00:00:02.3673380" startTime="2013-07-15T10:39:13.4927182-05:00" endTime="2013-07-15T10:39:16.6327810-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f2de389-c9a7-41a8-954a-2c46eef28b9d">
+    </UnitTestResult>
+  </Results>
+</TestRun>

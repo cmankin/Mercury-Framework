@@ -1,0 +1,2236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mercury.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Mercury.Net.PacketProtocol">
+            <summary>
+            Represents a data packet protocol for message framing
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.#ctor(Mercury.Net.PacketHeader,System.String)">
+            <summary>
+            Initializes a default instance of the PacketProtocol 
+            class with the specified header and string data.
+            </summary>
+            <param name="header">The PacketHeader to prepend to this packet.</param>
+            <param name="data">The string data contained in this packet.</param>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.#ctor(Mercury.Net.PacketHeader,System.Byte[])">
+            <summary>
+            Initializes a default instance of the PacketProtocol 
+            class with the specified header and byte data.
+            </summary>
+            <param name="header">The PacketHeader to prepend to this packet.</param>
+            <param name="data">The byte data that comprises the packet.</param>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPacket">
+            <summary>
+            Returns a byte array representation of this packet.
+            </summary>
+            <returns>A byte array representation of this packet.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPacket(Mercury.Net.PacketHeader,System.Byte[])">
+            <summary>
+            Returns a byte array packet assembled from the specified values.
+            </summary>
+            <param name="header">The packet header to use.</param>
+            <param name="data">The data byte array.</param>
+            <returns>A byte array packet assembled from the specified values.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPacket(System.Byte[],System.Byte[])">
+            <summary>
+            Returns a byte array packet assembled from the specified byte array values.
+            </summary>
+            <param name="header">The header byte array.</param>
+            <param name="data">The data byte array.</param>
+            <returns>A byte array packet assembled from the specified byte array values.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPacket(System.Byte[],System.Byte[],System.UInt16)">
+            <summary>
+            Returns a byte array packet assembled from the specified byte array values.
+            </summary>
+            <param name="header">The header byte array.</param>
+            <param name="data">The data byte array.</param>
+            <param name="extra">Extra info for the envelope record.</param>
+            <returns>A byte array packet assembled from the specified byte array values.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPacket(System.Byte[],System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            Fills the specified packet byte array with the bytes from the specified header, envelope, and data.
+            </summary>
+            <param name="packet">The packet byte array to fill.  
+            This must be sized to contain all specified byte data.</param>
+            <param name="header">The header byte array.</param>
+            <param name="envelope">The envelope byte array.</param>
+            <param name="data">The data byte array.</param>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GenerateHeader(System.String)">
+            <summary>
+            Returns a packet header generated from the specified values.
+            </summary>
+            <param name="via">The URI address destination for subsequent messages.</param>
+            <returns>A packet header generated from the specified values.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GenerateHeader(Mercury.Net.CommunicationMode,System.String,Mercury.Net.EnvelopeEncoding,Mercury.Net.EnvelopeStructure)">
+            <summary>
+            Returns a packet header generated from the specified values.
+            </summary>
+            <param name="mode">The communication mode being used.</param>
+            <param name="via">The URI address destination for subsequent messages.</param>
+            <param name="encoding">The envelope encoding scheme.</param>
+            <param name="structure">The envelope structure.</param>
+            <returns>A packet header generated from the specified values.</returns>
+        </member>
+        <member name="F:Mercury.Net.PacketProtocol.MajorVersion">
+            <summary>
+            The protocol major version.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.PacketProtocol.MinorVersion">
+            <summary>
+            The protocol minor version.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetSizedEnvelope(System.UInt32,System.UInt16)">
+            <summary>
+            Returns a sized envelope record (5).
+            </summary>
+            <param name="payloadSize">The size of the payload.</param>
+            <param name="extra">Extra info.</param>
+            <returns>A sized envelope record</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPreambleAck">
+            <summary>
+            Returns a preamble ack record (8).
+            </summary>
+            <returns>A preamble ack record</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPacketFault(Mercury.Net.PacketError)">
+            <summary>
+            Returns a packet fault record (7).
+            </summary>
+            <param name="error">The packet error associated with this record.</param>
+            <returns>A packet fault record.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetPacketEnd">
+            <summary>
+            Returns a packet end record (6).
+            </summary>
+            <returns>A packet end record</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetData(System.Text.Encoding,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Returns the string representation of the specified byte data and encoding.
+            </summary>
+            <param name="encoding">The encoding used for the byte data.</param>
+            <param name="data">A byte array containing the data to decode.</param>
+            <param name="offset">The offset integer at which to start decoding.</param>
+            <param name="length">The number of bytes to decode.</param>
+            <returns>The string representation of the specified byte data and encoding.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetBytes(System.UInt16)">
+            <summary>
+            Returns a byte array of the specified value.
+            </summary>
+            <param name="value">The value to convert to a byte array.</param>
+            <returns>A byte array of the specified value.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetBytes(System.UInt32)">
+            <summary>
+            Returns a byte array of the specified value.
+            </summary>
+            <param name="value">The value to convert to a byte array.</param>
+            <returns>A byte array of the specified value.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.ConvertToUint16(System.Byte[],System.Int32)">
+            <summary>
+            Converts the specified byte data into a 16-bit unsigned integer.
+            </summary>
+            <param name="data">The byte data to convert.</param>
+            <param name="offset">The integer offset at which to start.</param>
+            <returns>A 16-bit unsigned integer.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.ConvertToUint32(System.Byte[],System.Int32)">
+            <summary>
+            Converts the specified byte data into a 32-bit unsigned integer.
+            </summary>
+            <param name="data">The byte data to convert.</param>
+            <param name="offset">The integer offset at which to start.</param>
+            <returns>A 32-bit unsigned integer.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketProtocol.GetRecord(System.Byte,System.Byte[])">
+            <summary>
+            Returns a record-formatted byte array with the specified record ID and contents.
+            </summary>
+            <param name="recordId">The ID of the record to create.</param>
+            <param name="contents">The byte array contents of the record.</param>
+            <returns>A record-formatted byte array.</returns>
+        </member>
+        <member name="P:Mercury.Net.PacketProtocol.Header">
+            <summary>
+            Gets the data packet header.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.PacketProtocol.Data">
+            <summary>
+            Gets the byte data of this packet.
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Acknowledgment">
+            <summary>
+            Describes the acknowledgment of a received message to the sender.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.Acknowledgment.InvalidFormat">
+            <summary>
+            The message was incorrectly formatted.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.Acknowledgment.ReceiveTimeout">
+            <summary>
+            The message did not arrive in the expected amount of time.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.Acknowledgment.Receive">
+            <summary>
+            The message was received.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.Log">
+            <summary>
+            A set of methods for initializing the logging 
+            framework and retrieving the context.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.Log.InitializeWith``1">
+            <summary>
+            Initializes the logging framework with the specified logger type.
+            </summary>
+            <typeparam name="T">The type of the logger to use.</typeparam>
+        </member>
+        <member name="M:Mercury.Logging.Log.InitializeWith(Mercury.Logging.ILog)">
+            <summary>
+            Initializes the logging framework with the specified logger instance. If 
+            the log instance is set all logging calls will be routed to this logger.
+            </summary>
+            <param name="logger">The ILog instance to use for logging.</param>
+        </member>
+        <member name="M:Mercury.Logging.Log.GetLogger(System.String)">
+            <summary>
+            Returns a logger initialized with the specified log name.
+            </summary>
+            <param name="logName">The name of the logger.</param>
+            <returns>A logger initialized with the specified log name or the default logger instance.</returns>
+        </member>
+        <member name="M:Mercury.Logging.Log.GetExpandedFilePath(System.String)">
+            <summary>
+            Returns the file path with select system path variables expanded.
+            </summary>
+            <param name="filePath">The file path to expand.</param>
+            <returns>The file path with select system path variables expanded or the original file path.</returns>
+        </member>
+        <member name="P:Mercury.Logging.Log.RegisteredLogNames">
+            <summary>
+            Returns a list of registered log names. If any logs are registered, Mercury.Logging.Log.GetLogger() 
+            will only create and return logs for the registered log names.
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.Machine">
+            <summary>
+            Provides networking information about the current machine.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Machine.Host">
+            <summary>
+            Gets the current host entry for this machine.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Machine.IPv4">
+            <summary>
+            Gets the IPv4 IP address for this machine, if available.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.Machine.IPv6">
+            <summary>
+            Gets the IPv6 IP address for this machine, if available.
+            </summary>
+        </member>
+        <member name="T:Mercury.HashItem`2">
+            <summary>
+            An object representing an item that has been hashed by a hashing function.
+            </summary>
+            <typeparam name="TValue">The type of the value contained in this item.</typeparam>
+            <typeparam name="TCode">The type of the hash code for the value.</typeparam>
+        </member>
+        <member name="M:Mercury.HashItem`2.#ctor(`0,`1,System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the Mercury.HashItem class with the specified values.
+            </summary>
+            <param name="value">The raw value of the item that was hashed.</param>
+            <param name="hashCode">The hash code generated from the item.</param>
+            <param name="comparer">The IEqualityComparer(of T) comparer to use for value comparisons.</param>
+        </member>
+        <member name="M:Mercury.HashItem`2.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current instance.
+            </summary>
+            <param name="obj">The object to compare.</param>
+            <returns>True if the specified object is equal to the current instance; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.HashItem`2.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>The hashcode generated for this instance.</returns>
+        </member>
+        <member name="M:Mercury.HashItem`2.IsEqual(Mercury.HashItem{`0,`1},Mercury.HashItem{`0,`1},System.Boolean)">
+            <summary>
+            Compares the two Mercury.HashItem objects for equality.
+            </summary>
+            <param name="x">The first Mercury.HashItem object to compare.</param>
+            <param name="y">The second Mercury.HashItem object to compare.</param>
+            <param name="forceValueComparison">A value indicating whether to compare on the 
+            item value.  The default is a HashItem(Of TValue,TCode).HashCode comparison.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Mercury.HashItem`2.Comparer">
+            <summary>
+            Gets the equality comparer to use for value comparisons.
+            </summary>
+        </member>
+        <member name="P:Mercury.HashItem`2.Value">
+            <summary>
+            Gets the value of the hash item.
+            </summary>
+        </member>
+        <member name="P:Mercury.HashItem`2.HashCode">
+            <summary>
+            Gets the hash code generated for this value.
+            </summary>
+        </member>
+        <member name="T:Mercury.RingCache`1">
+            <summary>
+            Implementation of a circular cache.
+            </summary>
+            <typeparam name="T">The type of the data to cache.</typeparam>
+        </member>
+        <member name="M:Mercury.RingCache`1.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mercury.RingCache`1"/> class with the specified buffer size.
+            </summary>
+            <param name="bufferSize">The maximum number of elements that can be added to the cache.</param>
+        </member>
+        <member name="M:Mercury.RingCache`1.#ctor(System.Int32,System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mercury.RingCache`1"/> class with the specified buffer size and dispose handler.
+            </summary>
+            <param name="bufferSize">The maximum number of elements that can be added to the cache.</param>
+            <param name="disposeHandler">A delegate to a method that can dispose of elements that are overwritten.</param>
+        </member>
+        <member name="M:Mercury.RingCache`1.Clear(System.Boolean)">
+            <summary>
+            Removes all elements from the cache.
+            </summary>
+            <param name="withDispose">A value indicating whether each element should be disposed before being removed.</param>
+        </member>
+        <member name="M:Mercury.RingCache`1.Add(System.String,`0)">
+            <summary>
+            Attempts to add the specified item with the associated key to the cache.
+            </summary>
+            <param name="key">The key associated with the item to add.</param>
+            <param name="item">The item value to add.</param>
+            <returns>True if key does not already exist in the cache; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.RingCache`1.Add(System.String,`0,`0@)">
+            <summary>
+            Attempts to add the specified item with the associated key to the cache.
+            </summary>
+            <param name="key">The key associated with the item to add.</param>
+            <param name="item">The item value to add.</param>
+            <param name="overwrite">Out. The value that was overwritten by the added item or null.</param>
+            <returns>True if key does not already exist in the cache; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.RingCache`1.Remove(System.String)">
+            <summary>
+            Removes the item associated with the specified key from the cache.  This 
+            is an expensive operation; try to avoid it as much as possible.
+            </summary>
+            <param name="key">The key associated with the item to remove.</param>
+            <returns>True if the item was removed from the cache; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.RingCache`1.Remove(System.String,`0@)">
+            <summary>
+            Removes the item associated with the specified key from the cache.  This 
+            is an expensive operation; try to avoid it as much as possible.
+            </summary>
+            <param name="key">The key associated with the item to remove.</param>
+            <param name="value">Out. The item removed from the cache.</param>
+            <returns>True if the item was removed from the cache; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.RingCache`1.GetValue(System.String)">
+            <summary>
+            Returns the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the value to retrieve.</param>
+            <returns>The value associated with the specified key.</returns>
+        </member>
+        <member name="P:Mercury.RingCache`1.BufferSize">
+            <summary>
+            Gets the maximum number of elements that can be added to the cache.
+            </summary>
+        </member>
+        <member name="P:Mercury.RingCache`1.Count">
+            <summary>
+            Gets the number of elements in the cache.
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.TraceObserver">
+            <summary>
+            Observes a block of code and outputs trace information at block entry and exit points.
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.Observer">
+            <summary>
+            Allows a block of code to be observed.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.#ctor">
+            <summary>
+            Initializes a default instance of the Mercury.Instrumentation.Observer class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>
+            Initializes a new instance of the Mercury.Instrumentation.Observer 
+            class with the specified method context and logger.
+            </summary>
+            <param name="context">The method context being observed.  This can be obtained 
+            through a call to System.Reflection.MethodBase.GetCurrentMethod().</param>
+            <param name="logger">The logger to use.</param>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.Enter">
+            <summary>
+            Executes an entry into the observer block.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.Exit">
+            <summary>
+            Executes an exit of the observer block.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>
+            Executes an entry into the observer block.
+            </summary>
+            <param name="context">The method context for this block.</param>
+            <param name="logger">The current logger.</param>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>
+            Executes an exit of the observer block.
+            </summary>
+            <param name="context">The method context for this block.</param>
+            <param name="logger">The current logger.</param>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.Dispose">
+            <summary>
+            Disposes this instance of the Mercury.Instrumentation.Observer.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.Observer.Dispose(System.Boolean)">
+            <summary>
+            Disposes this instance of the Mercury.Instrumentation.Observer.
+            </summary>
+            <param name="disposing">A value indicating whether this instance is disposing.</param>
+        </member>
+        <member name="P:Mercury.Instrumentation.Observer.Context">
+            <summary>
+            Gets information on the observed class member.
+            </summary>
+        </member>
+        <member name="P:Mercury.Instrumentation.Observer.Logger">
+            <summary>
+            Gets the logger used by this observer.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.TraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>
+            Initializes a new instance of the Mercury.Instrumentation.TraceObserver class 
+            with the specified method context and logger.
+            </summary>
+            <param name="context">The method context being observed.  This can be obtained 
+            through a call to System.Reflection.MethodBase.GetCurrentMethod().</param>
+            <param name="logger">The logger to use.</param>
+        </member>
+        <member name="M:Mercury.Instrumentation.TraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog,System.Func{System.String})">
+            <summary>
+            Initializes a new instance of the Mercury.Instrumentation.TraceObserver class 
+            with the specified method context, logger, and state retrieval function.
+            </summary>
+            <param name="context">The method context being observed.  This can be obtained 
+            through a call to System.Reflection.MethodBase.GetCurrentMethod().</param>
+            <param name="logger">The logger to use.</param>
+            <param name="captureState">A function that returns a string indicating the current state.</param>
+        </member>
+        <member name="M:Mercury.Instrumentation.TraceObserver.#ctor(System.Reflection.MethodBase,Mercury.Logging.ILog,System.Func{System.String},System.Boolean)">
+            <summary>
+            Initializes a new instance of the Mercury.Instrumentation.TraceObserver class with the 
+            specified method context, logger, state retrieval function, and delay enter status.
+            </summary>
+            <param name="context">The method context being observed.  This can be obtained 
+            through a call to System.Reflection.MethodBase.GetCurrentMethod().</param>
+            <param name="logger">The logger to use.</param>
+            <param name="captureState">A function that returns a string indicating the current state.</param>
+            <param name="delayEnterToCall">If true the Enter() function will NOT be called in the 
+            constructor; otherwise, the Enter() function will be called during object construction.</param>
+        </member>
+        <member name="M:Mercury.Instrumentation.TraceObserver.GetCurrentState">
+            <summary>
+            Gets the current default state information for enter and exit functions.
+            </summary>
+            <returns>The current default state information for enter and exit functions.</returns>
+        </member>
+        <member name="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>
+            Executes an entry into the observer block.  This is a write once 
+            entry.  Subsequent executions will yield no trace info.
+            </summary>
+            <param name="context">The method context for this block.</param>
+            <param name="logger">The current logger.</param>
+        </member>
+        <member name="M:Mercury.Instrumentation.TraceObserver.EnterObserverBlockInternal(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>
+            Internal method for handling an entry into an observer block. 
+            Can be called from inside the class constructor.
+            </summary>
+            <param name="context">The method context for this block.</param>
+            <param name="logger">The current logger.</param>
+        </member>
+        <member name="F:Mercury.Instrumentation.TraceObserver.ExecutedEnter">
+            <summary>
+            Flag indicating the whether the observer has been entered.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.TraceObserver.ExecuteExit">
+            <summary>
+            Flag indicating whether the observer has been exited.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.TraceObserver.ExitObserverBlock(System.Reflection.MethodBase,Mercury.Logging.ILog)">
+            <summary>
+            Executes an exit of the observer block.  This is a write once 
+            entry.  Subsequent executions will yield no trace info.
+            </summary>
+            <param name="context">The method context for this block.</param>
+            <param name="logger">The current logger.</param>
+        </member>
+        <member name="P:Mercury.Instrumentation.TraceObserver.CaptureState">
+            <summary>
+            Gets a function that returns a string indicating the current state.
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.PacketError">
+            <summary>
+            Describes an error on a data packet.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.PacketError.None">
+            <summary>
+            No error was encountered.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.PacketError.InvalidMessage">
+            <summary>
+            The message format was invalid.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.PacketError.UnexpectedEndOfMessage">
+            <summary>
+            The message did not contain the appropriate "end message" construct.
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.NetExtensions">
+            <summary>
+            A set of extensions to core System.Net classes.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.NetExtensions.GetAddress(System.Net.IPHostEntry,System.Func{System.Net.IPAddress,System.Boolean})">
+            <summary>
+            Retrieves an address from a host entry that satisfies the specified condition.
+            </summary>
+            <param name="host">The host entry on which to search.</param>
+            <param name="condition">The predicate function to use.</param>
+            <returns>An IP address that satisfies the specified condition or null.</returns>
+        </member>
+        <member name="T:Mercury.Net.TcpSockets">
+            <summary>
+            A helper class for generating and connecting sockets for a TCP protocol.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.TcpSockets.Connect(System.String,System.Int32)">
+            <summary>
+            Returns a newly created socket that has been connected 
+            to the end point at the specified host and port.
+            </summary>
+            <param name="host">The name of the host server, or the string representation of its IP address.</param>
+            <param name="port">The port number on which to connect.</param>
+            <returns>A newly created socket that has been connected 
+            to the end point at the specified host and port or null.</returns>
+        </member>
+        <member name="M:Mercury.Net.TcpSockets.Connect(System.Int64,System.Int32)">
+            <summary>
+            Returns a newly created socket that has been connected 
+            to the end point at the specified IP address and port.
+            </summary>
+            <param name="ipAddress">The IP address represented as a 64-bit integer.</param>
+            <param name="port">The port number on which to connect.</param>
+            <returns>A newly created socket that has been connected to 
+            the end point at the specified IP address and port or null.</returns>
+        </member>
+        <member name="M:Mercury.Net.TcpSockets.Connect(System.Net.IPEndPoint)">
+            <summary>
+            Returns a newly created socket that has been connected to the specified end point.
+            </summary>
+            <param name="endPoint">The IP end point on which to connect.</param>
+            <returns>A socket that has been created for and connected to the specified end point or null.</returns>
+        </member>
+        <member name="M:Mercury.Net.TcpSockets.GetSocket(System.Int64,System.Int32,System.Net.Sockets.SocketType)">
+            <summary>
+            Returns a socket created from the specified IP address, port and socket type.
+            </summary>
+            <param name="ipAddress">The IP address represented as a 64-bit integer.</param>
+            <param name="port">The port number to use.</param>
+            <param name="type">The type of socket to create.</param>
+            <returns>A socket created from the specified IP address, port and socket type.</returns>
+        </member>
+        <member name="M:Mercury.Net.TcpSockets.GetSocket(System.Net.IPEndPoint,System.Net.Sockets.SocketType)">
+            <summary>
+            Returns a socket created from the specified end point and socket type.
+            </summary>
+            <param name="endPoint">The IP end point to use.</param>
+            <param name="type">The type of socket to create.</param>
+            <returns>A socket created from the specified end point and socket type.</returns>
+        </member>
+        <member name="M:Mercury.Net.TcpSockets.TryConnectSocket(System.Net.Sockets.Socket,System.Net.IPEndPoint)">
+            <summary>
+            Attempts to connect the specified socket to the specified end point.
+            </summary>
+            <param name="socket">The socket to connect.</param>
+            <param name="endPoint">The IP end point on which to connect.</param>
+            <returns>True if the the socket was able to connect; otherwise, false.</returns>
+        </member>
+        <member name="P:Mercury.Net.TcpSockets.LastError">
+            <summary>
+            Gets the last error value that occurred while using the TcpSockets connection methods.
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.CommunicationMode">
+            <summary>
+            Describes the communication mode over a network.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.CommunicationMode.SingletonUnsized">
+            <summary>
+            The initiating stream for a single one-way message 
+            or for a pair of messages in a request-reply 
+            manner between two nodes.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.CommunicationMode.Duplex">
+            <summary>
+            The initiating stream for multiple bi-directional 
+            messages between two nodes.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.CommunicationMode.Simplex">
+            <summary>
+            The initiating stream for multiple one-way messages 
+            from a single source.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.CommunicationMode.SingletonSized">
+            <summary>
+            The initiating stream for a single one-way message 
+            from a single source.
+            </summary>
+        </member>
+        <member name="T:Mercury.TimeSpanExtensions">
+            <summary>
+            Core extensions to the TimeSpan class.
+            </summary>
+        </member>
+        <member name="M:Mercury.TimeSpanExtensions.Days(System.Int32)">
+            <summary>
+            Returns a time span for the specified number of days.
+            </summary>
+            <param name="value">The number of days.</param>
+            <returns>A time span for the specified number of days.</returns>
+        </member>
+        <member name="M:Mercury.TimeSpanExtensions.Hours(System.Int32)">
+            <summary>
+            Returns a time span for the specified number of hours.
+            </summary>
+            <param name="value">The number of hours.</param>
+            <returns>A time span for the specified number of hours.</returns>
+        </member>
+        <member name="M:Mercury.TimeSpanExtensions.Minutes(System.Int32)">
+            <summary>
+            Returns a time span for the specified number of minutes.
+            </summary>
+            <param name="value">The number of minutes.</param>
+            <returns>A time span for the specified number of minutes.</returns>
+        </member>
+        <member name="M:Mercury.TimeSpanExtensions.Seconds(System.Int32)">
+            <summary>
+            Returns a time span for the specified number of seconds.
+            </summary>
+            <param name="value">The number of seconds.</param>
+            <returns>A time span for the specified number of seconds.</returns>
+        </member>
+        <member name="M:Mercury.TimeSpanExtensions.Milliseconds(System.Int32)">
+            <summary>
+            Returns a time span for the specified number of milliseconds.
+            </summary>
+            <param name="value">The number of milliseconds.</param>
+            <returns>A time span for the specified number of milliseconds.</returns>
+        </member>
+        <member name="T:Mercury.Xml.Serialization.XmlSerializationHelper">
+            <summary>
+            A helper class for XML serialization.
+            </summary>
+        </member>
+        <member name="F:Mercury.Xml.Serialization.XmlSerializationHelper.NewLine">
+            <summary>
+            Gets a new line character.
+            </summary>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.SetEncoding(System.Text.Encoding)">
+            <summary>
+            Sets the default encoding scheme to the specified encoding.
+            </summary>
+            <param name="encoding">The System.Text.Encoding to set.</param>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.GetSerializableTypeName(System.Type)">
+            <summary>
+            Returns the assembly qualified name or the custom formatted name of the specified System.Type.
+            </summary>
+            <param name="type">The System.Type to use.</param>
+            <returns>The assembly qualified name or the custom formatted name of the specified System.Type.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.Serialize(System.Object)">
+            <summary>
+            Serializes the specified object instance to an XML string using the Unicode (little endian) encoding.
+            </summary>
+            <param name="data">The object instance to serialize.</param>
+            <returns>An object serialized XML string.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.Serialize(System.Object,System.Text.Encoding)">
+            <summary>
+            Serializes the specified object instance to an XML string with the specified encoding.
+            </summary>
+            <param name="data">The object instance to serialize.</param>
+            <param name="encoding">The encoding to use.</param>
+            <returns>An object serialized XML string with the specified encoding.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.Serialize(System.Object,System.Xml.XmlWriter)">
+            <summary>
+            Serializes the specified object instance using the specified System.Xml.XmlWriter.
+            </summary>
+            <param name="data">The object instance to serialize.</param>
+            <param name="writer">The System.Xml.XmlWriter to use.</param>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.SerializeType(System.Type)">
+            <summary>
+            Serializes the specified System.Type to an XML string using the Unicode (little endian) encoding.
+            </summary>
+            <param name="type">The System.Type to serialize.</param>
+            <returns>An XML string describing the specified System.Type.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.SerializeType(System.Type,System.Text.Encoding)">
+            <summary>
+            Serializes the specified System.Type to an XML string with the specified encoding.
+            </summary>
+            <param name="type">The System.Type to serialize.</param>
+            <param name="encoding">The encoding to use.</param>
+            <returns>An XML string describing the specified System.Type.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.SerializeType(System.Type,System.Xml.XmlWriter)">
+            <summary>
+            Serializes the specified System.Type using the specified System.Xml.XmlWriter.
+            </summary>
+            <param name="type">The System.Type to serialize.</param>
+            <param name="writer">The System.Xml.XmlWriter to use.</param>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.Deserialize(System.String,System.Type)">
+            <summary>
+            Deserializes the specified XML to an instance of the specified type.
+            </summary>
+            <param name="xml">An XML serialized object.</param>
+            <param name="expectedType">The type of the instance to return.</param>
+            <returns>An instance of the specified type deserialized from the specified XML or null.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified XML to an instance of the specified type.
+            </summary>
+            <typeparam name="T">The type of the instance to return.</typeparam>
+            <param name="xml">An XML serialized object.</param>
+            <returns>An instance of the specified type deserialized from the specified XML or null.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.DeserializeType(System.String)">
+            <summary>
+            Deserializes a System.Type from the specified XML string.
+            </summary>
+            <param name="xml">An XML serialized type.</param>
+            <returns>A System.Type deserialized from the specified XML string or null.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.DeserializeType(System.Xml.XmlReader)">
+            <summary>
+            Deserializes a System.Type using the specified System.Xml.XmlReader.
+            </summary>
+            <param name="reader">The XML reader to use.</param>
+            <returns>A System.Type deserialized from the specified System.Xml.XmlReader.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.GenerateHeader(System.Text.Encoding)">
+            <summary>
+            Generates an XML document header with the specified encoding.
+            </summary>
+            <param name="encoding">The encoding to use for the XML document header.</param>
+            <returns>An XML document header generated with the specified encoding.</returns>
+        </member>
+        <member name="M:Mercury.Xml.Serialization.XmlSerializationHelper.SetCustomTypeFormat(System.Func{System.Type,System.String})">
+            <summary>
+            Sets the custom XML serialized type format.  If format is null, then the default will be used.
+            </summary>
+            <param name="format">A method that can format the serialized type or null to use the default.</param>
+        </member>
+        <member name="P:Mercury.Xml.Serialization.XmlSerializationHelper.CurrentEncoding">
+            <summary>
+            Gets the current default encoding.
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.PacketHeader">
+            <summary>
+            A header for a message packet sent over the network.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.#ctor">
+            <summary>
+            Initializes a default instance of the PacketHeader class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.#ctor(System.Byte,System.Byte)">
+            <summary>
+            Initializes a default instance of the PacketHeader class with the specified values.
+            </summary>
+            <param name="majorVersion">The major version of the packet protocol.</param>
+            <param name="minorVersion">The minor version of the packet protocol.</param>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.#ctor(System.Byte,System.Byte,Mercury.Net.CommunicationMode,System.String,Mercury.Net.EnvelopeEncoding,Mercury.Net.EnvelopeStructure)">
+            <summary>
+            Initializes a default instance of the PacketHeader class with the specified values.
+            </summary>
+            <param name="majorVersion">The major version of the packet protocol.</param>
+            <param name="minorVersion">The minor version of the packet protocol.</param>
+            <param name="mode">The communication mode being used.</param>
+            <param name="via">The URI address destination for subsequent messages.</param>
+            <param name="encoding">The envelope encoding scheme.</param>
+            <param name="structure">The envelope structure.</param>
+        </member>
+        <member name="F:Mercury.Net.PacketHeader.DefaultStringEncoding">
+            <summary>
+            The default string encoding.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.GetBytes">
+            <summary>
+            Gets a byte array containing the complete packet header information.
+            </summary>
+            <returns>A byte array containing the complete packet header information.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.CalculateHeaderSize">
+            <summary>
+            Gets the size in bytes of the packet header.
+            </summary>
+            <returns>The size in bytes of the packet header.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.GetSizeBytes(System.UInt16)">
+            <summary>
+            Returns a byte array of the specified size value.
+            </summary>
+            <param name="size">The size value to convert into a byte array.</param>
+            <returns>A byte array of the specified size value.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.GetSizeBytes(System.UInt32)">
+            <summary>
+            Returns a byte array of the specified size value.
+            </summary>
+            <param name="size">The size value to convert into a byte array.</param>
+            <returns>A byte array of the specified size value.</returns>
+        </member>
+        <member name="M:Mercury.Net.PacketHeader.GetRecord(System.Byte,System.Byte[])">
+            <summary>
+            Returns a record-formatted byte array with the specified record ID and contents.
+            </summary>
+            <param name="recordId">The ID of the record to create.</param>
+            <param name="contents">The byte array contents of the record.</param>
+            <returns>A record-formatted byte array.</returns>
+        </member>
+        <member name="P:Mercury.Net.PacketHeader.MajorVersion">
+            <summary>
+            Gets the major version of this protocol.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.PacketHeader.MinorVersion">
+            <summary>
+            Gets the minor version of this protocol.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.PacketHeader.EnvelopeStructure">
+            <summary>
+            Gets the type of data following this header.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.PacketHeader.EnvelopeEncoding">
+            <summary>
+            Gets the encoding for the message envelope.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.PacketHeader.Mode">
+            <summary>
+            Gets the communication mode.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.PacketHeader.Via">
+            <summary>
+            Gets the URI for which subsequent messages are bound.
+            </summary>
+        </member>
+        <member name="T:Mercury.Properties.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Mercury.Properties.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Mercury.Properties.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Mercury.Properties.Strings.Mid_Function_Start_Error">
+            <summary>
+              Looks up a localized string similar to The start index must be greater than or equal to 0..
+            </summary>
+        </member>
+        <member name="P:Mercury.Properties.Strings.OrderedDictionary_ReadOnly">
+            <summary>
+              Looks up a localized string similar to The OrderedDictionary collection is read-only..
+            </summary>
+        </member>
+        <member name="P:Mercury.Properties.Strings.OrderedDictionaryKeyValueCollection_ReadOnly">
+            <summary>
+              Looks up a localized string similar to The OrderedDictionaryKeyValueCollection is read-only..
+            </summary>
+        </member>
+        <member name="P:Mercury.Properties.Strings.String_Function_Length_Error">
+            <summary>
+              Looks up a localized string similar to The length must be greater than or equal to 0..
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.SystemVariable">
+            <summary>
+            A set of common system variables and associated functions.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.AppData">
+            <summary>
+            Path variable for the AppData->Roaming folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.LocalAppData">
+            <summary>
+            Path variable for the AppData->Local folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.AllUsersAppData">
+            <summary>
+            Path variable for the All Users AppData folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.ProgramFiles">
+            <summary>
+            Path variable for the Program Files folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.ProgramFilesX86">
+            <summary>
+            Path variable for the Program Files (x86) folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.CommonProgramFiles">
+            <summary>
+            Path variable for the Program Files->Common Files folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.CommonProgramFilesX86">
+            <summary>
+            Path variable for the Program Files (x86)->Common Files folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.UserProfile">
+            <summary>
+            Path variable for the user profile folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.SystemRoot">
+            <summary>
+            Path variable for the system root folder.
+            </summary>
+        </member>
+        <member name="F:Mercury.Instrumentation.SystemVariable.WinDir">
+            <summary>
+            Path variable for the windows folder.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.SystemVariable.GetExpandedPathVariable(System.String)">
+            <summary>
+            Gets the expanded path from the specified system variable.
+            </summary>
+            <param name="pathVar">The path variable to expand.</param>
+            <returns>The expanded path from the specified system variable or the original variable.</returns>
+        </member>
+        <member name="T:Mercury.Logging.DiagnosticsLog">
+            <summary>
+            A log that utilizes System.Diagnostics TraceSource objects for logging.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.ILog">
+            <summary>
+            An interface for logging nessages.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Initialize(System.String)">
+            <summary>
+            Initializes this log with the specified log name.
+            </summary>
+            <param name="logName">The name of this log.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Debug(System.Func{System.String})">
+            <summary>
+            Writes the specified debug message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Debug(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified debug message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Debug(System.String,System.Object[])">
+            <summary>
+            Writes the debug message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Debug(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the debug message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Info(System.Func{System.String})">
+            <summary>
+            Writes the specified information message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Info(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified information message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Info(System.String,System.Object[])">
+            <summary>
+            Writes the information message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Info(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the information message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Warn(System.Func{System.String})">
+            <summary>
+            Writes the specified warning message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Warn(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified warning message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Warn(System.String,System.Object[])">
+            <summary>
+            Writes the warning message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Warn(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the warning message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Error(System.Func{System.String})">
+            <summary>
+            Writes the specified error message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Error(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified error message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Error(System.String,System.Object[])">
+            <summary>
+            Writes the error message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Error(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the error message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Critical(System.Func{System.String})">
+            <summary>
+            Writes the specified critical error message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Critical(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified critical error message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Critical(System.String,System.Object[])">
+            <summary>
+            Writes the critical error message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.ILog.Critical(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the critical error message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="P:Mercury.Logging.ILog.Name">
+            <summary>
+            Gets the name of this log.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.ILog`1">
+            <summary>
+            Ensures a default constructor for the logger type.
+            </summary>
+            <typeparam name="T">The type of the logger to construct.</typeparam>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.#ctor">
+            <summary>
+            Initializes a default instance of the Mercury.Logging.DiagnosticsLog class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Initialize(System.String)">
+            <summary>
+            Initializes this log with the specified log name.
+            </summary>
+            <param name="logName">The name of this log.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.InitializeTraceSource(System.Diagnostics.TraceSource)">
+            <summary>
+            Initializes the TraceSource for this log.
+            </summary>
+            <param name="ts">The TraceSource to initialize.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Debug(System.Func{System.String})">
+            <summary>
+            Writes the specified debug message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified debug message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Debug(System.String,System.Object[])">
+            <summary>
+            Writes the debug message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Debug(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the debug message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Info(System.Func{System.String})">
+            <summary>
+            Writes the specified information message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified information message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Info(System.String,System.Object[])">
+            <summary>
+            Writes the information message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Info(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the information message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Warn(System.Func{System.String})">
+            <summary>
+            Writes the specified warning message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified warning message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Warn(System.String,System.Object[])">
+            <summary>
+            Writes the warning message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Warn(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the warning message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Error(System.Func{System.String})">
+            <summary>
+            Writes the specified error message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified error message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Error(System.String,System.Object[])">
+            <summary>
+            Writes the error message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Error(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the error message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Critical(System.Func{System.String})">
+            <summary>
+            Writes the specified critical error message.
+            </summary>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.Func{System.String})">
+            <summary>
+            Writes the specified critical error message with the specified event identifier.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="message">A function generating the message to write.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Critical(System.String,System.Object[])">
+            <summary>
+            Writes the critical error message using the specified argument array and format. 
+            </summary>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.Critical(System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes the critical error message using the specified event identifier, argument array, and format.
+            </summary>
+            <param name="id">The event identifier for this message.</param>
+            <param name="format">The composite format string to write.</param>
+            <param name="args">The argument array to format.</param>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.InternalFlushListeners">
+            <summary>
+            Flushes all trace listeners on internal trace source.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.DiagnosticsLog.EnsureArgsNotNull(System.Object[]@)">
+            <summary>
+            Ensures that the specified argument array is not null.
+            </summary>
+            <param name="args">The argument array to ensure.</param>
+        </member>
+        <member name="P:Mercury.Logging.DiagnosticsLog.Trace">
+            <summary>
+            Gets the TraceSource used to write data.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.DiagnosticsLog.Name">
+            <summary>
+            Gets the name of this log.
+            </summary>
+        </member>
+        <member name="T:Mercury.Collections.OrderedDictionary`2">
+            <summary>
+            Represents a generic collection of key/value pairs that are accessible by either key or index.
+            </summary>
+            <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of the values in the dictionary.</typeparam>
+        </member>
+        <member name="T:Mercury.Collections.IOrderedDictionary`2">
+            <summary>
+            Represents a generic, indexed collection of key/value pairs.
+            </summary>
+            <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of the values in the dictionary.</typeparam>
+        </member>
+        <member name="M:Mercury.Collections.IOrderedDictionary`2.Insert(System.Int32,`0,`1)">
+            <summary>
+            Inserts the specified key and value at the specified index of the collection.
+            </summary>
+            <param name="index">The index at which to insert.</param>
+            <param name="key">The key to insert.</param>
+            <param name="value">The value to insert.</param>
+        </member>
+        <member name="M:Mercury.Collections.IOrderedDictionary`2.RemoveAt(System.Int32)">
+            <summary>
+            Removes the item at the specified index.
+            </summary>
+            <param name="index">The index of the item to be removed.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.#ctor">
+            <summary>
+            Initializes a default instance of the OrderedDictionary class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.#ctor(System.Int32)">
+            <summary>
+            Initializes a default instance of the OrderedDictionary 
+            class with the specified element capacity.
+            </summary>
+            <param name="capacity">The maximum number of elements the dictionary can contain.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.#ctor(System.Int32,System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a default instance of the OrderedDictionary 
+            class with the specified capacity and equality comparer.
+            </summary>
+            <param name="capacity">The maximum number of elements the dictionary can contain.</param>
+            <param name="comparer">An equality comparer.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.#ctor(Mercury.Collections.OrderedDictionary{`0,`1})">
+            <summary>
+            Initializes a default instance of the OrderedDictionary class with the specified ordered dictionary.
+            </summary>
+            <param name="dictionary">The ordered dictionary to use.  Creates a read-only copy.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>An enumerator that iterates through a collection.</returns>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>An enumerator that iterates through a collection.</returns>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.Add(`0,`1)">
+            <summary>
+            Adds an element with the provided key and value to the dictionary.
+            </summary>
+            <param name="key">The object to use as the key of the element to add.</param>
+            <param name="value">The object to use as the value of the element to add.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Adds an item to the dictionary.
+            </summary>
+            <param name="item">The object to add to the dictionary.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.Clear">
+            <summary>
+            Removes all items from the dictionary.
+            </summary>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.AsReadOnly">
+            <summary>
+            Returns a read-only copy of the current dictionary.
+            </summary>
+            <returns>A read-only copy of the current dictionary.</returns>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Determines whether the dictionary contains a specific value.
+            </summary>
+            <param name="item">The object to locate in the dictionary.</param>
+            <returns>True if the item is found in the dictionary; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the dictionary contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the dictionary.</param>
+            <returns>True if the dictionary contains an element with the key; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+            <summary>
+            Copies the elements of the dictionary to an array, starting at a particular array index.
+            </summary>
+            <param name="array">The one-dimensional array that is the destination of the 
+            elements copied from the dictionary. The array must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in array at which copying begins.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.Insert(System.Int32,`0,`1)">
+            <summary>
+            Inserts an element into the dictionary at the specified index.
+            </summary>
+            <param name="index">The index position at which to insert the element.</param>
+            <param name="key">The key of the element to insert.</param>
+            <param name="value">The value of the element to insert.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index from the dictionary.
+            </summary>
+            <param name="index">The index of the element to remove.</param>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.Remove(`0)">
+            <summary>
+            Removes the element with the specified key from the dictionary.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns>True if the element is successfully removed; otherwise, false.  
+            This method also returns false if key was not found in the dictionary.</returns>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.Remove(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Removes the specified element from the dictionary.
+            </summary>
+            <param name="item">The element to remove.</param>
+            <returns>True if the element is successfully removed; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Collections.OrderedDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, 
+            if the key is found; otherwise, the default value for the type of the value parameter.  
+            This parameter is passed uninitialized.</param>
+            <returns>True if the dictionary contains an element with the specified key; otherwise, false.</returns>
+        </member>
+        <member name="P:Mercury.Collections.OrderedDictionary`2.Count">
+            <summary>
+            Gets the number of items in the dictionary.
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.OrderedDictionary`2.IsReadOnly">
+            <summary>
+            Gets a value indicating whether this dictionary is read-only.
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.OrderedDictionary`2.Item(System.Int32)">
+            <summary>
+            Gets the element at the specified index.
+            </summary>
+            <param name="index">The index position of the element to retrieve.</param>
+            <returns>The element at the specified index.</returns>
+        </member>
+        <member name="P:Mercury.Collections.OrderedDictionary`2.Item(`0)">
+            <summary>
+            Gets the element with the specified key.
+            </summary>
+            <param name="key">The key of the element to retrieve.</param>
+            <returns>The element with the specified key.</returns>
+        </member>
+        <member name="P:Mercury.Collections.OrderedDictionary`2.Keys">
+            <summary>
+            Gets an ICollection(Of T) containing the keys in the dictionary.
+            </summary>
+        </member>
+        <member name="P:Mercury.Collections.OrderedDictionary`2.Values">
+            <summary>
+            Gets an ICollection(Of T) containing the values in the dictionary.
+            </summary>
+        </member>
+        <member name="T:Mercury.Collections.OrderedDictionary`2.OrderedDictionaryKeyValueCollection`1">
+            <summary>
+            A private class for a dictionary key/value collection.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Mercury.Collections.OrderedDictionary`2.OrderedDictionaryKeyValueEnumerator`1">
+            <summary>
+            A private enumerator for the ordered dictionary key value collection.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Mercury.Logging.TextWriterTraceListenerEx">
+            <summary>
+            An extension of the System.Diagnostics.TextWriterTraceListener 
+            that allows path variables in the file path to be expanded and 
+            ensures that all directories in the path exist.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.TextWriterTraceListenerEx.#ctor">
+            <summary>
+            Initializes a default instance of the TextWriterTraceListenerEx class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.TextWriterTraceListenerEx.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the TextWriterTraceListenerEx 
+            class with the specified file path.
+            </summary>
+            <param name="path">The file path of the file to write to.</param>
+        </member>
+        <member name="M:Mercury.Logging.TextWriterTraceListenerEx.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the TextWriterTraceListenerEx 
+            class with the specified file path and name.
+            </summary>
+            <param name="path">The file path of the file to write to.</param>
+            <param name="name">The name of the new instance.</param>
+        </member>
+        <member name="T:Mercury.MutexFlag">
+            <summary>
+            A flag that allows only one owner during a given time.
+            </summary>
+        </member>
+        <member name="M:Mercury.MutexFlag.#ctor">
+            <summary>
+            Initializes a default instance of the Mercury.MutexFlag class.
+            </summary>
+        </member>
+        <member name="M:Mercury.MutexFlag.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the Mercury.MutexFlag class with the specified initial state.
+            </summary>
+            <param name="initialState">The initial state of the flag.</param>
+        </member>
+        <member name="M:Mercury.MutexFlag.Enter">
+            <summary>
+            Attempts to enter the flag.
+            </summary>
+            <returns>A MutexFlagHandler designating ownership.  The handler must be closed by 
+            calling MutexFlagHandler.Dispose() before ownership may be changed.</returns>
+        </member>
+        <member name="P:Mercury.MutexFlag.CanEnter">
+            <summary>
+            Gets a value indicating whether this flag may be entered.
+            </summary>
+        </member>
+        <member name="T:Mercury.MutexFlag.MutexFlagHandler">
+            <summary>
+            Restricts access to the owning MutexFlag.
+            </summary>
+        </member>
+        <member name="M:Mercury.MutexFlag.MutexFlagHandler.#ctor(Mercury.MutexFlag)">
+            <summary>
+            Initializes a new instance of the Mercury.MutexFlagHandler class.
+            </summary>
+            <param name="owner">The owning BoolFlag.</param>
+        </member>
+        <member name="M:Mercury.MutexFlag.MutexFlagHandler.Dispose">
+            <summary>
+            Disposes of this instance of the Mercury.MutexFlagHandler.
+            </summary>
+        </member>
+        <member name="M:Mercury.MutexFlag.MutexFlagHandler.Dispose(System.Boolean)">
+            <summary>
+            Disposes of this instance of the Mercury.MutexFlagHandler.
+            </summary>
+            <param name="disposing">A value indicating whether to dispose.</param>
+        </member>
+        <member name="T:Mercury.Utils">
+            <summary>
+            A set of library utilities.
+            </summary>
+        </member>
+        <member name="M:Mercury.Utils.GetCultureInfo">
+            <summary>
+            Gets the culture info of the current thread.
+            </summary>
+            <returns>The culture info of the current thread.</returns>
+        </member>
+        <member name="T:Mercury.Net.EnvelopeStructure">
+            <summary>
+            Describes the type of data being sent.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeStructure.FormattedString">
+            <summary>
+            Represents an arbitrary formatted string.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeStructure.XmlFormattedString">
+            <summary>
+            XML formatted string data.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeStructure.SerializedObject">
+            <summary>
+            CLR or .Net serialized object.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeStructure.Raw">
+            <summary>
+            Raw byte data.
+            </summary>
+        </member>
+        <member name="T:Mercury.Net.ByteExtensions">
+            <summary>
+            A set of extension methods for a byte.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.ByteExtensions.Append(System.Byte[],System.Byte[])">
+            <summary>
+            Appends the specified bytes to the tail of the current byte array.
+            </summary>
+            <param name="current">The byte array on which to append.</param>
+            <param name="bytes">The byte array to append.</param>
+            <returns>The specified bytes appended to the tail of the current byte array.</returns>
+        </member>
+        <member name="M:Mercury.Net.ByteExtensions.Append(System.Byte[],System.Byte)">
+            <summary>
+            Appends one byte array to another.
+            </summary>
+            <param name="current">The byte array on which to append.</param>
+            <param name="appendByte">The byte array to append.</param>
+            <returns>A byte array containing the appended bytes.</returns>
+        </member>
+        <member name="M:Mercury.Net.ByteExtensions.Prepend(System.Byte[],System.Byte[])">
+            <summary>
+            Prepends the specified bytes to the head of the current byte array.
+            </summary>
+            <param name="current">The byte array on which to prepend.</param>
+            <param name="bytes">The byte array to prepend.</param>
+            <returns>The specified bytes prepended to the head of the current byte array.</returns>
+        </member>
+        <member name="M:Mercury.Net.ByteExtensions.Prepend(System.Byte[],System.Byte)">
+            <summary>
+            Prepends one byte to a byte array.
+            </summary>
+            <param name="current">The byte array on which to prepend.</param>
+            <param name="appendByte">The byte to prepend.</param>
+            <returns>A byte array containing the prepended byte.</returns>
+        </member>
+        <member name="M:Mercury.Net.ByteExtensions.ExtractCopy(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Extracts a copy of the byte array beginning at the specified offset index and with the specified length.
+            </summary>
+            <param name="current">The byte array from which to extract.</param>
+            <param name="offset">The index at which to begin the extraction.</param>
+            <param name="length">The number of bytes to extract.</param>
+            <returns>A copy of the byte array beginning at the specified offset index and with the specified length.</returns>
+        </member>
+        <member name="M:Mercury.Net.ByteExtensions.Merge(System.Byte[],System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Merges one byte array into another.
+            </summary>
+            <param name="current">The byte array on which to merge.</param>
+            <param name="mergeBytes">The byte array to merge.</param>
+            <param name="offset">The offset at which to start merging.</param>
+            <param name="length">The number of bytes to merge.</param>
+        </member>
+        <member name="T:Mercury.Logging.TraceCollection">
+            <summary>
+            Represents a collection of System.Diagnostics.TraceSource objects.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.TraceCollection.#ctor">
+            <summary>
+            Initializes a default instance of the TraceCollection class.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.TraceCollection.GetTrace(System.String)">
+            <summary>
+            Returns the TraceSource with the specified name.
+            </summary>
+            <param name="name">The name of the TraceSource to find.</param>
+            <returns>The TraceSource with the specified name or null.</returns>
+        </member>
+        <member name="M:Mercury.Logging.TraceCollection.RemoveTrace(System.String)">
+            <summary>
+            Removes the specified TraceSource.
+            </summary>
+            <param name="name">The name of the TraceSource to remove.</param>
+        </member>
+        <member name="M:Mercury.Logging.TraceCollection.TryAddTrace(System.Diagnostics.TraceSource)">
+            <summary>
+            Attempts to add the specified TraceSource to this collection.
+            </summary>
+            <param name="ts">The TraceSource to add.</param>
+            <returns>True if the TraceSource was added to the collection; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Logging.TraceCollection.TryGetTrace(System.String,System.Diagnostics.TraceSource@)">
+            <summary>
+            Returns the TraceSource with the specified name.
+            </summary>
+            <param name="name">The name of the TraceSource to find.</param>
+            <param name="ts">Out. The found TraceSource or null.</param>
+            <returns>True if the TraceSource was found; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.Logging.TraceCollection.GetEnumerator">
+            <summary>
+            Returns a TraceSource enumerator for this collection.
+            </summary>
+            <returns>A TraceSource enumerator.</returns>
+        </member>
+        <member name="P:Mercury.Logging.TraceCollection.Count">
+            <summary>
+            Gets the number of items in the collection.
+            </summary>
+        </member>
+        <member name="P:Mercury.Logging.TraceCollection.Item(System.String)">
+            <summary>
+            Gets the trace source with the specified name.
+            </summary>
+            <param name="name">The name of the trace source to find.</param>
+            <returns>The trace source with the specified name or null.</returns>
+        </member>
+        <member name="P:Mercury.Logging.TraceCollection.Names">
+            <summary>
+            Gets an enumerable collection of names for the System.Diagnostics.TraceSource objects in this collection.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.TraceCollection.TraceCollectionEnumerator">
+            <summary>
+            A private enumerator class for a TraceCollection.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.NullLog">
+            <summary>
+            A default logger that does not publish data.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Initialize(System.String)">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="loggerName">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Debug(System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Debug(System.Int32,System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Debug(System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Debug(System.Int32,System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Info(System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Info(System.Int32,System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Info(System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Info(System.Int32,System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Warn(System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Warn(System.Int32,System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Warn(System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Warn(System.Int32,System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Error(System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Error(System.Int32,System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Error(System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Error(System.Int32,System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Critical(System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Critical(System.Int32,System.Func{System.String})">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Critical(System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="M:Mercury.Logging.NullLog.Critical(System.Int32,System.String,System.Object[])">
+            <summary>
+            Null implementation.  Does no processing.
+            </summary>
+            <param name="id">Unused.</param>
+            <param name="message">Unused.</param>
+            <param name="format">Unused.</param>
+        </member>
+        <member name="P:Mercury.Logging.NullLog.Name">
+            <summary>
+            Null implementation.
+            </summary>
+        </member>
+        <member name="T:Mercury.Distributed.RemoteNode">
+            <summary>
+            Represents a remote caching node.
+            </summary>
+        </member>
+        <member name="F:Mercury.Distributed.RemoteNode.DEFAULT_HOSTNAME_PREFIX">
+            <summary>
+            The default host name prefix used to create a node address.
+            </summary>
+        </member>
+        <member name="M:Mercury.Distributed.RemoteNode.#ctor(System.String,System.Net.IPEndPoint)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mercury.Distributed.RemoteNode"/> 
+            class with the specified name and IP end point.
+            </summary>
+            <param name="name">The name used to initialize the remote runtime environment.</param>
+            <param name="endPoint">The IP end point of the remote node.</param>
+        </member>
+        <member name="M:Mercury.Distributed.RemoteNode.CreateAddress(System.String)">
+            <summary>
+            Returns a runtime-formatted address string created from the specified name.
+            </summary>
+            <param name="name">The name of the runtime from which to create an address.</param>
+            <returns>A runtime-formatted address string created from the specified name.</returns>
+        </member>
+        <member name="P:Mercury.Distributed.RemoteNode.Name">
+            <summary>
+            Gets the name used to initialize the remote runtime environment.
+            </summary>
+        </member>
+        <member name="P:Mercury.Distributed.RemoteNode.NodeAddress">
+            <summary>
+            Gets the runtime address of the remote node.
+            </summary>
+        </member>
+        <member name="P:Mercury.Distributed.RemoteNode.EndPoint">
+            <summary>
+            Gets the IP end point of the remote node.
+            </summary>
+        </member>
+        <member name="T:Mercury.StringExtensions">
+            <summary>
+            Core extensions to a System.String.
+            </summary>
+        </member>
+        <member name="M:Mercury.StringExtensions.Left(System.String,System.Int32)">
+            <summary>
+            Returns a string containing a specified number of characters from the left side of a string.
+            </summary>
+            <param name="value">The string from which the characters are returned.</param>
+            <param name="length">The number of characters to return.  If 0, a zero-length string ("") is returned.</param>
+            <returns>A string containing a specified number of characters from the left side of a string.</returns>
+        </member>
+        <member name="M:Mercury.StringExtensions.Right(System.String,System.Int32)">
+            <summary>
+            Returns a string containing a specified number of characters from the right side of a string.
+            </summary>
+            <param name="value">The string from which the characters are returned.</param>
+            <param name="length">The number of characters to return.  If 0, a zero-length string ("") is returned.</param>
+            <returns>A string containing a specified number of characters from the right side of a string.</returns>
+        </member>
+        <member name="M:Mercury.StringExtensions.Mid(System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns a string containing a specified number of characters 
+            from a string beginning at the specified start index.  This 
+            function is zero-based.
+            </summary>
+            <param name="value">The string from which the characters are returned.</param>
+            <param name="start">Zero-based character position in string.</param>
+            <param name="length">The number of characters to return.</param>
+            <returns>A string containing a specified number of characters 
+            from a string beginning at the specified start index.</returns>
+        </member>
+        <member name="M:Mercury.StringExtensions.ReplaceText(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Returns a string in which a specified substring has been replaced with another substring 
+            a specified number of times.  Evaluation of the strings is case-insensitive.
+            </summary>
+            <param name="value">The string containing the substring to replace.</param>
+            <param name="find">The substring being searched for.</param>
+            <param name="replacement">The replacement value.</param>
+            <param name="count">Optional. Number of substring substitutions to perform.  If 
+            omitted, the default value is -1, which means "make all possible substitutions."</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mercury.StringExtensions.IsNumeric(System.String)">
+            <summary>
+            Returns a value indicating whether the specified 
+            string value contains only numeric data.
+            </summary>
+            <param name="value">The string value to test.</param>
+            <returns>True if the string contains only numeric data; otherwise, false.</returns>
+        </member>
+        <member name="M:Mercury.StringExtensions.FormatWith(System.String,System.Object[])">
+            <summary>
+            Formats a string using the specified format.  Wraps string.Format().
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">An object array that contains zero or more objects to format.</param>
+            <returns>A string formatted with the specified argument array.</returns>
+        </member>
+        <member name="M:Mercury.StringExtensions.AppendNewLine(System.String)">
+            <summary>
+            Appends a new line character to the string.
+            </summary>
+            <param name="current">The string on which to append a new line character.</param>
+            <returns>A string on which a new line character has been appended.</returns>
+        </member>
+        <member name="M:Mercury.StringExtensions.AppendTab(System.String)">
+            <summary>
+            Appends a tab character to the string.
+            </summary>
+            <param name="current">The string on which to append a tab character.</param>
+            <returns>A string on which a tab character has been appended.</returns>
+        </member>
+        <member name="T:Mercury.Net.EnvelopeEncoding">
+            <summary>
+            Describes the encoding used for a message envelope.
+            </summary>
+        </member>
+        <member name="M:Mercury.Net.EnvelopeEncoding.#ctor(System.Byte)">
+            <summary>
+            Initializes a default EnvelopeEncoding class with the specified encoding ID value.
+            </summary>
+            <param name="encoding">The encoding ID value.</param>
+        </member>
+        <member name="M:Mercury.Net.EnvelopeEncoding.GetEncoding(System.Byte)">
+            <summary>
+            Returns the encoding associated with the specified encoding ID.
+            </summary>
+            <param name="encoding">The ID of the encoding to retrieve.</param>
+            <returns>The encoding associated with the specified encoding ID.</returns>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeEncoding.Utf8">
+            <summary>
+            UTF-8 encoding.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeEncoding.Utf16">
+            <summary>
+            UTF-16, big-endian, encoding.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeEncoding.Unicode">
+            <summary>
+            Unicode, little-endian, encoding.
+            </summary>
+        </member>
+        <member name="F:Mercury.Net.EnvelopeEncoding.Binary">
+            <summary>
+            Raw binary.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.EnvelopeEncoding.Encoding">
+            <summary>
+            Gets the envelope encoding.
+            </summary>
+        </member>
+        <member name="P:Mercury.Net.EnvelopeEncoding.Id">
+            <summary>
+            Gets the identifier for this envelope encoding.
+            </summary>
+        </member>
+        <member name="T:Mercury.Logging.LogExtensions">
+            <summary>
+            Extensions for the core logging classes.
+            </summary>
+        </member>
+        <member name="F:Mercury.Logging.LogExtensions._loggers">
+            <summary>
+            Logger dictionary.
+            </summary>
+        </member>
+        <member name="M:Mercury.Logging.LogExtensions.Log``1(``0,System.String)">
+            <summary>
+            Returns the logger with the specified log name.
+            </summary>
+            <typeparam name="T">The type of the instance being logged.</typeparam>
+            <param name="type">The instance being logged.</param>
+            <param name="logName">The name of the logger to use.</param>
+            <returns>The logger with the specified log name.</returns>
+        </member>
+        <member name="M:Mercury.Logging.LogExtensions.Log(System.String)">
+            <summary>
+            Returns the logger with the specified log name.
+            </summary>
+            <param name="logName">The name of the logger to use.</param>
+            <returns>The logger with the specified log name.</returns>
+        </member>
+        <member name="T:Mercury.Security.Cryptography.CRC32">
+            <summary>
+            HashAlgorithm implementation for CRC-32.
+            </summary>
+        </member>
+        <member name="M:Mercury.Security.Cryptography.CRC32.#cctor">
+            <summary>
+            Initializes the shared lookup table.
+            </summary>
+        </member>
+        <member name="M:Mercury.Security.Cryptography.CRC32.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Mercury.Security.Cryptography.CRC32.Initialize">
+            <summary>
+            Initializes internal state.
+            </summary>
+        </member>
+        <member name="M:Mercury.Security.Cryptography.CRC32.InitializeVariables">
+            <summary>
+            Initializes variables.
+            </summary>
+        </member>
+        <member name="M:Mercury.Security.Cryptography.CRC32.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Updates the hash code for the provided data.
+            </summary>
+            <param name="array">Data.</param>
+            <param name="ibStart">Start position.</param>
+            <param name="cbSize">Number of bytes.</param>
+        </member>
+        <member name="M:Mercury.Security.Cryptography.CRC32.HashFinal">
+            <summary>
+            Finalizes the hash code and returns it.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mercury.Security.Cryptography.CRC32.Hash">
+            <summary>
+            Returns the hash as an array of bytes.
+            </summary>
+        </member>
+        <member name="P:Mercury.Security.Cryptography.CRC32.HashSize">
+            <summary>
+            Gets the size of the hash in bytes.
+            </summary>
+        </member>
+        <member name="T:Mercury.IO.EncodableStringWriter">
+            <summary>
+            A string writer for which a text encoding may be specified.
+            </summary>
+        </member>
+        <member name="M:Mercury.IO.EncodableStringWriter.#ctor(System.Text.Encoding)">
+            <summary>
+            Initializes a default instance of the EncodableStringWriter 
+            class utilizing the specified System.Text.Encoding.
+            </summary>
+            <param name="encoding">The encoding in which the output will be written.</param>
+        </member>
+        <member name="M:Mercury.IO.EncodableStringWriter.#ctor(System.Text.Encoding,System.Text.StringBuilder)">
+            <summary>
+            Initializes a default instance of the EncodableStringWriter class 
+            utilizing the specified System.Text.Encoding and string builder.
+            </summary>
+            <param name="encoding">The encoding in which the output will be written.</param>
+            <param name="stringBuilder">The string builder on which to output.</param>
+        </member>
+        <member name="F:Mercury.IO.EncodableStringWriter._encoding">
+            <summary>
+            The internal encoding.
+            </summary>
+        </member>
+        <member name="P:Mercury.IO.EncodableStringWriter.Encoding">
+            <summary>
+            Gets the System.Text.Encoding in which the output is written.
+            </summary>
+        </member>
+        <member name="T:Mercury.Instrumentation.InstrumentationUtil">
+            <summary>
+            A utility class for logging.
+            </summary>
+        </member>
+        <member name="M:Mercury.Instrumentation.InstrumentationUtil.EnsurePath(System.String)">
+            <summary>
+            Creates the appropriate directories for the specified path and returns the full file path.
+            </summary>
+            <param name="filePath">The path to ensure.</param>
+            <returns>The full file path.</returns>
+        </member>
+        <member name="M:Mercury.Instrumentation.InstrumentationUtil.GetExpandedFilePath(System.String)">
+            <summary>
+            Returns the file path with select system path variables expanded.
+            </summary>
+            <param name="filePath">The file path to expand.</param>
+            <returns>The file path with select system path variables expanded or the original file path.</returns>
+        </member>
+        <member name="M:Mercury.Instrumentation.InstrumentationUtil.GetExpandedPathVariable(System.String)">
+            <summary>
+            Wrapper for a call to the SystemVariable.GetExpandedPathVariable() method.
+            </summary>
+            <param name="pathVar">The path variable to expnad.</param>
+            <returns>The expanded path variable or the original variable.</returns>
+        </member>
+    </members>
+</doc>

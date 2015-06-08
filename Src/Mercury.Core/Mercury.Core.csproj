@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7669234-2DF5-4D8B-B463-DF4CE38F370D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mercury</RootNamespace>
+    <AssemblyName>Mercury.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Mercury.Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Mercury.Core.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\build\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Collections\IOrderedDictionary.cs" />
+    <Compile Include="Collections\OrderedDictionary.cs" />
+    <Compile Include="Core\InternalCacheItem.cs" />
+    <Compile Include="Core\MutexFlag.cs" />
+    <Compile Include="Core\RingCache.cs" />
+    <Compile Include="Core\StringExtensions.cs" />
+    <Compile Include="Core\TimeSpanExtensions.cs" />
+    <Compile Include="Core\HashItem.cs" />
+    <Compile Include="Distributed\RemoteNode.cs" />
+    <Compile Include="Instrumentation\TraceObserver.cs" />
+    <Compile Include="Logging\DiagnosticsLog.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Instrumentation\InstrumentationUtil.cs" />
+    <Compile Include="Logging\LogExtensions.cs" />
+    <Compile Include="Logging\NullLog.cs" />
+    <Compile Include="Instrumentation\Observer.cs" />
+    <Compile Include="Instrumentation\SystemVariable.cs" />
+    <Compile Include="Logging\TextWriterTraceListenerEx.cs" />
+    <Compile Include="Logging\TraceCollection.cs" />
+    <Compile Include="IO\EncodableStringWriter.cs" />
+    <Compile Include="Net\Acknowledgment.cs" />
+    <Compile Include="Net\ByteExtensions.cs" />
+    <Compile Include="Net\CommunicationMode.cs" />
+    <Compile Include="Net\EnvelopeEncoding.cs" />
+    <Compile Include="Net\NetExtensions.cs" />
+    <Compile Include="Net\Machine.cs" />
+    <Compile Include="Net\PacketError.cs" />
+    <Compile Include="Net\PacketHeader.cs" />
+    <Compile Include="Net\PacketProtocol.cs" />
+    <Compile Include="Net\TcpSockets.cs" />
+    <Compile Include="Net\EnvelopeStructure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Security\Cryptography\CRC32.cs" />
+    <Compile Include="Xml\Serialization\XmlSerializationHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mercury.Core.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Diff Algorithm License.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

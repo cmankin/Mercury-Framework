@@ -1,0 +1,10 @@
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\bin\Release\Mercury.Core.OpenXml.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\bin\Release\Mercury.Core.OpenXml.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\bin\Release\Mercury.Core.OpenXml.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\bin\Release\Ionic.Zip.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\obj\Release\Mercury.Resources.resources
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\obj\Release\Mercury.Core.OpenXml.vbproj.GenerateResource.Cache
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\obj\Release\Mercury.Core.OpenXml.dll
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\obj\Release\Mercury.Core.OpenXml.xml
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\obj\Release\Mercury.Core.OpenXml.pdb
+E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Core.OpenXml\obj\Release\Mercury.Core.OpenXml.vbprojResolveAssemblyReference.cache

@@ -1,0 +1,2 @@
+
+ilmerge /log:"ilmergelog.txt" /targetPlatform:"v4","C:\Windows\Microsoft.NET\Framework64\v4.0.30319" /xmldocs /out:Mercury.Logging.dll Mercury.Logging.Core.dll Mercury.Logging.Configuration.dll

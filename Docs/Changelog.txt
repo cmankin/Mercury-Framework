@@ -1,0 +1,117 @@
+Id|User|Change
+=============================================================================
+119		Chris Mankin		Fixed a bug in the FutureChannel class that threw an error when the Get property 
+							was called after the wait timed out or if WaitUntilCompleted() method was called 
+							multiple times.  Checked for IsPersisted state of channel and IsClosed state of 
+							the SafeWaitHandle, also Reset the signal for multiple calls.
+
+120		Chris Mankin		Converted the protected method HandleRead() on the RuntimeListener class in the  
+							Mercury.Messaging.ServiceModel namespace to a protected VIRTUAL method.
+
+121		Chris Mankin		Added the RingCache<T> class to the Mercury.Core project.  This class implements 
+							a circular-buffered cache that can be constantly filled.  It specifies an action 
+							handler to aid in the disposal of overwritten items before release.
+
+122		Chris Mankin		Modified the ServiceModel and remote routing engine to cache connections to 
+							remote environments (specifically, caching open Socket objects) for reuse where 
+							appropriate.  Also, updated the packet protocol to include an operation/ message 
+							identifier, which is dynamically generated with each remoting channel send, with 
+							the version record.  This identifier can be used to post error messages for a 
+							message originating from a specific channel.  The RuntimeListener class was 
+							updated to work with the new model, and it no longer supports a dynamic redirect 
+							to alternate protocols with the ExtendableReader method (removed).  Alternate 
+							protocols should be implemented separately from the Mercury.Messaging.Core 
+							service model and should listen on a different port.
+
+123		Chris Mankin		Added the FutureMulticastChannel to allow waiting on multiple future values 
+							through a single, runtime supported channel.  Also, added additional dispatchers 
+							to more evenly divide up tasks between agents, timers, and other tasks.  Added 
+							test cases to verify.
+
+124		Chris Mankin		Added OriginalType and OriginalTypeName properties to the SerialException class 
+							and updated the constructor overload and serialization logic.
+
+125		Chris Mankin		Fixed a bug in the implementation of IXmlSerializable.ReadXml method across 
+							various Mercury.Messaging.Core base class members.
+
+126		Chris Mankin		Added a solution for mobile device projects using .NET Compact Framework, Mercury 
+							Framework CF.
+
+127		Chris Mankin		Added the Mercury.Logging project to provide a compact and extensible framework 
+							for logging activities.
+
+128		Chris Mankin		Made some updates to the Mercury Framework CF solution.
+
+129		Chris Mankin		Added logging support, Mercury.Mobile.Logging, to the Mercury Framework CF 
+							Solution.  The supported logging infrastructure is almost identical to that 
+							implemented for the full framework in Change # 128.
+
+130		Chris Mankin		Added the Mercury.Mobile.Controls library to the Mercury Framework CF Solution.
+							Also included the Mercury.Mobile.Controls.TestForm for testing.
+
+131		Chris Mankin		Renamed the Mercury.Mobile.Controls library to Mercury.Mobile.Forms and updated 
+							many of the data structures to work with the Mercury.Mobile.Core async model.
+							
+132		Chris Mankin		Updated the Mercury.Mobile.Forms.DataGrid Dispose method, wrapping the 
+							VScrollBar disposal in a try-catch to prevent throwing in the dispose method.
+							
+133		Chris Mankin		Removed auto-initialization of the builder array when PacketState2.RecordSize 
+							property is set.
+
+134		Chris Mankin		Added some methods to the Mercury.Mobile.Xml.Serialization.XmlSerializationHelper 
+							class that enable customization of serialized type string formats.
+							
+135		Chris Mankin		Reversed the changes made in Change #134 and added a method that accepts a 
+							delegate to a method that can implement custom formatting for type serialization.
+							If this is set, every System.Type that is serialized will call the custom 
+							formatter.
+							
+136		Chris Mankin		Added the ConcurrentDictionary<TKey, TValue> class to the Mercury.Core project 
+							along with some unit tests for verifying functionality.
+
+137		Chris Mankin		Added the Mercury.SettingsManager project and associated test project and unit
+							tests.  This project allows for a generalized approach to managing settings 
+							data that works similarly to the ConfigurationManager from System.Configuration.
+
+138		Chris Mankin		Updated the PassFilter on the Mercury.Logging project to allow for a conditional 
+							pass/fail to be configured.
+
+139		Chris Mankin		Signed the Mercury.Logging and Mercury.SettingsManager projects.
+
+140		Chris Mankin		Updated the Mercury.Xml.Serialization.XmlSerializationHelper class with the 
+							support for custom type formats and general output compatibility with the 
+							mobile framework helper class.
+
+141		Chris Mankin		Defect fix for the CompositeLogger class.  Updated the _AllowEntry method, which 
+							is used to determine whether each logger allows logging to it, to correctly 
+							pass as "true" if no filter is applied to the logger instance.
+
+142		Chris Mankin		Addition of the xsd2config.exe tool which can convert an XML Schema Definition 
+							file (XSD) to an appropriate set of Configuration element classes which will 
+							support the schema in the app.config file.
+
+143		Chris Mankin		Added logging configuration library and tests.
+
+144		Chris Mankin		Updated versioning methodology for C# projects to use a shared VersionInfo.cs
+							file containing all shared assembly information.  Also, using T4 template to 
+							update the version information with a custom *.bat file.
+
+145		Chris Mankin		Added a public property (FormatMessageArguments) to the Logger base class to 
+							allow the option for LogEntry objects to be passed through the framework without 
+							any attempts made to format the message string with any provided arguments.  This 
+							enables us to pass arbitrary values through the framework to be formatted in a 
+							non-conventional (read: not using string.Format), customized manner.  Includes 
+							changes to the PersistentLogger to store LogEntry objects instead of strings.
+
+146		Chris Mankin		Updated the DurableLogger to serialize the entire LogEntry to the file system and 
+							to pass the LogEntry to the primary logger.  This includes an update to the 
+							Logger class to expose a public Log method that accepts a LogEntry.
+
+147		Chris Mankin		Updated the LogEntry class to be a public, non-sealed class.  Added the ability 
+							to replace the constructed LogEntry with a derived version on the base Logger 
+							class.  Added tests to verify that the LogEntry is propagated appropriately.
+
+148		Chris Mankin		Fixed an issue when loading a logging object from configuration.  The 
+							FrameworkObject.PrepareInstance method failed to properly call the Initialize 
+							method of all objects that implemented the IInitializable interface.  This has 
+							been corrected. (Framework version 2.6).

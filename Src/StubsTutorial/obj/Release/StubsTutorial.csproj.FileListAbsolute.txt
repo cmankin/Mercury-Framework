@@ -1,4 +1,0 @@
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\StubsTutorial\bin\Release\StubsTutorial.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\StubsTutorial\bin\Release\StubsTutorial.pdb
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\StubsTutorial\obj\Release\StubsTutorial.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\StubsTutorial\obj\Release\StubsTutorial.pdb

@@ -19,18 +19,9 @@ namespace Mercury.Logging.Configuration
         /// </summary>
         public const string DEFAULT_SECTION_NAME = "mercuryLogging";
 
-        private static string LogSectionName = DEFAULT_SECTION_NAME;
-        private static ConfigurationProvider activeConfigurationProvider = new ClientConfigurationProvider(ConfigurationUserLevel.None);
         private static object s_lock = new object();
+        private static int cacheKey;
         private static LoggingSection logSection;
-
-        /// <summary>
-        /// Gets the currently active configuration provider.
-        /// </summary>
-        public static ConfigurationProvider ConfigurationProvider
-        {
-            get { return activeConfigurationProvider; }
-        }
 
         /// <summary>
         /// Gets a logger constructed from configuration.
@@ -39,9 +30,32 @@ namespace Mercury.Logging.Configuration
         /// <returns>A logger constructed from configuration.</returns>
         public static Logger GetLogger(Type type)
         {
+            return GetLogger(type, null, null);
+        }
+
+        /// <summary>
+        /// Gets a logger constructed from configuration.
+        /// </summary>
+        /// <param name="type">The System.Type from which to derive the logger name.</param>
+        /// <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+        /// <returns>A logger constructed from configuration.</returns>
+        public static Logger GetLogger(Type type, ConfigurationProvider provider)
+        {
+            return GetLogger(type, provider, null);
+        }
+
+        /// <summary>
+        /// Gets a logger constructed from configuration.
+        /// </summary>
+        /// <param name="type">The System.Type from which to derive the logger name.</param>
+        /// <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+        /// <param name="sectionName">The name of the configuration section to load.  Null specifies the default configuration section.</param>
+        /// <returns>A logger constructed from configuration.</returns>
+        public static Logger GetLogger(Type type, ConfigurationProvider provider, string sectionName)
+        {
             if (type == null)
                 throw new ArgumentNullException("type");
-            return GetLogger(type.FullName);
+            return GetLogger(type.FullName, provider, sectionName);
         }
 
         /// <summary>
@@ -51,63 +65,62 @@ namespace Mercury.Logging.Configuration
         /// <returns>A logger constructed from configuration.</returns>
         public static Logger GetLogger(string name)
         {
-            return BuildLoggerFromConfiguration(name);
+            return GetLogger(name, null, null);
         }
 
         /// <summary>
-        /// Sets the section name that will be referenced in the configuration file.
+        /// Gets a logger constructed from configuration.
         /// </summary>
-        /// <param name="sectionName">The section name to use.</param>
-        public static void SetConfigurationSectionName(string sectionName)
+        /// <param name="name">The name of the logger.</param>
+        /// <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+        /// <returns>A logger constructed from configuration.</returns>
+        public static Logger GetLogger(string name, ConfigurationProvider provider)
         {
-            if (string.IsNullOrEmpty(sectionName))
-                sectionName = DEFAULT_SECTION_NAME;
-            lock (s_lock)
-            {
-                LogSectionName = sectionName;
-                Reset();
-            }
+            return GetLogger(name, provider, null);
         }
 
         /// <summary>
-        /// Sets the provider that will be used to create a configuration object to access the configuration file.
+        /// Gets a logger constructed from configuration.
         /// </summary>
-        /// <param name="provider">The configuration provider to set.</param>
-        public static void SetConfigurationProvider(ConfigurationProvider provider)
+        /// <param name="name">The name of the logger.</param>
+        /// <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+        /// <param name="sectionName">The name of the configuration section to load.  Null specifies the default configuration section.</param>
+        /// <returns>A logger constructed from configuration.</returns>
+        public static Logger GetLogger(string name, ConfigurationProvider provider, string sectionName)
         {
-            // Default if null
-            if (provider == null)
-                provider = new ClientConfigurationProvider(ConfigurationUserLevel.None);
-            lock (s_lock)
-            {
-                activeConfigurationProvider = provider;
-                Reset();
-            }
+            return BuildLoggerFromConfiguration(name, provider, sectionName);
         }
 
-        private static void Reset()
+        private static void EnsureConfiguration(ConfigurationProvider provider, string sectionName)
         {
-            logSection = null;
-            FrameworkObject.ClearCache();
-        }
-
-        private static void EnsureConfiguration()
-        {
-            if (logSection == null)
+            int test = GetHashCode(provider, sectionName);
+            if (test != cacheKey || logSection == null)
             {
                 lock (s_lock)
                 {
-                    if (logSection == null)
+                    if (test != cacheKey || logSection == null)
                     {
-                        logSection = activeConfigurationProvider.LoadConfiguration().GetSection(LogFramework.LogSectionName) as LoggingSection;
+                        cacheKey = test;
+                        FrameworkObject.ClearCache();
+                        logSection = provider.LoadConfiguration().GetSection(sectionName) as LoggingSection;
                     }
                 }
             }
         }
 
-        private static Logger BuildLoggerFromConfiguration(string name)
+        private static int GetHashCode(ConfigurationProvider provider, string sectionName)
         {
-            EnsureConfiguration();
+            return provider.GetHashCode() ^ sectionName.GetHashCode();
+        }
+
+        private static Logger BuildLoggerFromConfiguration(string name, ConfigurationProvider provider, string sectionName)
+        {
+            if (provider == null)
+                provider = new ClientConfigurationProvider(ConfigurationUserLevel.None);
+            if (string.IsNullOrEmpty(sectionName))
+                sectionName = DEFAULT_SECTION_NAME;
+
+            EnsureConfiguration(provider, sectionName);
             if (logSection != null)
             {
                 var root = logSection.Root;

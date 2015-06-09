@@ -65,7 +65,6 @@ namespace Mercury.Logging.Test
         [TestMethod]
         public void Can_load_loggers_from_configuration()
         {
-            LogFramework.SetConfigurationSectionName(LogFramework.DEFAULT_SECTION_NAME);
             var logger = LogFramework.GetLogger(typeof(Configuration_specs));
             Assert.IsNotNull(logger);
             Assert.IsTrue(logger.Name == typeof(Configuration_specs).FullName);
@@ -130,19 +129,11 @@ namespace Mercury.Logging.Test
         [TestMethod]
         public void Can_load_configuration_from_custom_section()
         {
-            try
-            {
-                LogFramework.SetConfigurationSectionName("customLog");
-                var logger = LogFramework.GetLogger("");
-                Assert.IsNotNull(logger);
-                Assert.IsInstanceOfType(logger, typeof(MemoryLogger));
-                Assert.IsTrue(logger.Name == "memLogger");
-                Assert.IsTrue(((MemoryLogger)logger).BufferSize == 10);
-            }
-            finally
-            {
-                LogFramework.SetConfigurationSectionName(LogFramework.DEFAULT_SECTION_NAME);
-            }
+            var logger = LogFramework.GetLogger("", null, "customLog");
+            Assert.IsNotNull(logger);
+            Assert.IsInstanceOfType(logger, typeof(MemoryLogger));
+            Assert.IsTrue(logger.Name == "memLogger");
+            Assert.IsTrue(((MemoryLogger)logger).BufferSize == 10);
         }
     }
 }

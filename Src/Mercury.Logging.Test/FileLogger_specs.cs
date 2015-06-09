@@ -66,7 +66,7 @@ namespace Mercury.Logging.Test
         public void Can_create_log_file()
         {
             var logName = "testlog.log";
-            var logPath = Path.Combine(CurrentAssemblyPath, logName);
+            var logPath = Path.Combine(CurrentAssemblyPath, "TestDir\\" + logName);
             FileLogger logger = new FileLogger(logPath, Encoding.Unicode);
             Assert.IsNotNull(logger);
             Assert.IsTrue(logger.Threshold == 1);

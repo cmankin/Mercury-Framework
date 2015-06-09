@@ -1601,9 +1601,25 @@
             Gets a collection of properties on this element.
             </summary>
     </member>
+    <member name="T:Mercury.Logging.Configuration.ConfigurationProvider">
+      <summary>
+            Provides a <see cref="T:System.Configuration.Configuration" /> object that can be used to access the configuration file. 
+            </summary>
+    </member>
+    <member name="M:Mercury.Logging.Configuration.ConfigurationProvider.LoadConfiguration">
+      <summary>
+            Gets a <see cref="T:System.Configuration.Configuration" /> object used to access a specific configuration file.
+            </summary>
+      <returns>A <see cref="T:System.Configuration.Configuration" /> object used to access a specific configuration file.</returns>
+    </member>
     <member name="T:Mercury.Logging.Configuration.LogFramework">
       <summary>
             Provides methods for altering aspects of the logging framework.
+            </summary>
+    </member>
+    <member name="F:Mercury.Logging.Configuration.LogFramework.DEFAULT_SECTION_NAME">
+      <summary>
+            The default section name within a configuration file from which the logging framework will load configuration data.
             </summary>
     </member>
     <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.Type)">
@@ -1620,12 +1636,22 @@
       <param name="name">The name of the logger.</param>
       <returns>A logger constructed from configuration.</returns>
     </member>
-    <member name="M:Mercury.Logging.Configuration.LogFramework.OpenConfiguration(System.String,System.String)">
+    <member name="M:Mercury.Logging.Configuration.LogFramework.SetConfigurationSectionName(System.String)">
       <summary>
-            Opens the logging configuration from the specified file using the specified section name.
+            Sets the section name that will be referenced in the configuration file.
             </summary>
-      <param name="exePath">The full path to the executable (exe) file whose configuration should be loaded.</param>
-      <param name="sectionName">The name of the logging section element.</param>
+      <param name="sectionName">The section name to use.</param>
+    </member>
+    <member name="M:Mercury.Logging.Configuration.LogFramework.SetConfigurationProvider(Mercury.Logging.Configuration.ConfigurationProvider)">
+      <summary>
+            Sets the provider that will be used to create a configuration object to access the configuration file.
+            </summary>
+      <param name="provider">The configuration provider to set.</param>
+    </member>
+    <member name="P:Mercury.Logging.Configuration.LogFramework.ConfigurationProvider">
+      <summary>
+            Gets the currently active configuration provider.
+            </summary>
     </member>
     <member name="T:Mercury.Logging.Configuration.FilterObjectCollection">
       <summary>
@@ -1681,6 +1707,46 @@
     <member name="P:Mercury.Logging.Configuration.LogRoot.Children">
       <summary>
             Gets a collection of logger objects associated with this root.
+            </summary>
+    </member>
+    <member name="T:Mercury.Logging.Configuration.ClientConfigurationProvider">
+      <summary>
+            Provides a <see cref="T:System.Configuration.Configuration" /> object that can access configuration 
+            files on a client application using the <see cref="T:System.Configuration.ConfigurationManager" />.
+            </summary>
+    </member>
+    <member name="M:Mercury.Logging.Configuration.ClientConfigurationProvider.#ctor(System.Configuration.ConfigurationUserLevel)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Mercury.Logging.Configuration.ClientConfigurationProvider" /> class with the specified configuration user level.
+            </summary>
+      <param name="userLevel">The configuration user level.</param>
+    </member>
+    <member name="M:Mercury.Logging.Configuration.ClientConfigurationProvider.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Mercury.Logging.Configuration.ClientConfigurationProvider" /> class with the specified executable path.
+            </summary>
+      <param name="exePath">The path of the executable (exe) file.</param>
+    </member>
+    <member name="M:Mercury.Logging.Configuration.ClientConfigurationProvider.LoadConfiguration">
+      <summary>
+            Gets a <see cref="T:System.Configuration.Configuration" /> object used to access a specific configuration file.
+            </summary>
+      <returns>A <see cref="T:System.Configuration.Configuration" /> object used to access a specific configuration file.</returns>
+    </member>
+    <member name="P:Mercury.Logging.Configuration.ClientConfigurationProvider.UserLevel">
+      <summary>
+            Gets the user configuration level.
+            </summary>
+    </member>
+    <member name="P:Mercury.Logging.Configuration.ClientConfigurationProvider.ConfigExePath">
+      <summary>
+            Gets the executable path.
+            </summary>
+    </member>
+    <member name="P:Mercury.Logging.Configuration.ClientConfigurationProvider.UseExePath">
+      <summary>
+            Gets a value indicating whether the executable (exe) path will be used to open the configuration.  
+            If an executable path is specified, it will be used.
             </summary>
     </member>
   </members>

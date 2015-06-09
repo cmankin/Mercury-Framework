@@ -14,15 +14,22 @@ namespace Mercury.Logging.Configuration
     /// </summary>
     public static class LogFramework
     {
-        private const string DEFAULT_SECTION_NAME = "mercuryLogging";
+        /// <summary>
+        /// The default section name within a configuration file from which the logging framework will load configuration data.
+        /// </summary>
+        public const string DEFAULT_SECTION_NAME = "mercuryLogging";
+
         private static string LogSectionName = DEFAULT_SECTION_NAME;
-        private static System.Configuration.Configuration defaultConfiguration;
+        private static ConfigurationProvider activeConfigurationProvider = new ClientConfigurationProvider(ConfigurationUserLevel.None);
         private static object s_lock = new object();
         private static LoggingSection logSection;
 
-        static LogFramework()
+        /// <summary>
+        /// Gets the currently active configuration provider.
+        /// </summary>
+        public static ConfigurationProvider ConfigurationProvider
         {
-            defaultConfiguration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            get { return activeConfigurationProvider; }
         }
 
         /// <summary>
@@ -48,17 +55,40 @@ namespace Mercury.Logging.Configuration
         }
 
         /// <summary>
-        /// Opens the logging configuration from the specified file using the specified section name.
+        /// Sets the section name that will be referenced in the configuration file.
         /// </summary>
-        /// <param name="exePath">The full path to the executable (exe) file whose configuration should be loaded.</param>
-        /// <param name="sectionName">The name of the logging section element.</param>
-        public static void OpenConfiguration(string exePath, string sectionName)
+        /// <param name="sectionName">The section name to use.</param>
+        public static void SetConfigurationSectionName(string sectionName)
         {
+            if (string.IsNullOrEmpty(sectionName))
+                sectionName = DEFAULT_SECTION_NAME;
             lock (s_lock)
             {
-                LogFramework.LogSectionName = sectionName;
-                LogFramework.defaultConfiguration = ConfigurationManager.OpenExeConfiguration(exePath);
+                LogSectionName = sectionName;
+                Reset();
             }
+        }
+
+        /// <summary>
+        /// Sets the provider that will be used to create a configuration object to access the configuration file.
+        /// </summary>
+        /// <param name="provider">The configuration provider to set.</param>
+        public static void SetConfigurationProvider(ConfigurationProvider provider)
+        {
+            // Default if null
+            if (provider == null)
+                provider = new ClientConfigurationProvider(ConfigurationUserLevel.None);
+            lock (s_lock)
+            {
+                activeConfigurationProvider = provider;
+                Reset();
+            }
+        }
+
+        private static void Reset()
+        {
+            logSection = null;
+            FrameworkObject.ClearCache();
         }
 
         private static void EnsureConfiguration()
@@ -69,7 +99,7 @@ namespace Mercury.Logging.Configuration
                 {
                     if (logSection == null)
                     {
-                        logSection = defaultConfiguration.GetSection(LogFramework.LogSectionName) as LoggingSection;
+                        logSection = activeConfigurationProvider.LoadConfiguration().GetSection(LogFramework.LogSectionName) as LoggingSection;
                     }
                 }
             }

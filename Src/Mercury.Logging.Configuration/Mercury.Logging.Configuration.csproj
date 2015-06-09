@@ -50,6 +50,8 @@
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
     <Compile Include="Logging\Configuration\BaseConfigurationElementCollection.cs" />
+    <Compile Include="Logging\Configuration\ClientConfigurationProvider.cs" />
+    <Compile Include="Logging\Configuration\ConfigurationProvider.cs" />
     <Compile Include="Logging\Configuration\FilterObject.cs" />
     <Compile Include="Logging\Configuration\FilterObjectCollection.cs" />
     <Compile Include="Logging\Configuration\FormatterObject.cs" />

@@ -203,6 +203,11 @@ namespace Mercury.Logging.Configuration
             FrameworkObject.cached.Add(value.Id, value);
         }
 
+        internal static void ClearCache()
+        {
+            FrameworkObject.cached.Clear();
+        }
+
         internal static FrameworkObject GetCachedObject(string referenceId)
         {
             FrameworkObject obj = null;

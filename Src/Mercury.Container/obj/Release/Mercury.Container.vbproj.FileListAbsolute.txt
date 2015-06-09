@@ -1,8 +1,0 @@
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\bin\Release\Mercury.Container.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\bin\Release\Mercury.Container.pdb
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\bin\Release\Mercury.Container.xml
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\obj\Release\Mercury.Container.Resources.resources
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\obj\Release\Mercury.Container.vbproj.GenerateResource.Cache
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\obj\Release\Mercury.Container.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\obj\Release\Mercury.Container.xml
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Container\obj\Release\Mercury.Container.pdb

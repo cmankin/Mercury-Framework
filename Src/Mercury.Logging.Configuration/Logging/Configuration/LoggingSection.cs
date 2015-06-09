@@ -72,6 +72,12 @@ namespace Mercury.Logging.Configuration
             get { return (LoggerObjectCollection)this[LoggingSection.LoggersProperty]; }
         }
 
+        /// <summary>
+        /// Gets a value indicating whether an unknown attribute is encountered during deserialization.
+        /// </summary>
+        /// <param name="name">The name of the unrecognized attribute.</param>
+        /// <param name="value">The value of the unrecognized attribute.</param>
+        /// <returns>True when an unknown attribute is encountered during deserialization; otherwise, false.</returns>
         protected override bool OnDeserializeUnrecognizedAttribute(string name, string value)
         {
             // Ignore unrecognized attributes.

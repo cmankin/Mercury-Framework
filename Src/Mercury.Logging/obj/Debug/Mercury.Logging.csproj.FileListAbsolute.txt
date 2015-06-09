@@ -1,5 +1,0 @@
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging\bin\Debug\Mercury.Logging.XML
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging\bin\Debug\Mercury.Logging.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging\bin\Debug\Mercury.Logging.pdb
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging\obj\Debug\Mercury.Logging.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging\obj\Debug\Mercury.Logging.pdb

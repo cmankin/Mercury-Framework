@@ -1,6 +1,0 @@
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Core\bin\Release\Mercury.Logging.Core.xml
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Core\bin\Release\Mercury.Logging.Core.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Core\bin\Release\Mercury.Logging.Core.pdb
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Core\obj\Release\Mercury.Logging.Core.dll
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Core\obj\Release\Mercury.Logging.Core.pdb
-E:\Documents\Projects\Personal\Mercury Framework\Main\Src\Mercury.Logging.Core\obj\Release\Mercury.Logging.Core.csprojResolveAssemblyReference.cache

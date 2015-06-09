@@ -109,6 +109,9 @@ namespace Mercury.Logging.Loggers
 
         private void __Init()
         {
+            var parentDir = Directory.GetParent(this.FilePath).FullName;
+            if (!Directory.Exists(parentDir))
+                Directory.CreateDirectory(parentDir);
             if (this.WriteOnly)
                 this.m_logFile = new FileStream(this.FilePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite, BUFFER_SIZE);
             else

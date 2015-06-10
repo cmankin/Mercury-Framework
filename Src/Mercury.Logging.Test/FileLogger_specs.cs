@@ -67,28 +67,37 @@ namespace Mercury.Logging.Test
         {
             var logName = "testlog.log";
             var logPath = Path.Combine(CurrentAssemblyPath, "TestDir\\" + logName);
-            FileLogger logger = new FileLogger(logPath, Encoding.Unicode);
-            Assert.IsNotNull(logger);
-            Assert.IsTrue(logger.Threshold == 1);
-            Assert.IsTrue(logger.Encoding == Encoding.Unicode);
-            Assert.IsTrue(logger.FilePath == logPath);
-            Assert.IsTrue(File.Exists(logPath));
-            logger.Threshold = 60;
-
-            logger.Log(LogSeverity.Info, "Created new file logger for {0}.", logName);
-            logger.Write("Something interesting...");
-            logger.Write("1, ");
-            logger.Write("2");
-            logger.Flush();
-            logger.Dispose();
-
-            string text = ReadFullText(logPath, Encoding.Unicode);
-            Assert.IsNotNull(text);
-            var lastChar = text.Substring(text.Length - 1, 1);
-            Assert.IsTrue(lastChar == "2");
-
             if (File.Exists(logPath))
                 File.Delete(logPath);
+
+            try
+            {
+                FileLogger logger = new FileLogger(logPath, Encoding.Unicode);
+                Assert.IsNotNull(logger);
+                Assert.IsTrue(logger.Threshold == 1);
+                Assert.IsTrue(logger.Encoding == Encoding.Unicode);
+                Assert.IsTrue(logger.FilePath == logPath);
+                Assert.IsFalse(File.Exists(logPath));
+                logger.Threshold = 60;
+
+                logger.Log(LogSeverity.Info, "Created new file logger for {0}.", logName);
+                logger.Write("Something interesting...");
+                logger.Write("1, ");
+                logger.Write("2");
+                logger.Flush();
+                logger.Dispose();
+
+                Assert.IsTrue(File.Exists(logPath));
+                string text = ReadFullText(logPath, Encoding.Unicode);
+                Assert.IsNotNull(text);
+                var lastChar = text.Substring(text.Length - 1, 1);
+                Assert.IsTrue(lastChar == "2");
+            }
+            finally
+            {
+                if (File.Exists(logPath))
+                    File.Delete(logPath);
+            }
         }
 
         [TestMethod]
@@ -96,34 +105,99 @@ namespace Mercury.Logging.Test
         {
             var logName = "testlog.log";
             var logPath = Path.Combine(CurrentAssemblyPath, logName);
-            using (var logger = new FileLogger(logPath, Encoding.Unicode))
-            {
-                Assert.IsTrue(File.Exists(logPath));
-                logger.Threshold = 10;
-
-                for (int i = 0; i < 5000; i++)
-                {
-                    logger.Log(LogSeverity.Info, "Created new file logger for {0}.", logName);
-                    logger.WriteLine("1");
-                    logger.Flush();
-                    logger.WriteLine("2");
-                    logger.WriteLine("3");
-                    logger.WriteLine("4");
-                    logger.Flush();
-                    logger.WriteLine("5");
-                    logger.WriteLine("6");
-                    logger.WriteLine("7");
-                    logger.Flush();
-                }
-            }
-            string text = ReadFullText(logPath, Encoding.Unicode);
-            Assert.IsNotNull(text);
-            var noLnText = text.Replace(Environment.NewLine, "");
-            var lastSigChar = noLnText.Substring(noLnText.Length - 1, 1);
-            Assert.IsTrue(lastSigChar == "7");
-
             if (File.Exists(logPath))
                 File.Delete(logPath);
+
+            try
+            {
+                using (var logger = new FileLogger(logPath, Encoding.Unicode))
+                {
+                    Assert.IsFalse(File.Exists(logPath));
+                    logger.Threshold = 10;
+
+                    for (int i = 0; i < 5000; i++)
+                    {
+                        logger.Log(LogSeverity.Info, "Created new file logger for {0}.", logName);
+                        if (i == 0) // File stream is opened on first write.
+                            Assert.IsTrue(File.Exists(logPath));
+                        logger.WriteLine("1");
+                        logger.Flush();
+                        logger.WriteLine("2");
+                        logger.WriteLine("3");
+                        logger.WriteLine("4");
+                        logger.Flush();
+                        logger.WriteLine("5");
+                        logger.WriteLine("6");
+                        logger.WriteLine("7");
+                        logger.Flush();
+                    }
+                }
+                string text = ReadFullText(logPath, Encoding.Unicode);
+                Assert.IsNotNull(text);
+                var noLnText = text.Replace(Environment.NewLine, "");
+                var lastSigChar = noLnText.Substring(noLnText.Length - 1, 1);
+                Assert.IsTrue(lastSigChar == "7");
+            }
+            finally
+            {
+                if (File.Exists(logPath))
+                    File.Delete(logPath);
+            }
+        }
+
+        [TestMethod]
+        public void Can_continue_after_underlying_stream_is_disposed()
+        {
+            var logName = "testlog.log";
+            var logPath = Path.Combine(CurrentAssemblyPath, logName);
+            if (File.Exists(logPath))
+                File.Delete(logPath);
+
+            try
+            {
+                using (var logger = new FileLogger(logPath, Encoding.UTF8))
+                {
+                    logger.Info("Created new file logger for {0}.", logName);
+                    logger.Info("Writing another message to log file.");
+                    logger.CloseStream();
+                    logger.Critical("Actually, no problems here.");
+                }
+            }
+            finally
+            {
+                if (File.Exists(logPath))
+                    File.Delete(logPath);
+            }
+        }
+
+        [TestMethod]
+        public void Cannot_continue_to_use_disposed_file_logger()
+        {
+            Exception caught = null;
+            var logName = "testlog.log";
+            var logPath = Path.Combine(CurrentAssemblyPath, logName);
+            if (File.Exists(logPath))
+                File.Delete(logPath);
+
+            try
+            {
+                var logger = new FileLogger(logPath, Encoding.UTF8);
+                logger.Info("Writing a test message to ensure stream is open.");
+                logger.Dispose();
+                logger.Critical("This should throw since the object has been disposed.");
+            }
+            catch (Exception ex)
+            {
+                caught = ex;
+            }
+            finally
+            {
+                if (File.Exists(logPath))
+                    File.Delete(logPath);
+            }
+
+            Assert.IsNotNull(caught);
+            Assert.IsInstanceOfType(caught, typeof(ObjectDisposedException));
         }
 
         internal static string ReadFullText(string filePath, Encoding encoding)

@@ -60,9 +60,9 @@ namespace Mercury.Logging.Loggers
 
         private const int BUFFER_SIZE = 8192;
         private object writerLock = new object();
-        private FileStream m_logFile;
+        private Stream m_logFile;
         private int m_writeCount;
-        private bool disposedValue;
+        private bool instanceDisposed;
         private long _writePosition;
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Mercury.Logging.Loggers
         /// </summary>
         public bool IsDisposed
         {
-            get { return this.disposedValue; }
+            get { return this.instanceDisposed; }
         }
 
         /// <summary>
@@ -112,10 +112,21 @@ namespace Mercury.Logging.Loggers
             var parentDir = Directory.GetParent(this.FilePath).FullName;
             if (!Directory.Exists(parentDir))
                 Directory.CreateDirectory(parentDir);
-            if (this.WriteOnly)
-                this.m_logFile = new FileStream(this.FilePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite, BUFFER_SIZE);
-            else
-                this.m_logFile = new FileStream(this.FilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite, BUFFER_SIZE);
+        }
+
+        /// <summary>
+        /// Closes the underlying file stream.  Subsequent logging calls will attempt to get 
+        /// a new stream by calling the GetFileStream method.
+        /// </summary>
+        public void CloseStream()
+        {
+            if (this.m_logFile != null)
+            {
+                lock (this.writerLock)
+                {
+                    this.__UnsafeDisposeFileStream();
+                }
+            }
         }
 
         /// <summary>
@@ -135,21 +146,52 @@ namespace Mercury.Logging.Loggers
         /// </summary>
         public override void Flush()
         {
-            this.m_logFile.Flush();
+            lock (this.writerLock)
+            {
+                this.__UnsafeEnsureFileStream();
+                this.m_logFile.Flush();
+            }
+        }
+
+        internal bool CallEnsurePosition()
+        {
+            return this.EnsurePosition();
         }
 
         /// <summary>
         /// Ensures that the position of the write head in the file stream matches the write position.
         /// </summary>
-        protected internal virtual bool EnsurePosition()
+        protected virtual bool EnsurePosition()
         {
             if (this.m_logFile == null)
                 return false;
             lock (this.writerLock)
             {
-                this.m_logFile.Position = this.WritePosition;
+                this.__UnsafeEnsureFileStream();
+                this.__UnsafeSetPosition(this.WritePosition);
                 return true;
             }
+        }
+
+        /// <summary>
+        /// Gets the file stream used to write to the log file.
+        /// </summary>
+        /// <param name="logFilePath">The full system path to the log file.</param>
+        /// <param name="isWriteOnly">A value indicating whether this file logger is only enabled for writing.</param>
+        /// <param name="defaultBufferSize">The default buffer size used by the logger.</param>
+        /// <returns>The file stream used to write to the log file.</returns>
+        protected virtual Stream GetFileStream(string logFilePath, bool isWriteOnly, int defaultBufferSize)
+        {
+            // Ensure parent directory path
+            var parentDir = Directory.GetParent(logFilePath).FullName;
+            if (!Directory.Exists(parentDir))
+                Directory.CreateDirectory(parentDir);
+
+            // Create stream
+            if (isWriteOnly)
+                return new FileStream(logFilePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite, defaultBufferSize);
+            else
+                return new FileStream(logFilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite, defaultBufferSize);
         }
 
         /// <summary>
@@ -161,21 +203,41 @@ namespace Mercury.Logging.Loggers
         {
             if (message == null)
                 return false;
-            if (this.m_logFile == null)
-                throw new ObjectDisposedException(this.GetType().Name);
             lock (this.writerLock)
             {
-                var flag = this._UnsafeWriteToFile(message);
-                var flag1 = this._UnsafeConditionalFlush();
-                return flag & flag1;
+                this.__UnsafeEnsureFileStream();
+                var written = this.__UnsafeWriteToFile(message);
+                var flushed = this.__UnsafeConditionalFlush();
+                return written & flushed;
             }
         }
 
-        private bool _UnsafeWriteToFile(string message)
+        #region Critical, non-thread-safe methods
+        private void __UnsafeEnsureFileStream()
+        {
+            if (!this.instanceDisposed && this.m_logFile == null)
+                this.m_logFile = this.GetFileStream(this.FilePath, this.WriteOnly, BUFFER_SIZE);
+        }
+
+        private void __UnsafeDisposeFileStream()
+        {
+            if (this.m_logFile != null)
+            {
+                this.m_logFile.Dispose();
+                this.m_logFile = null;
+            }
+        }
+
+        private void __UnsafeSetPosition(long setPosition)
+        {
+            this.m_logFile.Position = setPosition;
+        }
+
+        private bool __UnsafeWriteToFile(string message)
         {
             if (message == null)
                 return false;
-            if (this.m_logFile == null)
+            if (this.m_logFile == null || !this.m_logFile.CanWrite)
                 throw new ObjectDisposedException(this.GetType().Name);
             try
             {
@@ -190,7 +252,7 @@ namespace Mercury.Logging.Loggers
             return false;
         }
 
-        private bool _UnsafeConditionalFlush()
+        private bool __UnsafeConditionalFlush()
         {
             try
             {
@@ -204,6 +266,7 @@ namespace Mercury.Logging.Loggers
             }
             return false;
         }
+        #endregion
 
         /// <summary>
         /// Dispsoses of the resources associated with this logger.
@@ -216,15 +279,14 @@ namespace Mercury.Logging.Loggers
 
         private void Dispose(bool isDisposing)
         {
-            if (!this.disposedValue)
+            if (!this.instanceDisposed)
             {
-                if (this.m_logFile != null)
+                lock (this.writerLock)
                 {
-                    this.m_logFile.Dispose();
-                    this.m_logFile = null;
+                    this.__UnsafeDisposeFileStream();
                 }
             }
-            this.disposedValue = true;
+            this.instanceDisposed = true;
         }
     }
 }

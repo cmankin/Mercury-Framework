@@ -759,6 +759,12 @@
       <param name="encoding">The text encoding used for this file.</param>
       <param name="writeOnly">A value indicating whether this file logger is only enabled for writing.</param>
     </member>
+    <member name="M:Mercury.Logging.Loggers.FileLogger.CloseStream">
+      <summary>
+            Closes the underlying file stream.  Subsequent logging calls will attempt to get 
+            a new stream by calling the GetFileStream method.
+            </summary>
+    </member>
     <member name="M:Mercury.Logging.Loggers.FileLogger.GetReader">
       <summary>
             Gets a <see cref="T:System.IO.StreamReader" /> that can read from the log file.  Attempting 
@@ -775,6 +781,15 @@
       <summary>
             Ensures that the position of the write head in the file stream matches the write position.
             </summary>
+    </member>
+    <member name="M:Mercury.Logging.Loggers.FileLogger.GetFileStream(System.String,System.Boolean,System.Int32)">
+      <summary>
+            Gets the file stream used to write to the log file.
+            </summary>
+      <param name="logFilePath">The full system path to the log file.</param>
+      <param name="isWriteOnly">A value indicating whether this file logger is only enabled for writing.</param>
+      <param name="defaultBufferSize">The default buffer size used by the logger.</param>
+      <returns>The file stream used to write to the log file.</returns>
     </member>
     <member name="M:Mercury.Logging.Loggers.FileLogger.WriteLog(System.String)">
       <summary>
@@ -1629,6 +1644,23 @@
       <param name="type">The System.Type from which to derive the logger name.</param>
       <returns>A logger constructed from configuration.</returns>
     </member>
+    <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.Type,Mercury.Logging.Configuration.ConfigurationProvider)">
+      <summary>
+            Gets a logger constructed from configuration.
+            </summary>
+      <param name="type">The System.Type from which to derive the logger name.</param>
+      <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+      <returns>A logger constructed from configuration.</returns>
+    </member>
+    <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.Type,Mercury.Logging.Configuration.ConfigurationProvider,System.String)">
+      <summary>
+            Gets a logger constructed from configuration.
+            </summary>
+      <param name="type">The System.Type from which to derive the logger name.</param>
+      <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+      <param name="sectionName">The name of the configuration section to load.  Null specifies the default configuration section.</param>
+      <returns>A logger constructed from configuration.</returns>
+    </member>
     <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.String)">
       <summary>
             Gets a logger constructed from configuration.
@@ -1636,22 +1668,22 @@
       <param name="name">The name of the logger.</param>
       <returns>A logger constructed from configuration.</returns>
     </member>
-    <member name="M:Mercury.Logging.Configuration.LogFramework.SetConfigurationSectionName(System.String)">
+    <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.String,Mercury.Logging.Configuration.ConfigurationProvider)">
       <summary>
-            Sets the section name that will be referenced in the configuration file.
+            Gets a logger constructed from configuration.
             </summary>
-      <param name="sectionName">The section name to use.</param>
+      <param name="name">The name of the logger.</param>
+      <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+      <returns>A logger constructed from configuration.</returns>
     </member>
-    <member name="M:Mercury.Logging.Configuration.LogFramework.SetConfigurationProvider(Mercury.Logging.Configuration.ConfigurationProvider)">
+    <member name="M:Mercury.Logging.Configuration.LogFramework.GetLogger(System.String,Mercury.Logging.Configuration.ConfigurationProvider,System.String)">
       <summary>
-            Sets the provider that will be used to create a configuration object to access the configuration file.
+            Gets a logger constructed from configuration.
             </summary>
-      <param name="provider">The configuration provider to set.</param>
-    </member>
-    <member name="P:Mercury.Logging.Configuration.LogFramework.ConfigurationProvider">
-      <summary>
-            Gets the currently active configuration provider.
-            </summary>
+      <param name="name">The name of the logger.</param>
+      <param name="provider">The configuration provider to use.  Null specifies the default provider.</param>
+      <param name="sectionName">The name of the configuration section to load.  Null specifies the default configuration section.</param>
+      <returns>A logger constructed from configuration.</returns>
     </member>
     <member name="T:Mercury.Logging.Configuration.FilterObjectCollection">
       <summary>

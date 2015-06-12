@@ -20,8 +20,8 @@ namespace Mercury.Logging.Configuration
         public const string DEFAULT_SECTION_NAME = "mercuryLogging";
 
         private static object s_lock = new object();
-        private static int cacheKey;
-        private static LoggingSection logSection;
+        private static volatile int cacheKey;
+        private static volatile LoggingSection logSection;
 
         /// <summary>
         /// Gets a logger constructed from configuration.
@@ -91,21 +91,24 @@ namespace Mercury.Logging.Configuration
             return BuildLoggerFromConfiguration(name, provider, sectionName);
         }
 
-        private static void EnsureConfiguration(ConfigurationProvider provider, string sectionName)
+        private static LoggingSection EnsureConfiguration(ConfigurationProvider provider, string sectionName)
         {
             int test = GetHashCode(provider, sectionName);
-            if (test != cacheKey || logSection == null)
+            var section = LogFramework.logSection;
+            if (test != cacheKey || section == null)
             {
                 lock (s_lock)
                 {
-                    if (test != cacheKey || logSection == null)
+                    if (test != cacheKey || LogFramework.logSection == null)
                     {
                         cacheKey = test;
                         FrameworkObject.ClearCache();
-                        logSection = provider.LoadConfiguration().GetSection(sectionName) as LoggingSection;
+                        LogFramework.logSection = provider.LoadConfiguration().GetSection(sectionName) as LoggingSection;
                     }
+                    section = LogFramework.logSection;
                 }
             }
+            return section;
         }
 
         private static int GetHashCode(ConfigurationProvider provider, string sectionName)
@@ -120,10 +123,10 @@ namespace Mercury.Logging.Configuration
             if (string.IsNullOrEmpty(sectionName))
                 sectionName = DEFAULT_SECTION_NAME;
 
-            EnsureConfiguration(provider, sectionName);
-            if (logSection != null)
+            var section = EnsureConfiguration(provider, sectionName);
+            if (section != null)
             {
-                var root = logSection.Root;
+                var root = section.Root;
                 if (root != null)
                     return root.GetInstance(name);
             }

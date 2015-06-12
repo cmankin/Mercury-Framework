@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
@@ -130,6 +131,18 @@ namespace Mercury.Logging.Test
         public void Can_load_configuration_from_custom_section()
         {
             var logger = LogFramework.GetLogger("", null, "customLog");
+            Assert.IsNotNull(logger);
+            Assert.IsInstanceOfType(logger, typeof(MemoryLogger));
+            Assert.IsTrue(logger.Name == "memLogger");
+            Assert.IsTrue(((MemoryLogger)logger).BufferSize == 10);
+        }
+
+        [TestMethod]
+        public void Can_load_configuration_from_alternate_file_path()
+        {
+            var alternatePath = Path.Combine(FileLogger_specs.CurrentAssemblyPath, "Resources", "testConfig.config");
+            var provider = new ClientConfigurationProvider(alternatePath);
+            var logger = LogFramework.GetLogger("", provider, "customLog");
             Assert.IsNotNull(logger);
             Assert.IsInstanceOfType(logger, typeof(MemoryLogger));
             Assert.IsTrue(logger.Name == "memLogger");

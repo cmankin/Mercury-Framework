@@ -13,7 +13,8 @@ namespace Mercury.Logging.Configuration
     public class ClientConfigurationProvider : ConfigurationProvider
     {
         private ConfigurationUserLevel _userLevel = ConfigurationUserLevel.None;
-        private readonly string _configExePath;
+        private readonly string _configurationFilePath;
+        private ConfigurationFileMap _configMap;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Mercury.Logging.Configuration.ClientConfigurationProvider"/> class with the specified configuration user level.
@@ -25,18 +26,23 @@ namespace Mercury.Logging.Configuration
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Mercury.Logging.Configuration.ClientConfigurationProvider"/> class with the specified executable path.
+        /// Initializes a new instance of the <see cref="Mercury.Logging.Configuration.ClientConfigurationProvider"/> class with the specified congiguration file path.
         /// </summary>
-        /// <param name="exePath">The path of the executable (exe) file.</param>
-        public ClientConfigurationProvider(string exePath)
-            : this(ConfigurationUserLevel.None, exePath)
+        /// <param name="configPath">The path to the configuration file.</param>
+        public ClientConfigurationProvider(string configPath)
+            : this(ConfigurationUserLevel.None, configPath)
         {
         }
 
-        private ClientConfigurationProvider(ConfigurationUserLevel userLevel, string exePath)
+        private ClientConfigurationProvider(ConfigurationUserLevel userLevel, string configPath)
         {
             this._userLevel = userLevel;
-            this._configExePath = exePath;
+            this._configurationFilePath = configPath;
+            if (!string.IsNullOrEmpty(configPath))
+            {
+                this._configMap = new ConfigurationFileMap();
+                this._configMap.MachineConfigFilename = configPath;
+            }
         }
 
         /// <summary>
@@ -48,20 +54,20 @@ namespace Mercury.Logging.Configuration
         }
 
         /// <summary>
-        /// Gets the executable path.
+        /// Gets the path to the configuration file.
         /// </summary>
-        public string ConfigExePath
+        public string ConfigurationFilePath
         {
-            get { return this._configExePath; }
+            get { return this._configurationFilePath; }
         }
 
         /// <summary>
-        /// Gets a value indicating whether the executable (exe) path will be used to open the configuration.  
-        /// If an executable path is specified, it will be used.
+        /// Gets a value indicating whether the configuration file path will be used to open the configuration.  
+        /// If a configuration file path is specified, it will be used instead of the user level.
         /// </summary>
-        public bool UseExePath
+        public bool UseFilePath
         {
-            get { return !string.IsNullOrEmpty(this._configExePath); }
+            get { return !string.IsNullOrEmpty(this._configurationFilePath); }
         }
 
         /// <summary>
@@ -70,8 +76,12 @@ namespace Mercury.Logging.Configuration
         /// <returns>A <see cref="System.Configuration.Configuration"/> object used to access a specific configuration file.</returns>
         public override System.Configuration.Configuration LoadConfiguration()
         {
-            if (this.UseExePath)
-                return ConfigurationManager.OpenExeConfiguration(this._configExePath);
+            if (this.UseFilePath)
+            {
+                if (this._configMap == null)
+                    throw new InvalidOperationException(string.Format(Strings.Config_file_map_not_set_1, this._configurationFilePath));
+                return ConfigurationManager.OpenMappedMachineConfiguration(this._configMap);
+            }
             return ConfigurationManager.OpenExeConfiguration(this._userLevel);
         }
     }

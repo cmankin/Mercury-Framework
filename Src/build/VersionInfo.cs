@@ -30,8 +30,8 @@ using System.Runtime.InteropServices;
 
 // ONLY UPDATE THE MAJOR AND MINOR VERSIONS.  DO NOT MODIFY THE BUILD AND REVISION NUMBERS.
 // Leaving these ensures hotfixes can be applied without affecting other assemblies.
-[assembly: AssemblyVersion("2.7.0.0")]
+[assembly: AssemblyVersion("2.8.0.0")]
 
 // Cannot use * syntax since AssemblyVersion has also been specified.  Set according to 
 // the above table.
-[assembly: AssemblyFileVersion("2.7.3.0")]
+[assembly: AssemblyFileVersion("2.8.2.0")]

@@ -150,7 +150,7 @@ namespace Mercury.Logging.Configuration
                 {
                     var itf = instance as IAddChild;
                     if (itf == null)
-                        throw new InvalidOperationException("Cannot add child objects to an instance which does not support it.");
+                        throw new InvalidOperationException(Strings.Does_not_support_IAddChild);
 
                     ObjectRef obj;
                     for (int i = 0; i < rColl.Count; i++)
@@ -197,9 +197,9 @@ namespace Mercury.Logging.Configuration
         internal static void Cache(FrameworkObject value)
         {
             if (value.Id == null)
-                throw new ArgumentException("Cannot cache a framework object whose 'Id' is null.");
+                throw new ArgumentException(Strings.FrameworkObj_cache_requires_non_null_id);
             if (FrameworkObject.cached.ContainsKey(value.Id))
-                throw new ArgumentException(string.Format("The specified key '{0}' already exists in the framework object cache.", value.Id));
+                throw new ArgumentException(string.Format(Strings.Duplicate_FrameworkObject_cache_key_1, value.Id));
             FrameworkObject.cached.Add(value.Id, value);
         }
 

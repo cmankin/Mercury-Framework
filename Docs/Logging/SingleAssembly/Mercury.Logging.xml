@@ -1755,9 +1755,9 @@
     </member>
     <member name="M:Mercury.Logging.Configuration.ClientConfigurationProvider.#ctor(System.String)">
       <summary>
-            Initializes a new instance of the <see cref="T:Mercury.Logging.Configuration.ClientConfigurationProvider" /> class with the specified executable path.
+            Initializes a new instance of the <see cref="T:Mercury.Logging.Configuration.ClientConfigurationProvider" /> class with the specified congiguration file path.
             </summary>
-      <param name="exePath">The path of the executable (exe) file.</param>
+      <param name="configPath">The path to the configuration file.</param>
     </member>
     <member name="M:Mercury.Logging.Configuration.ClientConfigurationProvider.LoadConfiguration">
       <summary>
@@ -1770,15 +1770,51 @@
             Gets the user configuration level.
             </summary>
     </member>
-    <member name="P:Mercury.Logging.Configuration.ClientConfigurationProvider.ConfigExePath">
+    <member name="P:Mercury.Logging.Configuration.ClientConfigurationProvider.ConfigurationFilePath">
       <summary>
-            Gets the executable path.
+            Gets the path to the configuration file.
             </summary>
     </member>
-    <member name="P:Mercury.Logging.Configuration.ClientConfigurationProvider.UseExePath">
+    <member name="P:Mercury.Logging.Configuration.ClientConfigurationProvider.UseFilePath">
       <summary>
-            Gets a value indicating whether the executable (exe) path will be used to open the configuration.  
-            If an executable path is specified, it will be used.
+            Gets a value indicating whether the configuration file path will be used to open the configuration.  
+            If a configuration file path is specified, it will be used instead of the user level.
+            </summary>
+    </member>
+    <member name="T:Mercury.Strings">
+      <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:Mercury.Strings.ResourceManager">
+      <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+    </member>
+    <member name="P:Mercury.Strings.Culture">
+      <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+    <member name="P:Mercury.Strings.Config_file_map_not_set_1">
+      <summary>
+              Looks up a localized string similar to The configuration at the specified path '{0}' could not be loaded..
+            </summary>
+    </member>
+    <member name="P:Mercury.Strings.Does_not_support_IAddChild">
+      <summary>
+              Looks up a localized string similar to Cannot add child objects to an instance which does not support it..
+            </summary>
+    </member>
+    <member name="P:Mercury.Strings.Duplicate_FrameworkObject_cache_key_1">
+      <summary>
+              Looks up a localized string similar to The specified key '{0}' already exists in the framework object cache..
+            </summary>
+    </member>
+    <member name="P:Mercury.Strings.FrameworkObj_cache_requires_non_null_id">
+      <summary>
+              Looks up a localized string similar to Cannot cache a framework object whose 'Id' is null..
             </summary>
     </member>
   </members>

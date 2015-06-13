@@ -2,6 +2,8 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Mercury.Logging;
 using Mercury.Logging.Loggers;
@@ -223,6 +225,101 @@ namespace Mercury.Logging.Test
                 Assert.IsNotNull(output);
                 Assert.IsTrue(output == string.Format("\r\nmock Info [99] : {0}", message));
             }
+        }
+
+        [TestMethod]
+        public void Supported_loggers_are_safe_to_log_from_multiple_threads()
+        {
+            var filePath = FileLogger_specs.GetPathInCurrentAssembly("file.log");
+            var durablePath = FileLogger_specs.GetPathInCurrentAssembly("durable.log");
+            this.EnsureFileDeleted(filePath);
+            this.EnsureFileDeleted(durablePath);
+
+            try
+            {
+                // MemoryLogger
+                MemoryLogger memLog = new MemoryLogger(10);
+                // ConsoleLogger
+                ConsoleLogger consLog = new ConsoleLogger();
+                // FileLogger
+                FileLogger fileLog = new FileLogger(filePath, Encoding.UTF8, true);
+                // DurableLogger
+                MemoryLogger dPrimary = new MemoryLogger(60);
+                DurableLogger durableLog = new DurableLogger(dPrimary, durablePath, DurableLogger.DurabilityMode.WriteThrough, 5);
+                // PersistentLogger
+                MemoryLogger pl = new MemoryLogger(60);
+                PersistentLogger persistentLog = new PersistentLogger(pl, 15, 1);
+                // CompositeLogger
+                CompositeLogger composite = new CompositeLogger(memLog, consLog, fileLog, durableLog, persistentLog);
+
+                // Initial test run
+                composite.Info("Starting multithread test...");
+
+                var t1 = Task.Factory.StartNew((state) =>
+                    {
+                        var log = state as Logger;
+                        for (int i = 0; i < 10; i++)
+                        {
+                            log.Info("Message from thread: {0}", Thread.CurrentThread.ManagedThreadId);
+                            Thread.Sleep(50);
+                        }
+                    }
+                    , composite
+                );
+
+                var t2 = Task.Factory.StartNew((state) =>
+                    {
+                        var log = state as Logger;
+                        for (int i = 0; i < 10; i++)
+                        {
+                            log.Info("Message from thread: {0}", Thread.CurrentThread.ManagedThreadId);
+                            Thread.Sleep(50);
+                        }
+                    }
+                    , composite
+                );
+
+                var t3 = Task.Factory.StartNew((state) =>
+                    {
+                        var log = state as Logger;
+                        for (int i = 0; i < 10; i++)
+                        {
+                            log.Info("Message from thread: {0}", Thread.CurrentThread.ManagedThreadId);
+                            Thread.Sleep(50);
+                        }
+                    }
+                    , composite
+                );
+
+                var t4 = Task.Factory.StartNew((state) =>
+                    {
+                        var log = state as Logger;
+                        for (int i = 0; i < 10; i++)
+                        {
+                            log.Info("Message from thread: {0}", Thread.CurrentThread.ManagedThreadId);
+                            Thread.Sleep(50);
+                        }
+                    }
+                    , composite
+                );
+
+                Task.WaitAll(t1, t2, t3, t4);
+                Assert.IsFalse(t1.IsFaulted);
+                Assert.IsFalse(t2.IsFaulted);
+                Assert.IsFalse(t3.IsFaulted);
+                Assert.IsFalse(t4.IsFaulted);
+            }
+            finally
+            {
+                this.EnsureFileDeleted(filePath);
+                this.EnsureFileDeleted(durablePath);
+            }
+        }
+
+        private void EnsureFileDeleted(string filePath)
+        {
+            if (System.IO.File.Exists(filePath))
+                System.IO.File.Delete(filePath);
         }
     }
 }

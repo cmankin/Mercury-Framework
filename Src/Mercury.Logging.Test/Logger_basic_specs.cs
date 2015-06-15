@@ -235,6 +235,8 @@ namespace Mercury.Logging.Test
             this.EnsureFileDeleted(filePath);
             this.EnsureFileDeleted(durablePath);
 
+            // CompositeLogger
+            CompositeLogger composite = null;
             try
             {
                 // MemoryLogger
@@ -250,7 +252,7 @@ namespace Mercury.Logging.Test
                 MemoryLogger pl = new MemoryLogger(60);
                 PersistentLogger persistentLog = new PersistentLogger(pl, 15, 1);
                 // CompositeLogger
-                CompositeLogger composite = new CompositeLogger(memLog, consLog, fileLog, durableLog, persistentLog);
+                composite = new CompositeLogger(memLog, consLog, fileLog, durableLog, persistentLog);
 
                 // Initial test run
                 composite.Info("Starting multithread test...");
@@ -311,6 +313,9 @@ namespace Mercury.Logging.Test
             }
             finally
             {
+                // Dispose of any unmanaged resources
+                if (composite != null)
+                    composite.Dispose();
                 this.EnsureFileDeleted(filePath);
                 this.EnsureFileDeleted(durablePath);
             }

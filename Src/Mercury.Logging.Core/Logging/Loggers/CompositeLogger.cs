@@ -47,6 +47,8 @@ namespace Mercury.Logging.Loggers
         /// <param name="logger">The logger to add.</param>
         public void Add(string logName, Logger logger)
         {
+            if (logger == null)
+                throw new ArgumentNullException("logger");
             logger.Name = logName;
             this.Add(logger);
         }
@@ -71,7 +73,11 @@ namespace Mercury.Logging.Loggers
         {
             if (logName == null)
                 return null;
-            var result = this._loggers.FirstOrDefault<Logger>((log) => log.Name == logName);
+
+            Logger result = null;
+            var list = GetChildren(logName, false, true);
+            if (list.Count > 0)
+                result = list[0];
             return result;
         }
 
@@ -82,16 +88,7 @@ namespace Mercury.Logging.Loggers
         /// <returns>A list of all loggers that are associated with the specified name.</returns>
         public IList<Logger> FindAll(string logName)
         {
-            var resList = new List<Logger>();
-            if (logName != null)
-            {
-                foreach (var log in this._loggers)
-                {
-                    if (log.Name == logName)
-                        resList.Add(log);
-                }
-            }
-            return resList;
+            return GetChildren(logName, false, false);
         }
 
         /// <summary>
@@ -100,10 +97,26 @@ namespace Mercury.Logging.Loggers
         /// <returns>A list of all <see cref="Mercury.Logging.Logger"/> objects attached to this instance.</returns>
         public IList<Logger> GetAll()
         {
+            return GetChildren(null, true, false);
+        }
+
+        private IList<Logger> GetChildren(string searchName, bool allRecords, bool firstOnly)
+        {
             var list = new List<Logger>();
-            foreach (var log in this._loggers)
+            Logger log = null;
+            for (int i = 0; i < this._loggers.Count; i++)
             {
-                list.Add(log);
+                log = this._loggers[i];
+                if (allRecords)
+                {
+                    list.Add(log);
+                }
+                else if (string.Equals(log.Name, searchName, StringComparison.OrdinalIgnoreCase))
+                {
+                    list.Add(log);
+                    if (firstOnly)
+                        break;
+                }
             }
             return list;
         }
@@ -115,7 +128,7 @@ namespace Mercury.Logging.Loggers
         /// <returns>True if the logger was found and removed; otherwise, false.</returns>
         public bool Remove(string logName)
         {
-            return this.RemoveInternal(logName, false);
+            return this.RemoveChildLogger(logName, false);
         }
 
         /// <summary>
@@ -125,10 +138,10 @@ namespace Mercury.Logging.Loggers
         /// <returns>True if any loggers were found and removed; otherwise, false.</returns>
         public bool RemoveAll(string logName)
         {
-            return this.RemoveInternal(logName, true);
+            return this.RemoveChildLogger(logName, true);
         }
 
-        private bool RemoveInternal(string logName, bool allEntries)
+        private bool RemoveChildLogger(string logName, bool allEntries)
         {
             Logger log = null;
             bool flag = false;
@@ -161,8 +174,10 @@ namespace Mercury.Logging.Loggers
         /// </summary>
         public override void Flush()
         {
-            foreach (var log in this._loggers)
-                log.Flush();
+            for (int i = 0; i < this._loggers.Count; i++)
+            {
+                this._loggers[i].Flush();
+            }
         }
 
         /// <summary>
@@ -179,13 +194,13 @@ namespace Mercury.Logging.Loggers
             for (int i = 0; i < this._loggers.Count; i++)
             {
                 log = this._loggers[i];
-                if (CompositeLogger._AllowEntry(log, entry))
+                if (CompositeLogger.__AllowEntryOnChild(log, entry))
                     log.Log(entry);
             }
             return true;
         }
 
-        private static bool _AllowEntry(Logger log, LogEntry entry)
+        private static bool __AllowEntryOnChild(Logger log, LogEntry entry)
         {
             if (log == null)
                 return false;
@@ -217,9 +232,9 @@ namespace Mercury.Logging.Loggers
         /// <returns>True if logging was successful; otherwise, false.</returns>
         protected override bool WriteLog(string message)
         {
-            foreach (var log in this._loggers)
+            for (int i = 0; i < this._loggers.Count; i++)
             {
-                log.Write(message);
+                this._loggers[i].Write(message);
             }
             return true;
         }
@@ -243,8 +258,10 @@ namespace Mercury.Logging.Loggers
             {
                 if (disposing)
                 {
-                    foreach (var log in this._loggers)
+                    Logger log = null;
+                    for (int i = 0; i < this._loggers.Count; i++)
                     {
+                        log = this._loggers[i];
                         IDisposable dispObj = log as IDisposable;
                         if (dispObj != null)
                             dispObj.Dispose();

@@ -34,4 +34,4 @@ using System.Runtime.InteropServices;
 
 // Cannot use * syntax since AssemblyVersion has also been specified.  Set according to 
 // the above table.
-[assembly: AssemblyFileVersion("2.8.2.0")]
+[assembly: AssemblyFileVersion("2.8.5.0")]

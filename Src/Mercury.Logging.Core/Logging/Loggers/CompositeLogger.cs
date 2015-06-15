@@ -174,8 +174,11 @@ namespace Mercury.Logging.Loggers
         {
             if (entry.Severity < this.SeverityThreshold)
                 return false;
-            foreach (var log in this._loggers)
+            
+            Logger log = null;
+            for (int i = 0; i < this._loggers.Count; i++)
             {
+                log = this._loggers[i];
                 if (CompositeLogger._AllowEntry(log, entry))
                     log.Log(entry);
             }

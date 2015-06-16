@@ -30,7 +30,7 @@ namespace Mercury.Logging.Loggers
             this.Logger = logger;
             this._bufferSize = bufferSize;
             this.RetryInterval = retryInterval;
-            this.__Init();
+            this.Init();
         }
 
         private int _bufferSize;
@@ -60,10 +60,13 @@ namespace Mercury.Logging.Loggers
 
         void IInitializable.Initialize()
         {
-            this.__Init();
+            this.Init();
         }
 
-        private void __Init()
+        /// <summary>
+        /// Initializes the <see cref="Mercury.Logging.Loggers.PersistentLogger"/> instance.
+        /// </summary>
+        protected virtual void Init()
         {
             this._inMemoryCache = new MemoryLogger(this._bufferSize);
             if (this._timer != null)

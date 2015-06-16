@@ -25,7 +25,7 @@ namespace Mercury.Logging.Loggers
         public MemoryLogger(int bufferSize)
         {
             this.BufferSize = bufferSize;
-            this.__Init();
+            this.Init();
         }
 
         private object _logLock = new object();
@@ -52,10 +52,13 @@ namespace Mercury.Logging.Loggers
 
         void IInitializable.Initialize()
         {
-            this.__Init();
+            this.Init();
         }
 
-        private void __Init()
+        /// <summary>
+        /// Initializes the <see cref="Mercury.Logging.Loggers.MemoryLogger"/> instance.
+        /// </summary>
+        protected virtual void Init()
         {
             this._bufferLog = new LogEntry[this.BufferSize];
         }

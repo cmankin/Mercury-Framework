@@ -65,7 +65,7 @@ namespace Mercury.Logging.Loggers
             this.DurableLogPath = durableLogPath;
             this.Mode = mode;
             this.Threshold = threshold;
-            this.__Init();
+            this.Init();
         }
 
         private int m_writeCount;
@@ -194,10 +194,13 @@ namespace Mercury.Logging.Loggers
 
         void IInitializable.Initialize()
         {
-            this.__Init();
+            this.Init();
         }
 
-        private void __Init()
+        /// <summary>
+        /// Initializes the <see cref="Mercury.Logging.Loggers.DurableLogger"/> instance.
+        /// </summary>
+        protected virtual void Init()
         {
             this.durableReaderWriter = new LogEntryReaderWriter(this.DurableLogPath);
         }

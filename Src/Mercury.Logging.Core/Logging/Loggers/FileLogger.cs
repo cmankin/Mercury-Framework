@@ -55,10 +55,14 @@ namespace Mercury.Logging.Loggers
             this.Encoding = encoding;
             this.Threshold = 1;
             this.WriteOnly = writeOnly;
-            this.__Init();
+            this.Init();
         }
 
-        private const int BUFFER_SIZE = 8192;
+        /// <summary>
+        /// The default file buffer size.
+        /// </summary>
+        public const int DEFAULT_BUFFER_SIZE = 8192;
+
         private object writerLock = new object();
         private Stream m_logFile;
         private int m_writeCount;
@@ -100,14 +104,18 @@ namespace Mercury.Logging.Loggers
         public long WritePosition
         {
             get { return this._writePosition; }
+            protected set { this._writePosition = value; }
         }
 
         void IInitializable.Initialize()
         {
-            this.__Init();
+            this.Init();
         }
 
-        private void __Init()
+        /// <summary>
+        /// Initializes the <see cref="Mercury.Logging.Loggers.FileLogger"/> instance.
+        /// </summary>
+        protected virtual void Init()
         {
             var parentDir = Directory.GetParent(this.FilePath).FullName;
             if (!Directory.Exists(parentDir))
@@ -124,7 +132,7 @@ namespace Mercury.Logging.Loggers
             {
                 lock (this.writerLock)
                 {
-                    this.__UnsafeDisposeFileStream();
+                    this.UnsafeDisposeStream();
                 }
             }
         }
@@ -213,19 +221,32 @@ namespace Mercury.Logging.Loggers
         }
 
         #region Critical, non-thread-safe methods
-        private void __UnsafeEnsureFileStream()
-        {
-            if (!this.instanceDisposed && this.m_logFile == null)
-                this.m_logFile = this.GetFileStream(this.FilePath, this.WriteOnly, BUFFER_SIZE);
-        }
-
-        private void __UnsafeDisposeFileStream()
+        /// <summary>
+        /// Manually disposes of the internal stream outside of a synchronization object.
+        /// </summary>
+        protected void UnsafeDisposeStream()
         {
             if (this.m_logFile != null)
             {
                 this.m_logFile.Dispose();
                 this.m_logFile = null;
             }
+        }
+
+        /// <summary>
+        /// Manually writes the specified byte buffer to the specified stream.
+        /// </summary>
+        /// <param name="stream">The stream object on which to write.</param>
+        /// <param name="buffer">An array of bytes to write to the stream.</param>
+        protected virtual void WriteToStream(Stream stream, byte[] buffer)
+        {
+            stream.Write(buffer, 0, buffer.Length);
+        }
+
+        private void __UnsafeEnsureFileStream()
+        {
+            if (!this.instanceDisposed && this.m_logFile == null)
+                this.m_logFile = this.GetFileStream(this.FilePath, this.WriteOnly, DEFAULT_BUFFER_SIZE);
         }
 
         private void __UnsafeSetPosition(long setPosition)
@@ -242,8 +263,9 @@ namespace Mercury.Logging.Loggers
             try
             {
                 var buffer = this.Encoding.GetBytes(message);
-                this.m_logFile.Write(buffer, 0, buffer.Length);
-                this._writePosition = this.m_logFile.Position;
+                this.WriteToStream(this.m_logFile, buffer);
+                if (this.m_logFile != null)
+                    this._writePosition = this.m_logFile.Position;
                 return true;
             }
             catch
@@ -257,7 +279,7 @@ namespace Mercury.Logging.Loggers
             try
             {
                 this.m_writeCount++;
-                if (this.m_writeCount >= this.Threshold)
+                if (this.m_logFile != null && this.m_writeCount >= this.Threshold)
                     this.m_logFile.Flush();
                 return true;
             }
@@ -283,7 +305,7 @@ namespace Mercury.Logging.Loggers
             {
                 lock (this.writerLock)
                 {
-                    this.__UnsafeDisposeFileStream();
+                    this.UnsafeDisposeStream();
                 }
             }
             this.instanceDisposed = true;

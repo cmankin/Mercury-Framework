@@ -56,12 +56,15 @@
   <ItemGroup>
     <Compile Include="CompositeLogger_specs.cs" />
     <Compile Include="Configuration_specs.cs" />
+    <Compile Include="Custom_logging_specs.cs" />
     <Compile Include="DurableLogger_specs.cs" />
     <Compile Include="FileLogger_specs.cs" />
     <Compile Include="MemoryLogger_specs.cs" />
     <Compile Include="Mock\MockEntry.cs" />
     <Compile Include="Mock\MockMemoryLogger.cs" />
     <Compile Include="Mock\NoFormattingFormatter.cs" />
+    <Compile Include="Mock\RollingFileLogger.cs" />
+    <Compile Include="Mock\WindowsEventLogger.cs" />
     <Compile Include="PersistentLogger_specs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Logger_basic_specs.cs" />

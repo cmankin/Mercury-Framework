@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="CompositeLogger_specs.cs" />
     <Compile Include="Configuration_specs.cs" />
+    <Compile Include="Custom_logging_specs.cs" />
     <Compile Include="DurableLogger_specs.cs" />
     <Compile Include="FileLogger_specs.cs" />
     <Compile Include="MemoryLogger_specs.cs" />

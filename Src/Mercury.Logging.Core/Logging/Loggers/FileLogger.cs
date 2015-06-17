@@ -279,7 +279,7 @@ namespace Mercury.Logging.Loggers
             try
             {
                 this.m_writeCount++;
-                if (this.m_writeCount >= this.Threshold)
+                if (this.m_logFile != null && this.m_writeCount >= this.Threshold)
                     this.m_logFile.Flush();
                 return true;
             }

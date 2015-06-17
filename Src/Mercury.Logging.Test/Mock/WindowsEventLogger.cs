@@ -14,10 +14,11 @@ namespace Mercury.Logging.Test.Mock
         private EventLog evtLogger;
 
         public WindowsEventLogger()
+            : this("Mercury Framework Test Event Log", "Mercury.Logging.TestEventLogger.Source")
         {
         }
 
-        public WindowsEventLogger(string loggerName, string sourceName)
+        private WindowsEventLogger(string loggerName, string sourceName)
         {
             this.Name = loggerName;
             this.SourceName = sourceName;
@@ -37,7 +38,7 @@ namespace Mercury.Logging.Test.Mock
                 throw new InvalidOperationException("Cannot create a valid Windows event logger instance without a valid logger name.");
             if (string.IsNullOrEmpty(this.SourceName))
                 throw new InvalidOperationException("Cannot create a valid Windows event logger instance without a valid source name.");
-            if (!EventLog.SourceExists(this.Name, this.SourceName))
+            if (!EventLog.SourceExists(this.SourceName))
                 EventLog.CreateEventSource(this.SourceName, this.Name);
         }
 
@@ -62,6 +63,7 @@ namespace Mercury.Logging.Test.Mock
         {
             try
             {
+                this.EnsureEventLogInstance();
                 this.evtLogger.WriteEntry(message, EventLogEntryType.Information, 0);
                 return true;
             }
@@ -69,6 +71,12 @@ namespace Mercury.Logging.Test.Mock
             {
             }
             return false;
+        }
+
+        private void EnsureEventLogInstance()
+        {
+            if (this.evtLogger == null)
+                this.evtLogger = new EventLog(this.Name, ".", this.SourceName);
         }
 
         private EventLogEntryType MapType(LogSeverity severity)

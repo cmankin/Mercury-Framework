@@ -8,6 +8,66 @@ using Mercury.Logging.Loggers;
 
 namespace Mercury.Logging.Test.Mock
 {
+    public class SimpleRollingFileLogger : FileLogger
+    {
+        private int _backupCount;
+
+        public SimpleRollingFileLogger()
+        {
+        }
+        public SimpleRollingFileLogger(string filePath, Encoding encoding, int maxFileSize, int maxBackupFiles, bool writeOnly)
+            : base(filePath, encoding, writeOnly)
+        {
+            this.MaxFileSize = maxFileSize;
+            this.MaxBackupFiles = maxBackupFiles;
+        }
+
+        public int MaxFileSize { get; set; }
+        public int MaxBackupFiles { get; set; }
+
+        protected override Stream GetFileStream(string logFilePath, bool isWriteOnly, int defaultBufferSize)
+        {
+            return base.GetFileStream(this.GetNewestFileName(), isWriteOnly, defaultBufferSize);
+        }
+
+        protected override void WriteToStream(Stream stream, byte[] buffer)
+        {
+            base.WriteToStream(stream, buffer);
+            if (this.MaxFileSize > 0)
+            {
+                if ((stream.Length + buffer.LongLength) > (long)this.MaxFileSize)
+                {
+                    stream.Flush();
+                    this.UnsafeDisposeStream();
+                    if (this.MaxBackupFiles == 0)
+                        File.Delete(this.FilePath);
+                    if (this.MaxBackupFiles > 0)
+                    {
+                        if (this._backupCount >= this.MaxBackupFiles)
+                            File.Delete(this.GetOldestFileName());
+                        this._backupCount++;
+                    }
+                }
+            }
+        }
+
+        private string GetOldestFileName()
+        {
+            var filenum = this._backupCount - this.MaxBackupFiles;
+            return FormatFileName(this.FilePath, filenum < 0 ? 0 : filenum);
+        }
+        private string GetNewestFileName()
+        {
+            return FormatFileName(this.FilePath, this._backupCount);
+        }
+        private static string FormatFileName(string filePath, int backupCount)
+        {
+            if (backupCount == 0)
+                return filePath;
+            return Path.ChangeExtension(filePath, string.Format(".{0}{1}", backupCount, Path.GetExtension(filePath)));
+        }
+    }
+
     /// <summary>
     /// An implementation of a rolling file logger.
     /// </summary>
@@ -19,9 +79,17 @@ namespace Mercury.Logging.Test.Mock
         {
         }
 
+        public RollingFileLogger(string filePath, Encoding encoding, int maxFileSize, int maxBackupFiles, bool writeOnly)
+            : base(filePath, encoding, writeOnly)
+        {
+            this.MaxFileSize = maxFileSize;
+            this.MaxBackupFiles = maxBackupFiles;
+            this.Init();
+        }
+
         /// <summary>
-        /// Gets the maximum size of the file in bytes.  If set to 0, it 
-        /// will be considered an unbounded log file.
+        /// Gets the maximum size of the file in bytes before a rollover occurs.  Log entries are not split to maintain an 
+        /// exact maximum file size.  Some variation may occur.  If set to 0, it will be considered an unbounded log file.
         /// </summary>
         public int MaxFileSize { get; private set; }
 
@@ -43,32 +111,32 @@ namespace Mercury.Logging.Test.Mock
 
         protected override void WriteToStream(Stream stream, byte[] buffer)
         {
-            if (stream != null)
+            base.WriteToStream(stream, buffer);
+            if (stream != null && this.MaxFileSize > 0)
             {
                 if ((stream.Length + buffer.LongLength) > (long)this.MaxFileSize)
                 {
+                    stream.Flush();
                     this.UnsafeDisposeStream();
                     this.PrepareNextLogFile();
                     if (this.MaxBackupFiles > 0)
                         this._backupCount++;
-
-                    using (var fStream = this.GetFileStream(this.FilePath, this.WriteOnly, FileLogger.DEFAULT_BUFFER_SIZE))
-                    {
-                        fStream.Write(buffer, 0, buffer.Length);
-                        this.WritePosition = fStream.Position;
-                    }
-                    return;
                 }
             }
-            base.WriteToStream(stream, buffer);
         }
 
         private void PrepareNextLogFile()
         {
             if (this.MaxBackupFiles == 0)
             {
-                if (File.Exists(this.FilePath))
-                    File.Delete(this.FilePath);
+                try
+                {
+                    if (File.Exists(this.FilePath))
+                        File.Delete(this.FilePath);
+                }
+                catch
+                {
+                }
             }
             else if (this.MaxBackupFiles > 0 && this._backupCount >= this.MaxBackupFiles)
             {
@@ -100,7 +168,7 @@ namespace Mercury.Logging.Test.Mock
         {
             if (backupCount == 0)
                 return filePath;
-            return Path.ChangeExtension(filePath, string.Format(".{0}.{1}", backupCount, Path.GetExtension(filePath)));
+            return Path.ChangeExtension(filePath, string.Format(".{0}{1}", backupCount, Path.GetExtension(filePath)));
         }
     }
 }

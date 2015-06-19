@@ -70,7 +70,7 @@ namespace Mercury.Logging.Test
         internal static void DeleteAllFilesAtParent(string filePath, string searchPattern)
         {
             var dir = Directory.GetParent(filePath);
-            if (dir != null)
+            if (dir != null && dir.Exists)
             {
                 FileInfo[] logFiles = dir.GetFiles(searchPattern);
                 foreach (var info in logFiles)

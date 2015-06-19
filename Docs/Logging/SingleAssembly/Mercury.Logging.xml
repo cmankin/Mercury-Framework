@@ -444,6 +444,11 @@
       <param name="bufferSize">The maximum number of log entries to maintain.</param>
       <param name="retryInterval">The number of seconds to wait before retrying an unsuccessful log.</param>
     </member>
+    <member name="M:Mercury.Logging.Loggers.PersistentLogger.Init">
+      <summary>
+            Initializes the <see cref="T:Mercury.Logging.Loggers.PersistentLogger" /> instance.
+            </summary>
+    </member>
     <member name="M:Mercury.Logging.Loggers.PersistentLogger.Flush">
       <summary>
             Flushes any output buffers, forcing data to be written to the log.
@@ -631,6 +636,11 @@
       <param name="threshold">The minimum number of write operations that can trigger a flush to the primary logger.  
             This is only used when the durability mode is set to DurabilityMode.BatchThrough.</param>
     </member>
+    <member name="M:Mercury.Logging.Loggers.DurableLogger.Init">
+      <summary>
+            Initializes the <see cref="T:Mercury.Logging.Loggers.DurableLogger" /> instance.
+            </summary>
+    </member>
     <member name="M:Mercury.Logging.Loggers.DurableLogger.Flush">
       <summary>
             Flushes any output buffers, forcing data to be written to the log.
@@ -730,6 +740,11 @@
             Represents a logger that writes to a text file.
             </summary>
     </member>
+    <member name="F:Mercury.Logging.Loggers.FileLogger.DEFAULT_BUFFER_SIZE">
+      <summary>
+            The default file buffer size.
+            </summary>
+    </member>
     <member name="M:Mercury.Logging.Loggers.FileLogger.#ctor">
       <summary>
             Initializes a default instance of the <see cref="T:Mercury.Logging.Loggers.FileLogger" /> class.
@@ -758,6 +773,11 @@
       <param name="filePath">The full system path to the log file.</param>
       <param name="encoding">The text encoding used for this file.</param>
       <param name="writeOnly">A value indicating whether this file logger is only enabled for writing.</param>
+    </member>
+    <member name="M:Mercury.Logging.Loggers.FileLogger.Init">
+      <summary>
+            Initializes the <see cref="T:Mercury.Logging.Loggers.FileLogger" /> instance.
+            </summary>
     </member>
     <member name="M:Mercury.Logging.Loggers.FileLogger.CloseStream">
       <summary>
@@ -797,6 +817,18 @@
             </summary>
       <param name="message">The message string to log.</param>
       <returns>True if logging was successful; otherwise, false.</returns>
+    </member>
+    <member name="M:Mercury.Logging.Loggers.FileLogger.UnsafeDisposeStream">
+      <summary>
+            Manually disposes of the internal stream outside of a synchronization object.
+            </summary>
+    </member>
+    <member name="M:Mercury.Logging.Loggers.FileLogger.WriteToStream(System.IO.Stream,System.Byte[])">
+      <summary>
+            Manually writes the specified byte buffer to the specified stream.
+            </summary>
+      <param name="stream">The stream object on which to write.</param>
+      <param name="buffer">An array of bytes to write to the stream.</param>
     </member>
     <member name="M:Mercury.Logging.Loggers.FileLogger.Dispose">
       <summary>
@@ -1048,6 +1080,11 @@
             Initializes a new instance of the <see cref="T:Mercury.Logging.Loggers.MemoryLogger" /> class with the specified buffer size.
             </summary>
       <param name="bufferSize">The maximum number of elements to log in-memory.</param>
+    </member>
+    <member name="M:Mercury.Logging.Loggers.MemoryLogger.Init">
+      <summary>
+            Initializes the <see cref="T:Mercury.Logging.Loggers.MemoryLogger" /> instance.
+            </summary>
     </member>
     <member name="M:Mercury.Logging.Loggers.MemoryLogger.CopyLog">
       <summary>
